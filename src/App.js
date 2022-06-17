@@ -1,10 +1,14 @@
-import { Header, Catalog } from './Components';
+import { Route, Routes } from 'react-router-dom';
+import Busket from './pages/Busket';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Catalog />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/busket" element={<Busket />} />
+      </Routes>
     </div>
   );
 }

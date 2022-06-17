@@ -1,5 +1,6 @@
 import React from 'react'
 import '../index.scss'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -12,7 +13,7 @@ function Header() {
             <li>О нас</li>
             <li>Как сделать заказ</li>
           </ul>
-          <div className='busketLogo'><img src="../image/busket.svg" alt="Корзина" /></div>
+         <Link to = "/busket "> <div className='busketLogo'><img src="../image/busket.svg" alt="Корзина" /></div></Link>
       </header>
       <section className='descriptionBlock'>
         <div className='titleTextButton'>
