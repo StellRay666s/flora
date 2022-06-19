@@ -2,10 +2,11 @@ import React from 'react'
 import  '../index.scss'
 import Items from './Cart/Items'
 
-export default function Catalog() {
+export default function Catalog({id}) {
+
   return (
     <div className='catalogWrapper'>
-        <h1>КАТАЛОГ</h1>
+        <h1 id = {id}> КАТАЛОГ</h1>
         <div className='inputBlock'>
             <select>
                 <option>Раздел товаров</option>

@@ -1,6 +1,9 @@
 import React from 'react'
 import '../index.scss'
 import { Link } from 'react-router-dom'
+import ShemWork from './ShemWork'
+import {Link as Scroll} from 'react-scroll'
+
 
 function Header() {
   return (
@@ -9,9 +12,23 @@ function Header() {
           <div><h3>МАГАЗИН СВЕЖИХ ЦВЕТОВ</h3></div>
           <ul>
             <li>Главная</li>
-            <li>Каталог</li>
-            <li>О нас</li>
-            <li>Как сделать заказ</li>
+            <li ><Scroll to="Catalog"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>Каталог</Scroll></li>
+            <li> <Scroll to="AboutUs"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500} > О нас</Scroll></li>
+            <li  ><Scroll to="HowDelevery"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>Как сделать заказ</Scroll>  </li>
+              <Link to ="/auth"><li>Авторизация</li></Link>
+              <Link to ="/registration"><li>Регистрация</li></Link>
           </ul>
          <Link to = "/busket "> <div className='busketLogo'><img src="../image/busket.svg" alt="Корзина" /></div></Link>
       </header>
@@ -22,37 +39,7 @@ function Header() {
           <button>Закать</button>
         </div>
       </section>
-      <div className='schemWork'>
-       <div className='shems'>
-        <img src='../image/truck.svg' />
-        <div className='shemtext'>
-          <h4>Бесплатная доставка по всему городу</h4>
-          <p>от 500 руб</p>
-        </div>
-       </div>
-       <div className='shems'>
-        <img src='../image/boquet.svg' />
-        <div className='shemtext'>
-          <h4>Если опаздаем на 15 минут</h4>
-          <p>цветы в подарок</p>
-        </div>
-       </div>
-       <div className='shems'>
-        <img src='../image/card.svg' />
-        <div className='shemtext'>
-          <h4>Безопасное оформление заказа</h4>
-          <p>Защита Pay Pal</p>
-        </div>
-       </div>
-       <div className='shems'>
-        <img src='../image/gift.svg' />
-        <div className='shemtext'>
-          <h4>Подарок</h4>
-          <p>Оформим бесплатно</p>
-        </div>
-       </div>
-      
-      </div>
+    <ShemWork/>
     </>
   )
 }

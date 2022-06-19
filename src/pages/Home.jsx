@@ -1,12 +1,14 @@
 import React from 'react'
-import { Header, Catalog } from '../Components'
+import { Header, Catalog, AboutUs,HowDelevery } from '../Components'
 import "../index.scss"
 
 function Home() {
   return (
     <div>
          <Header/> 
-         <Catalog/>  
+         <Catalog id = "Catalog"/>  
+         <AboutUs id = "AboutUs"/>
+         <HowDelevery id = "HowDelevery"/>
     </div>
   )
 }
