@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import ShemWork from './ShemWork';
 import { Link as Scroll } from 'react-scroll';
 
@@ -36,7 +36,7 @@ function Header() {
             <li>Регистрация</li>
           </Link>
         </ul>
-        <Link to="/busket ">
+        <Link to="/busket">
           {' '}
           <div className="busketLogo">
             <img src="../image/busket.svg" alt="Корзина" />
@@ -54,6 +54,7 @@ function Header() {
         </div>
       </section>
       <ShemWork />
+      <Outlet />
     </>
   );
 }
