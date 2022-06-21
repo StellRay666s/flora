@@ -1,0 +1,8 @@
+
+ {
+    "editorBracketMatch.background": "#f008",
+    "editorBracketMatch.border": "#f00",
+    "editor.guides.bracketPairs": false,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.matchBrackets": "near"
+}

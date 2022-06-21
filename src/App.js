@@ -6,6 +6,10 @@ import Item from './pages/Item';
 import Registr from './pages/Registr';
 
 function App() {
+  function one() {
+    console.log(111);
+  }
+
   return (
     <div className="App">
       <Routes>

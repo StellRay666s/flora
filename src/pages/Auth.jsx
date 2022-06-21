@@ -1,20 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 function Auth() {
   return (
-   <>
-        <h1>Авторизация</h1>
-         <div className='authWrapper'>
+    <>
+      <h1>Авторизация</h1>
+      <div className="authWrapper">
         <div className="formAuth">
-            <input type="text" placeholder='email' />
-            <input type="text" placeholder='Пароль' />
-            <button>Войти</button>
+          <input type="text" placeholder="email" />
+          <input type="text" placeholder="Пароль" />
+          <button>Войти</button>
         </div>
-
-
-
-    </div></>
-  )
+      </div>
+    </>
+  );
 }
 
-export default Auth
+export default Auth;
