@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+import { ThanksPurchase } from "../Components";
 
 function Busket() {
   const [swipe, setSwipe] = React.useState(true);
-
+  const [window, setWindow] = React.useState(false);
   const swipeON = () => {
     setSwipe(!swipe);
+  };
+
+  const buyOn = () => {
+    setWindow(!swipe);
   };
 
   console.log(swipe);
@@ -41,7 +46,7 @@ function Busket() {
                 Карточка при получении
               </label>
             </div>
-            <button>ОФОРМИТЬ</button>
+            <button onClick={() => buyOn(console.log(123))}>ОФОРМИТЬ</button>
           </div>
         </div>
         <div className="itemWrapperBlock">
@@ -78,6 +83,7 @@ function Busket() {
           </div>
         </div>
       </div>
+      {window ? <ThanksPurchase /> : ""}
     </>
   );
 }

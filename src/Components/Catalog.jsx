@@ -1,6 +1,6 @@
-import React from 'react';
-import Items from './Cart/Items';
-import db from '../db';
+import React from "react";
+import Items from "./Cart/Items";
+import db from "../db";
 
 export default function Catalog({ id }) {
   console.log(db);
