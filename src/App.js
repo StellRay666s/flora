@@ -1,9 +1,9 @@
-import { Route, Routes } from 'react-router-dom';
-import { Auth } from './Components';
-import Busket from './pages/Busket';
-import Home from './pages/Home';
-import Item from './pages/Item';
-import Registr from './pages/Registr';
+import { Route, Routes } from "react-router-dom";
+import { Auth } from "./components";
+import Busket from "./pages/Busket";
+import Home from "./pages/Home";
+import Item from "./pages/Item";
+import Registr from "./pages/Registr";
 
 function App() {
   return (
