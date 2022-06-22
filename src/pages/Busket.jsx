@@ -1,5 +1,5 @@
 import React from "react";
-import { ThanksPurchase } from "../Components";
+import { ThanksPurchase } from "../components";
 
 function Busket() {
   const [swipe, setSwipe] = React.useState(true);
