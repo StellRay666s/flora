@@ -3,16 +3,15 @@ import { ThanksPurchase } from "../Components";
 
 function Busket() {
   const [swipe, setSwipe] = React.useState(true);
-  const [window, setWindow] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   const swipeON = () => {
     setSwipe(!swipe);
   };
 
   const buyOn = () => {
-    setWindow(!swipe);
+    setOpen(!open);
   };
 
-  console.log(swipe);
   return (
     <>
       <div className="busketWrapper">
@@ -28,9 +27,9 @@ function Busket() {
           <div className="payment">
             <h3>Дополнительно</h3>
             {swipe ? (
-              <div onClick={() => swipeON()} class="switch-btn"></div>
+              <div onClick={() => swipeON()} className="switch-btn"></div>
             ) : (
-              <div onClick={() => swipeON()} class="switch-btn switch-on"></div>
+              <div onClick={() => swipeON()} className="switch-btn switch-on"></div>
             )}
             <h3>Выберите способ оплаты</h3>
             <div className="inpRadio">
@@ -46,7 +45,7 @@ function Busket() {
                 Карточка при получении
               </label>
             </div>
-            <button onClick={() => buyOn(console.log(123))}>ОФОРМИТЬ</button>
+            <button onClick={() => buyOn()}>ОФОРМИТЬ</button>
           </div>
         </div>
         <div className="itemWrapperBlock">
@@ -83,7 +82,7 @@ function Busket() {
           </div>
         </div>
       </div>
-      {window ? <ThanksPurchase /> : ""}
+      {open ? <ThanksPurchase onBuy={buyOn} /> : ""}
     </>
   );
 }

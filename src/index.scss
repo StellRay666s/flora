@@ -534,7 +534,51 @@ header {
   }
 }
 .purchaseWrapper {
-  width: 600px;
-  height: 400px;
-  background-color: #fefefe;
+  width: 700px;
+  height: 600px;
+  background-color: #528691;
+  position: absolute;
+  bottom: 100px;
+  left: 25%;
+  border: 1px;
+  border-radius: 6px;
+  .purchase {
+    border-radius: 6px;
+    position: relative;
+    background-color: #74cbde;
+    width: 550px;
+    height: 350px;
+    top: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    .close {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+    .text {
+      text-align: left;
+      width: 500px;
+
+      h1 {
+        line-height: 60px;
+        text-transform: uppercase;
+        font-size: 25px;
+      }
+      p {
+        margin-bottom: 30px;
+        width: 260px;
+        font-family: "Roboto";
+        font-weight: 100;
+        font-size: 14px;
+      }
+    }
+  }
+  .itemPurchse {
+    h3 {
+      font-size: 15px;
+      font-weight: 100;
+      font-family: "Roboto";
+    }
+  }
 }
