@@ -6,4 +6,4 @@ export { default as AboutUs } from "./AboutUs";
 export { default as HowDelevery } from "./HowDelevery";
 export { default as Auth } from "../pages/Auth";
 export { default as Registr } from "../pages/Registr";
-export { default as ThanksPurchase } from "../Components/ThanksPurchase";
+export { default as ThanksPurchase } from "../components/ThanksPurchase";
