@@ -1,5 +1,5 @@
-import React from 'react';
-import { Header, Catalog, AboutUs, HowDelevery } from '../Components';
+import React from "react";
+import { Header, Catalog, AboutUs, HowDelevery } from "../components";
 
 function Home() {
   return (

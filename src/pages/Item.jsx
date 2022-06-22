@@ -1,7 +1,7 @@
-import React from 'react';
-import ShemWork from '../Components/ShemWork';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import ShemWork from "../components/ShemWork";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 function Item() {
   let { id } = useParams();
 
@@ -9,7 +9,7 @@ function Item() {
 
   console.log(items);
   React.useEffect(() => {
-    axios.get(`https://61efda37732d93001778e635.mockapi.io/flowers/${id}`).then((resp) => {
+    axios.get(`https://61efda37732d93001778e635.mockapi.io/flowers/${id}`).then(resp => {
       const item = resp.data;
       setTtems(item);
     });
