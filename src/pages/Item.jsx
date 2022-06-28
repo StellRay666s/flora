@@ -1,30 +1,29 @@
 import React from "react";
-import ShemWork from "../components/ShemWork";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+
+import ShemWork from "../components/ShemWork";
+
 function Item() {
-  let { id } = useParams();
+  const { id } = useParams();
+  const [data, setData] = React.useState(null);
 
-  const [items, setTtems] = React.useState(null);
-
-  console.log(items);
   React.useEffect(() => {
-    axios.get(`https://61efda37732d93001778e635.mockapi.io/flowers/${id}`).then(resp => {
-      const item = resp.data;
-      setTtems(item);
+    axios.get(`https://61efda37732d93001778e635.mockapi.io/flowers/${id}`).then(response => {
+      setData(response.data);
     });
   }, [id]);
 
   return (
     <>
-      {items && (
+      {data && (
         <div className="itemWraper">
-          <div className="itemcart" id={items.id}>
-            <h1>{items.category}</h1>
-            <h2>{items.title}</h2>
-            <span>{items.price} руб.</span>
+          <div className="itemcart" id={data.id}>
+            <h1>{data.category}</h1>
+            <h2>{data.title}</h2>
+            <span>{data.price} руб.</span>
             <h3>Информация</h3>
-            <p className="infoText">{items.description}</p>
+            <p className="infoText">{data.description}</p>
 
             <div className="buyAddbtn">
               <button className="buy">Заказать</button>
@@ -32,7 +31,7 @@ function Item() {
             </div>
           </div>
           <div className="itemImage">
-            <img src={items.image} alt="" />
+            <img src={data.image} alt="" />
           </div>
         </div>
       )}

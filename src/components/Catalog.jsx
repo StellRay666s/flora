@@ -1,9 +1,7 @@
 import React from "react";
 import Items from "./Cart/Items";
-import db from "../db";
 
 export default function Catalog({ id }) {
-  console.log(db);
   return (
     <div className="catalogWrapper">
       <h1 id={id}> КАТАЛОГ</h1>

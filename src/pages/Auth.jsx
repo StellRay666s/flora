@@ -5,7 +5,6 @@ function Auth() {
   const count = useSelector(state => state.counter.value);
   const dispatch = useDispatch();
 
-  console.log(count);
   return (
     <>
       <h1>Авторизация</h1>

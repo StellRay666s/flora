@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import ShemWork from './ShemWork';
-import { Link as Scroll } from 'react-scroll';
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
+import { Link as Scroll } from "react-scroll";
+
+import ShemWork from "./ShemWork";
 
 function Header() {
   return (
@@ -18,16 +19,14 @@ function Header() {
             </Scroll>
           </li>
           <li>
-            {' '}
             <Scroll to="AboutUs" spy={true} smooth={true} offset={-70} duration={500}>
-              {' '}
               О нас
             </Scroll>
           </li>
           <li>
             <Scroll to="HowDelevery" spy={true} smooth={true} offset={-70} duration={500}>
               Как сделать заказ
-            </Scroll>{' '}
+            </Scroll>
           </li>
           <Link to="/auth">
             <li>Авторизация</li>
@@ -37,7 +36,6 @@ function Header() {
           </Link>
         </ul>
         <Link to="/busket">
-          {' '}
           <div className="busketLogo">
             <img src="../image/busket.svg" alt="Корзина" />
           </div>

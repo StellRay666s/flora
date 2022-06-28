@@ -3,7 +3,6 @@ import React from "react";
 function ShemWork() {
   return (
     <div>
-      {" "}
       <div className="schemWork">
         <div className="shems">
           <img src="../image/truck.svg" alt="" />
