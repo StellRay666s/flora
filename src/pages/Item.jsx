@@ -2,10 +2,11 @@ import React from "react";
 import ShemWork from "../components/ShemWork";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+
 function Item() {
   let { id } = useParams();
 
-  const [items, setTtems] = React.useState(null);
+  const [items, setTtems] = React.useState([{}]);
 
   console.log(items);
   React.useEffect(() => {

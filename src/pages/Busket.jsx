@@ -52,9 +52,9 @@ function Busket() {
           <h1>ВАША КОРЗИНА</h1>
           <div className="itemBusket">
             <div className="content">
-              <img src="../flowes/2.jpg" alt="" />
+              <img src="" alt="" />
               <div className="titleCount">
-                <h3>Название цветов</h3>
+                <h3></h3>
                 <div className="count">
                   <div className="counts">Кол-во</div>
                   <div className="wrapperBTN">
@@ -63,7 +63,7 @@ function Busket() {
                   </div>
                 </div>
               </div>
-              <div className="price">1200</div>
+              <div className="price"></div>
             </div>
           </div>
           <div className="totalPrice">

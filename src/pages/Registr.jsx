@@ -1,17 +1,17 @@
 import React from "react";
-import { addUser } from "../redux/counterSlice";
-import { useDispatch } from "react-redux/es/exports";
+import { useDispatch } from "react-redux";
+import item from "./Item";
+
 function Registr() {
+
   const [obj, setObj] = React.useState([]);
-  const [items, setItem] = React.useState([{}]);
-
-  const dispatch = useDispatch();
-
-  console.log(items);
+  const dispatch = useDispatch()
+  console.log(obj);
 
   function add() {
-    items.push(obj);
+    dispatch({type:"ADD_USER", payload:obj})
   }
+
   function change(e, prop) {
     setObj({ ...obj, [prop]: e.target.value });
   }
@@ -24,8 +24,8 @@ function Registr() {
           <input type="text" onChange={e => change(e, "email")} placeholder="Email" />
           <input type="text" onChange={e => change(e, "adress")} placeholder="Адрес" />
           <input type="text" onChange={e => change(e, "phone")} placeholder="Номер телефона" />
-          <button onClick={() => dispatch(addUser(items))}>Войти</button>
-          <button onClick={() => add()}>Войти</button>
+
+          <button onClick={()=>add()} >Войти</button>
         </div>
       </div>
     </>
