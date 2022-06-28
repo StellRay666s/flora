@@ -11,7 +11,6 @@ export default function ThanksPurchase({ onBuy }) {
           <h1>Благодарим за покупку</h1>
           <p>Посмотрите пожалуйста почту мы отправили туду информацию о заказе</p>
         </div>
-
         <div className="itemPurchse">
           <h3>Смотрите также:</h3>
         </div>

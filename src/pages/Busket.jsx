@@ -4,6 +4,7 @@ import { ThanksPurchase } from "../components";
 function Busket() {
   const [swipe, setSwipe] = React.useState(true);
   const [open, setOpen] = React.useState(false);
+
   const swipeON = () => {
     setSwipe(!swipe);
   };
