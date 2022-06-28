@@ -4,14 +4,14 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /** Pages */
-import IndexPage from "./pages";
+import HomePage from "pages/home";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<IndexPage />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
     </div>

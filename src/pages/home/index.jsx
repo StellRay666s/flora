@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
-const IndexPage = () => {
+const HomePage = () => {
   return <Fragment>Hello World!</Fragment>;
 };
 
-export default IndexPage;
+export default HomePage;
