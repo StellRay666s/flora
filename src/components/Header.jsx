@@ -1,16 +1,14 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
-
+import Logo from "./Logo";
 import ShemWork from "./ShemWork";
 
 function Header() {
   return (
     <>
       <header>
-        <div>
-          <h3>МАГАЗИН СВЕЖИХ ЦВЕТОВ</h3>
-        </div>
+        <Logo />
         <ul>
           <li>Главная</li>
           <li>
