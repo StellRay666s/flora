@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /** Pages */
-import IndexPage from "./pages";
+import IndexPage from "pages/home";
 
 function App() {
   return (
