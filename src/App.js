@@ -1,5 +1,4 @@
 import React from "react";
-import StarRating from "components/Rating";
 
 /** React Router Dom */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -16,6 +15,7 @@ import {
   TruckIcon,
   TwitterIcon,
 } from "icons";
+import { CrossClose, Rating } from "components";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
         </Routes>
       </Router>
       <div></div>
-      <StarRating />
+      <Rating />
       <InstagramIcons />
       <TelegramIcon />
       <TwitterIcon />
@@ -35,6 +35,7 @@ function App() {
       <BoqueteIcon />
       <CreditCartIcon />
       <GiftIcon />
+      <CrossClose />
     </div>
   );
 }
