@@ -1,5 +1,5 @@
 import React from "react";
-
+import StarRating from "components/Rating/StarRating";
 /** React Router Dom */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -14,6 +14,8 @@ function App() {
           <Route path="/" element={<IndexPage />} />
         </Routes>
       </Router>
+      <div></div>
+      <StarRating />
     </div>
   );
 }
