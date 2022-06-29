@@ -1,6 +1,7 @@
 import React from "react";
 import StarIcons from "icons/StarIcon";
 import StarIconsDisable from "icons/StarIconDisable";
+
 import styles from "./starRating.module.scss";
 
 const StarRating = () => {
