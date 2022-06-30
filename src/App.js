@@ -15,7 +15,7 @@ import {
   TruckIcon,
   TwitterIcon,
 } from "icons";
-import { CrossClose, Rating, Input } from "components";
+import { CrossClose, Rating, Input, PhoneInput } from "components";
 
 function App() {
   return (
@@ -40,6 +40,7 @@ function App() {
       <Input text={"Адресс"} />
       <Input text={"Эл.Почта"} />
       <Input text={"Фамилия"} />
+      <PhoneInput />
     </div>
   );
 }
