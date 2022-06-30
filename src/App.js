@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /** Pages */
 import IndexPage from "pages/home";
+
 import {
   BagIcon,
   BoqueteIcon,

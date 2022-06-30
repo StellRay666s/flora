@@ -1,8 +1,9 @@
 import React from "react";
-import style from "./phoneinput.module.scss";
 import InputMask from "react-input-mask";
 
-export default function index() {
+import style from "./index.module.scss";
+
+export default function PhoneInput() {
   return (
     <div>
       <InputMask

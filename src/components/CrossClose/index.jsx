@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./crossClose.module.scss";
+import styles from "./index.module.scss";
 
-export default function index() {
+export default function CrossClose() {
   return (
     <div>
       <svg

@@ -2,9 +2,9 @@ import React from "react";
 import StarIcons from "icons/StarIcon";
 import StarIconsDisable from "icons/StarIconDisable";
 
-import styles from "./starRating.module.scss";
+import styles from "./index.module.scss";
 
-const StarRating = () => {
+export default function Rating() {
   const [rating, setRating] = React.useState(0);
   const [hover, setHover] = React.useState(0);
 
@@ -26,6 +26,4 @@ const StarRating = () => {
       })}
     </div>
   );
-};
-
-export default StarRating;
+}
