@@ -1,7 +1,7 @@
 import React from "react";
 import InputMask from "react-input-mask";
 
-import style from "./index.module.scss";
+import styles from "./index.module.scss";
 
 export default function PhoneInput({ value, dispatchValue }) {
   /**
@@ -14,7 +14,7 @@ export default function PhoneInput({ value, dispatchValue }) {
 
   return (
     <InputMask mask="+7 999 999-99-99" value={value} onChange={onChange}>
-      {inputProps => <input {...inputProps} className={style.inputs} type="tel" />}
+      {inputProps => <input {...inputProps} className={styles.inputs} type="tel" />}
     </InputMask>
   );
 }
