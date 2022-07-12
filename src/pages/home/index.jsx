@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 
 import { PhoneInput } from "components";
 
-const IndexPage = () => {
+export default function IndexPage() {
   const [name, setName] = useState("");
 
   return (
@@ -10,6 +10,4 @@ const IndexPage = () => {
       <PhoneInput value={name} dispatchValue={setName} />
     </Fragment>
   );
-};
-
-export default IndexPage;
+}
