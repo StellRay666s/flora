@@ -13,7 +13,12 @@ export default function PhoneInput({ value, dispatchValue }) {
   }
 
   return (
-    <InputMask mask="+7 999 999-99-99" value={value} onChange={onChange}>
+    <InputMask
+      mask="+7 999 999-99-99"
+      value={value}
+      placeholder="Введите номер телефона"
+      onChange={onChange}
+    >
       {inputProps => <input {...inputProps} className={styles.input} type="tel" />}
     </InputMask>
   );

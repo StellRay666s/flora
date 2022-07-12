@@ -3,8 +3,13 @@
   height: 40px;
   padding: 10px 30px;
   margin-bottom: 15px;
-  background-color: #B5D5D9;
+  background-color: #b5d5d9;
+  color: #94a9ac;
   border: 1px;
   border-radius: 6px;
   outline: none;
+
+  &::placeholder {
+    color: #94a9ac;
+  }
 }
