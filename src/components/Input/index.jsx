@@ -2,10 +2,23 @@ import React, { Fragment } from "react";
 
 import styles from "./index.module.scss";
 
-function Input({ placeholder }) {
+function Input({ placeholder, value, dispatchValue }) {
+  /**
+   * Change handler
+   * @param {React.ChangeEvent<HTMLInputElement>} e
+   */
+  function onChange(e) {
+    dispatchValue(e.target.value);
+  }
+
   return (
     <Fragment>
-      <input className={styles.inputs} placeholder={placeholder} />
+      <input
+        value={value}
+        onChange={onChange}
+        className={styles.inputs}
+        placeholder={placeholder}
+      />
     </Fragment>
   );
 }
