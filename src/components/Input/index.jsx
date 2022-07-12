@@ -13,12 +13,7 @@ function Input({ placeholder, value, dispatchValue }) {
 
   return (
     <Fragment>
-      <input
-        value={value}
-        onChange={onChange}
-        className={styles.inputs}
-        placeholder={placeholder}
-      />
+      <input value={value} onChange={onChange} className={styles.input} placeholder={placeholder} />
     </Fragment>
   );
 }
