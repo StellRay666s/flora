@@ -1,10 +1,13 @@
-import React from "react";
-import styleInput from "./index.module.scss";
+import React, { Fragment } from "react";
 
-export default function Input({ text }) {
+import styles from "./index.module.scss";
+
+function Input({ placeholder }) {
   return (
-    <div>
-      <input className={styleInput.inputs} placeholder={text} />
-    </div>
+    <Fragment>
+      <input className={styles.inputs} placeholder={placeholder} />
+    </Fragment>
   );
 }
+
+export default Input;
