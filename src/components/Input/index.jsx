@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 import styles from "./index.module.scss";
 
-function Input({ placeholder, value, dispatchValue }) {
+export default function Input({ placeholder, value, dispatchValue }) {
   /**
    * Change handler
    * @param {React.ChangeEvent<HTMLInputElement>} e
@@ -17,5 +17,3 @@ function Input({ placeholder, value, dispatchValue }) {
     </Fragment>
   );
 }
-
-export default Input;

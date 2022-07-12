@@ -1,6 +1,6 @@
 import React from "react";
 
-const StarIconDisable = () => {
+export default function StarIconDisable() {
   return (
     <svg
       background="red"
@@ -17,6 +17,4 @@ const StarIconDisable = () => {
       </g>
     </svg>
   );
-};
-
-export default StarIconDisable;
+}
