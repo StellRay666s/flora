@@ -1,13 +1,13 @@
 import React, { Fragment, useState } from "react";
 
-import { Input } from "components";
+import { PhoneInput } from "components";
 
 const IndexPage = () => {
   const [name, setName] = useState("");
 
   return (
     <Fragment>
-      <Input value={name} dispatchValue={setName} />
+      <PhoneInput value={name} dispatchValue={setName} />
     </Fragment>
   );
 };
