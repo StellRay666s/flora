@@ -1,9 +1,19 @@
-import React from "react";
-import styleInput from "./input.module.scss";
-export default function index({ text }) {
+import React, { Fragment } from "react";
+
+import styles from "./index.module.scss";
+
+export default function Input({ placeholder, value, dispatchValue }) {
+  /**
+   * Change handler
+   * @param {React.ChangeEvent<HTMLInputElement>} e
+   */
+  function onChange(e) {
+    dispatchValue(e.target.value);
+  }
+
   return (
-    <div>
-      <input className={styleInput.inputs} placeholder={text} />
-    </div>
+    <Fragment>
+      <input value={value} onChange={onChange} className={styles.input} placeholder={placeholder} />
+    </Fragment>
   );
 }

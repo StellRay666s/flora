@@ -1,7 +1,13 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
-const IndexPage = () => {
-  return <Fragment>Hello World!</Fragment>;
-};
+import { PhoneInput } from "components";
 
-export default IndexPage;
+export default function IndexPage() {
+  const [name, setName] = useState("");
+
+  return (
+    <Fragment>
+      <PhoneInput value={name} dispatchValue={setName} />
+    </Fragment>
+  );
+}

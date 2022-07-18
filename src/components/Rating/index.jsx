@@ -1,16 +1,18 @@
 import React from "react";
-import StarIcons from "icons/StarIcon";
-import StarIconsDisable from "icons/StarIconDisable";
 
-import styles from "./starRating.module.scss";
+/** Icons */
+import StarIcon from "icons/StarIcon";
+import StarIconDisable from "icons/StarIconDisable";
 
-const StarRating = () => {
+import styles from "./index.module.scss";
+
+export default function Rating() {
   const [rating, setRating] = React.useState(0);
   const [hover, setHover] = React.useState(0);
 
   return (
     <div className={styles.starRating}>
-      {[...Array(5)].map((star, index) => {
+      {[...Array(5)].map((_, index) => {
         index += 1;
         return (
           <div
@@ -20,12 +22,10 @@ const StarRating = () => {
             onMouseLeave={() => setHover(rating)}
             onClick={() => setRating(index)}
           >
-            {index <= (hover || rating) ? <StarIcons /> : <StarIconsDisable />}
+            {index <= (hover || rating) ? <StarIcon /> : <StarIconDisable />}
           </div>
         );
       })}
     </div>
   );
-};
-
-export default StarRating;
+}
