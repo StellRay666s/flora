@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./phoneinput.module.scss";
+import style from "./index.module.scss";
 import InputMask from "react-input-mask";
 
 export default function index() {
