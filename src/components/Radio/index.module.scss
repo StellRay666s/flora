@@ -1,0 +1,44 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fefefe;
+}
+
+.radio {
+  display: none;
+}
+
+.fake {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #fefefe;
+}
+
+.fake::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffc4a3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.radio:checked + .fake::before {
+  opacity: 1;
+}

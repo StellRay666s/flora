@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-import { PhoneInput, CrossClose, Rating, Input, Switch } from "components";
+import { PhoneInput, CrossClose, Rating, Input, Switch, Radio } from "components";
 
 export default function IndexPage() {
   const [name, setName] = useState("");
