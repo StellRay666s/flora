@@ -14,7 +14,6 @@ function App() {
           <Route path="/" element={<IndexPage />} />
         </Routes>
       </Router>
-      <div></div>
     </div>
   );
 }
