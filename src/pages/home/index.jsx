@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-import { PhoneInput, CrossClose, Rating, Input, Switch, Radio } from "components";
+import { PhoneInput, CrossClose, Rating, Input, Switch } from "components";
 
 export default function IndexPage() {
   const [name, setName] = useState("");
@@ -14,7 +14,7 @@ export default function IndexPage() {
       <Input text={"Адресс"} />
       <Input text={"Эл.Почта"} />
       <Input text={"Фамилия"} />
-      <PhoneInput />
+
       <Switch />
     </Fragment>
   );
