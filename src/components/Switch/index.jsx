@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Switch.module.scss";
+import style from "./index.module.scss";
 
 function Switch() {
   const [switchOn, setSwitchOn] = React.useState(true);
