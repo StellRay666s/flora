@@ -1,8 +1,12 @@
 import React from "react";
 
+<<<<<<< HEAD
 /** Icons */
 import StarIcon from "icons/StarIcon";
 import StarIconDisable from "icons/StarIconDisable";
+=======
+import styles from "./index.module.scss";
+>>>>>>> CheckBoxComponent
 
 import styles from "./index.module.scss";
 
