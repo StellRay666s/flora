@@ -10,13 +10,11 @@ export default function IndexPage() {
     <Fragment>
       <PhoneInput value={name} dispatchValue={setName} />
       <Rating />
-
       <CrossClose />
-      {/* <Input text={"Имя"} />
+      <Input text={"Имя"} />
       <Input text={"Адресс"} />
       <Input text={"Эл.Почта"} />
-      <Input text={"Фамилия"} /> */}
-
+      <Input text={"Фамилия"} />
       <Switch />
     </Fragment>
   );
