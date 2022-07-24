@@ -5,7 +5,6 @@ import { PhoneInput, CrossClose, Rating, Input, Switch } from "components";
 export default function IndexPage() {
   const [name, setName] = useState("");
 
-  console.log(name);
   return (
     <Fragment>
       <PhoneInput value={name} dispatchValue={setName} />
