@@ -5,17 +5,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /** Pages */
 import IndexPage from "pages/home";
-import {
-  BagIcon,
-  BoqueteIcon,
-  CreditCartIcon,
-  GiftIcon,
-  InstagramIcons,
-  TelegramIcon,
-  TruckIcon,
-  TwitterIcon,
-} from "icons";
-import { CrossClose, Rating, Input, PhoneInput, Switch } from "components";
 
 function App() {
   return (
@@ -26,22 +15,6 @@ function App() {
         </Routes>
       </Router>
       <div></div>
-      <Rating />
-      <InstagramIcons />
-      <TelegramIcon />
-      <TwitterIcon />
-      <BagIcon />
-      <TruckIcon />
-      <BoqueteIcon />
-      <CreditCartIcon />
-      <GiftIcon />
-      <CrossClose />
-      <Input text={"Имя"} />
-      <Input text={"Адресс"} />
-      <Input text={"Эл.Почта"} />
-      <Input text={"Фамилия"} />
-      <PhoneInput />
-      <Switch />
     </div>
   );
 }
