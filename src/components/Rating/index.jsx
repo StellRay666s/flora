@@ -1,10 +1,9 @@
 import React from "react";
+import styles from "./index.module.scss";
 
 /** Icons */
 import StarIcon from "icons/StarIcon";
 import StarIconDisable from "icons/StarIconDisable";
-
-import styles from "./index.module.scss";
 
 export default function Rating() {
   const [rating, setRating] = React.useState(0);

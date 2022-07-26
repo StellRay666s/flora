@@ -2,12 +2,12 @@ import React from "react";
 import style from "./index.module.scss";
 
 function Radio() {
-  const payloadMethod = ["Наличными", "Apple Pay", "Банковская карта"];
+  const payloadMethods = ["Наличными", "Apple Pay", "Банковская карта"];
 
   return (
     <>
       <div className={style.inputWrapper}>
-        {payloadMethod.map((obj, index) => (
+        {payloadMethods.map((obj, index) => (
           <label className={style.label} key={index}>
             {" "}
             <input
