@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-
 import styles from "./index.module.scss";
 
 export default function Input({ placeholder, value, dispatchValue }) {
