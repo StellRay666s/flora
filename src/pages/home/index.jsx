@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 
 import { PhoneInput, CrossClose, Rating, Input, Switch } from "components";
-import Button from "components/Button";
 
 export default function IndexPage() {
   const [name, setName] = useState("");
@@ -16,8 +15,6 @@ export default function IndexPage() {
       <Input text={"Эл.Почта"} />
       <Input text={"Фамилия"} />
       <Switch />
-      {/* <Button classBtn={"buttonOrder"} text={"Оформить"} />
-      <Button classBtn={"buttonInCart"} text={"Добавить в корзину"} /> */}
     </Fragment>
   );
 }
