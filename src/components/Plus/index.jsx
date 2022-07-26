@@ -1,13 +1,15 @@
 import React from "react";
 import style from "./index.module.scss";
-import plus from "icons/Plus";
+import { Plus } from "icons";
 
-function Plus() {
+function Plusik() {
   return (
     <>
-      <img className={style.svg} src={plus} />
+      <div className={style.svgWrapper}>
+        <Plus />
+      </div>
     </>
   );
 }
 
-export default Plus;
+export default Plusik;
