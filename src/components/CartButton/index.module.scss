@@ -1,0 +1,27 @@
+.circle {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#fefefe, #ffc4a3 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  position: relative;
+  border-radius: 30px;
+
+  .span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 26px;
+    width: 15px;
+    color: white;
+    height: 15px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 10px;
+    background-color: #579faf;
+    bottom: 25px;
+  }
+}
