@@ -1,0 +1,15 @@
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background: linear-gradient(#fefefe, #ffc4a3 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text {
+    color: #fefefe;
+    font-family: "Roboto";
+    font-size: 10px;
+    text-align: center;
+  }
+}
