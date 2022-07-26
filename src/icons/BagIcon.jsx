@@ -3,13 +3,13 @@ import React from "react";
 export default function BagIcon() {
   return (
     <svg
-      width="32px"
-      height="32px"
+      width="23px"
+      height="23px"
       viewBox="0 0 32 32"
       id="i-bag"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      stroke="currentcolor"
+      stroke="white"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
