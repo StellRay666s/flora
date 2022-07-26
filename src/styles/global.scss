@@ -5,3 +5,25 @@ body {
   font-family: "Coworking";
   src: url(./fonts/Coworking.otf);
 }
+
+.buttonOrder {
+  background: darken($color: #ffc4a3, $amount: 3);
+  width: 170px;
+  border-radius: 4px;
+  height: 60px;
+  border: 1px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #fefefe;
+}
+
+.buttonInCart {
+  background: transparent;
+  width: 170px;
+  border-radius: 4px;
+  border: 1px solid #fefefe;
+  height: 60px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #fefefe;
+}
