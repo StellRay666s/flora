@@ -1,17 +1,18 @@
 import React from "react";
-import style from "./index.module.scss";
+import style from "./Switch.module.scss";
 
-function Switch() {
-  const [isValue, setIsValue] = React.useState(true);
-
-  function onClick() {
-    setIsValue(!isValue);
-  }
+function Switch({ value, setValue }) {
+  const onClikcSwitch = () => {
+    setValue(!value);
+  };
 
   return (
     <>
       <div className={style.switchWrapper}>
-        <div onClick={onClick} className={isValue ? style.switch : style.switchOn}></div>
+        <div
+          onClick={() => onClikcSwitch()}
+          className={value ? style.switch : style.switchOn}
+        ></div>
       </div>
     </>
   );
