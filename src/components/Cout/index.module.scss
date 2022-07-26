@@ -1,0 +1,30 @@
+.wrapperCount {
+  width: 100px;
+  margin: 10px 0px 0px 20px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #719da5c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fefefe;
+  gap: 10px;
+
+  .count {
+    font-family: "Roboto";
+    text-align: center;
+    width: 80px;
+    font-size: 15px;
+    font-weight: 100;
+  }
+
+  .click {
+    button {
+      border: 0px;
+      background-color: #719da5c7;
+      color: #fefefe;
+      cursor: pointer;
+    }
+  }
+}
