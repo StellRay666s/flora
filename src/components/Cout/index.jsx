@@ -1,9 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function Count() {
-  const [count, setCount] = React.useState(0);
-
+function Count({ count = 0, setCount = () => {} }) {
   function increment() {
     setCount(count + 1);
   }
@@ -17,8 +15,10 @@ function Count() {
       <div className={style.wrapperCount}>
         <div className={style.count}>{count}</div>
         <div className={style.click}>
-          <button onClick={() => increment()}>+</button>
-          <button disabled={count <= 0 ? true : ""} onClick={() => decrement()}>
+          <button aria-label="Add" onClick={() => increment()}>
+            +
+          </button>
+          <button aria-label="Minus" disabled={count <= 0 ? true : ""} onClick={() => decrement()}>
             -
           </button>
         </div>
