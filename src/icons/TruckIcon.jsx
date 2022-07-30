@@ -3,6 +3,7 @@ import React from "react";
 export default function TrackIcon() {
   return (
     <svg
+      fill="white"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
