@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BagIcon() {
+export default function BagIcon({ fill = "white" }) {
   return (
     <svg
       width="23px"
@@ -9,7 +9,7 @@ export default function BagIcon() {
       id="i-bag"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      stroke="white"
+      stroke={fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
