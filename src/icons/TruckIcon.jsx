@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function TrackIcon() {
+export default function TrackIcon({ fill = "white" }) {
   return (
     <svg
-      fill="white"
+      fill={fill}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

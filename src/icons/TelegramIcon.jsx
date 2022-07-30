@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function TelegramIcon() {
+export default function TelegramIcon({ fill = "white" }) {
   return (
     <svg
-      fill="white"
+      fill={fill}
       width="32px"
       height="32px"
       viewBox="0 0 32 32"

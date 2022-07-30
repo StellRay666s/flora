@@ -1,6 +1,6 @@
 import React from "react";
 
-function Plus() {
+function Plus({ fill = "white" }) {
   return (
     <div>
       <xml version="1.0" encoding="iso-8859-1" />
@@ -9,7 +9,7 @@ function Plus() {
         width={15}
         height={15}
         version="1.1"
-        fill="white"
+        fill={fill}
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsxlink="http://www.w3.org/1999/xlink"

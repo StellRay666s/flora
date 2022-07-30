@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function StarIcon() {
+export default function StarIcon({ fill = "yellow" }) {
   return (
     <svg
-      fill="yellow"
-      background="yellow"
+      fill={fill}
+      background={fill}
       width="32px"
       height="32px"
       viewBox="0 0 32 32"

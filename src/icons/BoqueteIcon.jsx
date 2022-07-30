@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function BoqueteIcon() {
+export default function BoqueteIcon({ fill = "white" }) {
   return (
     <svg
-      fill="white"
+      fill={fill}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
