@@ -3,7 +3,7 @@ import InputMask from "react-input-mask";
 
 import styles from "./index.module.scss";
 
-export default function PhoneInput({ value, dispatchValue }) {
+export default function PhoneInput({ value = "", dispatchValue = () => {} }) {
   /**
    * Change handler
    * @param {React.ChangeEvent<HTMLInputElement>} e
