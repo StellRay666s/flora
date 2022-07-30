@@ -2,7 +2,7 @@ import React from "react";
 import style from "./index.module.scss";
 import { BagIcon } from "icons";
 
-function CartButton({ onClick }) {
+function CartButton({ onClick = () => {} }) {
   return (
     <>
       <button aria-label="Кликни меня бля" className={style.circle}>

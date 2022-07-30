@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function Button({ text, classBtn }) {
+function Button({ children, classBtn = () => {} }) {
   return (
     <>
-      <button className={classBtn}>{text}</button>
+      <button className={classBtn}>{children}</button>
     </>
   );
 }
