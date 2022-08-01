@@ -3,11 +3,9 @@ import style from "./index.module.scss";
 
 function Layout({ children }) {
   return (
-    <>
-      <div className={style.layout}>
-        <div>{children}</div>
-      </div>
-    </>
+    <div className={style.layout}>
+      <div>{children}</div>
+    </div>
   );
 }
 
