@@ -1,10 +1,12 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function Layout() {
+function Layout({ children }) {
   return (
     <>
-      <div className={style.layout}></div>
+      <div className={style.layout}>
+        <div>{children}</div>
+      </div>
     </>
   );
 }
