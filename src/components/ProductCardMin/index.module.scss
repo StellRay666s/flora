@@ -1,0 +1,17 @@
+.cartWrapper {
+  width: 160px;
+  height: 230px;
+  border: 1px solid white;
+  position: relative;
+  border-radius: 100px;
+  margin: 10px;
+  .cart {
+    position: absolute;
+    background-color: white;
+    width: 140px;
+    height: 210px;
+    top: 10px;
+    left: 10px;
+    border-radius: 100px;
+  }
+}
