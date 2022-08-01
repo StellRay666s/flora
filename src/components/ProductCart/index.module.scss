@@ -1,0 +1,65 @@
+.cartWrapper {
+  height: 650px;
+  width: 400px;
+  margin: 20px 20px;
+  display: grid;
+  grid-template-columns: 400px;
+  grid-template-rows: 500px repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  row-gap: 20px;
+
+  .imgBorder {
+    position: relative;
+
+    .border {
+      width: inherit;
+      height: 500px;
+      border: 1px solid white;
+      border-radius: 220px;
+    }
+
+    .img {
+      border-radius: 220px;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: 375px;
+      height: 475px;
+    }
+  }
+
+  .title {
+    font-family: "Roboto";
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 1;
+  }
+
+  .price {
+    font-size: 25px;
+    font-family: "Roboto";
+    color: white;
+  }
+
+  .addBusket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-size: 14px;
+      color: white;
+      font-family: "Roboto";
+    }
+  }
+}
