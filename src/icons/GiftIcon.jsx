@@ -3,7 +3,7 @@ import React from "react";
 export default function GiftIcon({ fill = "white" }) {
   return (
     <svg
-      fill={fill}
+      fill="black"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,8 @@ export default function GiftIcon({ fill = "white" }) {
       x="0px"
       y="0px"
       viewBox="0 0 299.34 299.34"
-      width={32}
-      height={32}
+      width={50}
+      height={50}
       xmlSpace="preserve"
     >
       <g>
