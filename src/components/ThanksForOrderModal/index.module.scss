@@ -1,0 +1,58 @@
+.modalWrapper {
+  width: 650px;
+  height: 560px;
+  background-color: #719da5c7;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  border-radius: 6px;
+  padding: 35px;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 70px 100px 30px 150px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  position: fixed;
+
+  .close {
+    text-align: right;
+    align-self: center;
+  }
+
+  .title {
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .title::before {
+    content: "\2713";
+    color: white;
+  }
+
+  .text {
+    width: 300px;
+    color: white;
+    font-family: "Roboto";
+    font-weight: lighter;
+    line-height: 30px;
+  }
+
+  .description {
+    font-family: "Roboto";
+    color: white;
+    font-weight: normal;
+  }
+
+  .miniCart {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
