@@ -4,7 +4,7 @@ import Logo from "../Logo";
 import CartButton from "components/CartButton";
 import { Link } from "react-scroll";
 
-function Header({ isAuth }) {
+function Header(/**Я бля знаю что тут должен быть проп с авторизацией */) {
   return (
     <div className={style.header}>
       <Logo />
@@ -19,7 +19,11 @@ function Header({ isAuth }) {
           <li>О нас</li>
         </Link>
         <Link>
-          <li>Как сделать заказ</li>
+          <li>Как сделать заказы</li>
+        </Link>
+
+        <Link>
+          <li>Заказ</li>
         </Link>
       </ul>
       <CartButton />
