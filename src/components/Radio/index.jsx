@@ -11,6 +11,7 @@ function Radio() {
           <label className={style.label} key={index}>
             {" "}
             <input
+              /** ??? */
               onClick={() => console.log(index)}
               className={style.radio}
               type="radio"
