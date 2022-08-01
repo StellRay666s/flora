@@ -12,7 +12,7 @@ function ProductCart() {
               <img className={style.img} />
             </div>
           </div>
-          <div className={style.title}>Цветочная композиция роза и гербена</div>
+          <div className={style.title}>Цветочная композиция Роза и гербена</div>
           <span className={style.price}>4 440 руб.</span>
           <div className={style.addBusket}>
             <AddButton />

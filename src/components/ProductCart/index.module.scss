@@ -9,6 +9,8 @@
   grid-row-gap: 0px;
   text-align: center;
   row-gap: 20px;
+  align-items: center;
+  align-self: center;
 
   .imgBorder {
     position: relative;
@@ -38,10 +40,6 @@
     color: white;
     font-size: 18px;
     font-weight: 500;
-
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 1;
   }
 
   .price {
