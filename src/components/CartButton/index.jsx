@@ -5,11 +5,10 @@ import { BagIcon } from "icons";
 function CartButton({ onClick = () => {} }) {
   return (
     <>
-      <button aria-label="Кликни меня бля" className={style.circle}>
+      <button onClick={onClick} title="Cart" aria-label="Cart" className={style.circle}>
         <BagIcon className={style.svg} />
         <span className={style.span}>1</span>
       </button>
-      <></>
     </>
   );
 }

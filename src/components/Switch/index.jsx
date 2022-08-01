@@ -9,7 +9,7 @@ function Switch({ value = false, setValue = () => {} }) {
   return (
     <>
       <div className={style.switchWrapper}>
-        <div onClick={() => onClick()} className={value ? style.switch : style.switchOn}></div>
+        <div onClick={onClick} className={value ? style.switch : style.switchOn}></div>
       </div>
     </>
   );
