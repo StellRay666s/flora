@@ -3,7 +3,6 @@ import React from "react";
 export default function BoqueteIcon({ fill = "white" }) {
   return (
     <svg
-      fill={fill}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +11,9 @@ export default function BoqueteIcon({ fill = "white" }) {
       y="0px"
       viewBox="0 0 512 512"
       xmlSpace="preserve"
-      width={32}
-      height={32}
+      width={50}
+      height={50}
+      fill="black"
     >
       <g>
         <g>
