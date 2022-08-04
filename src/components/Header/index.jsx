@@ -4,7 +4,7 @@ import Logo from "../Logo";
 import CartButton from "components/CartButton";
 import { Link } from "react-scroll";
 
-function Header(/**Я бля знаю что тут должен быть проп с авторизацией */) {
+function Header() {
   return (
     <div className={style.header}>
       <Logo />
@@ -23,7 +23,7 @@ function Header(/**Я бля знаю что тут должен быть про
         </Link>
 
         <Link>
-          <li>Заказ</li>
+          <li>Заказы</li>
         </Link>
       </ul>
       <CartButton />
