@@ -1,0 +1,38 @@
+.wrapper {
+  width: 350px;
+  height: 450px;
+  border: 1px solid white;
+  border-radius: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  h4 {
+    text-align: center;
+    width: 190px;
+    display: -webkit-box;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: white;
+  }
+
+  p {
+    font-weight: 200;
+    color: white;
+    width: 240px;
+    text-align: center;
+    font-family: "Roboto";
+  }
+
+  .iconBack {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #719da5c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
