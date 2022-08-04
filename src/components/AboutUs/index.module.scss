@@ -1,11 +1,13 @@
 .logo {
   text-align: center;
 }
+
 .contentWrapper {
   display: flex;
   height: 600px;
   align-items: center;
   position: relative;
+
   .text {
     margin-left: 160px;
     width: 500px;
@@ -14,6 +16,7 @@
     font-size: 20px;
     color: white;
   }
+
   .girlWrapper {
     width: 900px;
     position: absolute;
