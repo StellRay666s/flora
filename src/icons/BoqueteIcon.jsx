@@ -3,7 +3,6 @@ import React from "react";
 export default function BoqueteIcon({ color, height, width }) {
   return (
     <svg
-      fill="black"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
