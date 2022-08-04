@@ -3,7 +3,7 @@ import React from "react";
 export default function CreditCartIcon({ color }) {
   return (
     <svg
-      fill={color}
+      fill="black"
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
