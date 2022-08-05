@@ -7,7 +7,7 @@ function OrderGuideCard({ title, text, icon }) {
     <>
       <div className={style.wrapper}>
         <div className={style.iconBack}>{icon}</div>
-        <h4>Выбираете цветы которые хотите купить</h4>
+        <h4>{title}</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic deleniti possimus maxime
           accusantium consectetur voluptates labore culpa fugit, rem inventore ut magni quos placeat
