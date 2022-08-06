@@ -2,14 +2,14 @@ import React from "react";
 import style from "./index.module.scss";
 import AddButton from "components/AddButton";
 
-function ProductCart({ price, title }) {
+function ProductCart({ price = 0, title = "", image = "", alt = "" }) {
   return (
     <>
       <div className={style.wrapper}>
         <div className={style.cartWrapper}>
           <div className={style.imgBorder}>
             <div className={style.border}>
-              <img className={style.img} />
+              <img src={image} alt={alt} className={style.img} />
             </div>
           </div>
           <div className={style.title}>{title}</div>

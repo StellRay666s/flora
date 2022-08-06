@@ -9,9 +9,7 @@ function Radio() {
       <div className={style.inputWrapper}>
         {payloadMethods.map((obj, index) => (
           <label className={style.label} key={index}>
-            {" "}
             <input
-              /** ??? */
               onClick={() => console.log(index)}
               className={style.radio}
               type="radio"
