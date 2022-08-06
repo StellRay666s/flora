@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BoqueteIcon({ fill = "white" }) {
+export default function BoqueteIcon({ color, height, width }) {
   return (
     <svg
       version="1.1"

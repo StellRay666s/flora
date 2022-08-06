@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CreditCartIcon({ fill = "white" }) {
+export default function CreditCartIcon({ color }) {
   return (
     <svg
       fill="black"

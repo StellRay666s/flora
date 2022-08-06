@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function H1({ valueБ, children }) {
+function H1({ children }) {
   return <h1 className={style.H1}>{children}</h1>;
 }
 
