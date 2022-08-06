@@ -3,11 +3,9 @@ import style from "./index.module.scss";
 
 function TagNew() {
   return (
-    <>
-      <div className={style.circle}>
-        <span className={style.text}>NEW</span>
-      </div>
-    </>
+    <div className={style.circle}>
+      <span className={style.text}>NEW</span>
+    </div>
   );
 }
 
