@@ -8,6 +8,7 @@ import App from "./App";
 import "styles/global.scss";
 import "styles/reset.css";
 import "styles/variables.scss";
+import "styles/buttons.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
