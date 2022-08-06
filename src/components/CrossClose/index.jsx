@@ -3,13 +3,14 @@ import styles from "./index.module.scss";
 
 export default function CrossClose({ onClick = () => {} }) {
   return (
-    <button onClick={onClick} aria-label="Закрыть" title="Закрыть">
+    <button className={styles.button} onClick={onClick} aria-label="Закрыть" title="Закрыть">
       <svg
         className={styles.svg}
-        width="24px"
-        height="24px"
+        width="30px"
+        height="30px"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
+        fill="white"
       >
         <path
           fillRule="evenodd"

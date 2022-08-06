@@ -1,0 +1,25 @@
+.header {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .barList {
+    display: flex;
+    align-items: center;
+    gap: 39px;
+
+    li {
+      color: white;
+      font-family: "Roboto";
+      font-size: 20px;
+      font-weight: 200;
+      cursor: pointer;
+    }
+    
+    li:hover {
+      font-weight: 500;
+    }
+  }
+}

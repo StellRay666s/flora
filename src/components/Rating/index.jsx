@@ -5,8 +5,7 @@ import styles from "./index.module.scss";
 import StarIcon from "icons/StarIcon";
 import StarIconDisable from "icons/StarIconDisable";
 
-export default function Rating() {
-  const [rating, setRating] = React.useState(0);
+export default function Rating({ rating = 0, setRating = () => {} }) {
   const [hover, setHover] = React.useState(0);
 
   return (

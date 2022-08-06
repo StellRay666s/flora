@@ -11,8 +11,8 @@ export default function CreditCartIcon({ color }) {
       x="0px"
       y="0px"
       viewBox="0 0 485.231 485.231"
-      width={32}
-      height={32}
+      width={50}
+      height={50}
       xmlSpace="preserve"
     >
       <g>

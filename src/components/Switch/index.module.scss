@@ -4,6 +4,7 @@
   border-radius: 15px;
   border: 1px solid black;
   position: relative;
+
   .switch {
     position: absolute;
     cursor: pointer;
@@ -15,6 +16,7 @@
     left: 5px;
     transition: 0.4s all ease-in-out;
   }
+  
   .switchOn {
     position: absolute;
     cursor: pointer;

@@ -1,0 +1,59 @@
+.footer {
+  background-color: #719da5c7;
+
+  .footerWrapper {
+    margin: 0 auto;
+    width: 1440px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 20px;
+
+    .logo {
+      width: 200px;
+      line-height: 20px;
+    }
+
+    .wrapperList {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      margin-bottom: 50px;
+
+      .company {
+        bottom: 20px;
+        font-size: 17px;
+        font-family: "Roboto";
+        color: white;
+        font-weight: 100;
+        line-height: 30px;
+      }
+    }
+
+    .lastBlock {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+      .socialNetwort {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      
+      .numbers {
+        color: white;
+        font-family: "Roboto";
+        font-size: 20px;
+      }
+    }
+  }
+}
