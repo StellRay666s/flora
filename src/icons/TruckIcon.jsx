@@ -1,17 +1,17 @@
 import React from "react";
 
-export default function TrackIcon({ fill = "white" }) {
+export default function TrackIcon({ fill = "black", width = 50, height = 50 }) {
   return (
     <svg
-      fill="black"
+      fill={fill}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      width={50}
-      height={50}
+      width={width}
+      height={height}
       viewBox="0 0 491.1 491.1"
       xmlSpace="preserve"
     >
