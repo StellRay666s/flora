@@ -3,15 +3,15 @@ import React from "react";
 export default function TrackIcon({ fill = "white" }) {
   return (
     <svg
-      fill={fill}
+      fill="black"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      width={32}
-      height={32}
+      width={50}
+      height={50}
       viewBox="0 0 491.1 491.1"
       xmlSpace="preserve"
     >
