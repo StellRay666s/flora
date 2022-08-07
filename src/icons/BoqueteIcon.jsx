@@ -11,9 +11,9 @@ export default function BoqueteIcon({ color, height, width }) {
       y="0px"
       viewBox="0 0 512 512"
       xmlSpace="preserve"
-      width={50}
-      height={50}
-      fill="black"
+      width={width}
+      height={height}
+      fill={color}
     >
       <g>
         <g>
