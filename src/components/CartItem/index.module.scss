@@ -1,0 +1,49 @@
+.wrapperItem {
+  background-color: white;
+  width: 550px;
+  height: 150px;
+  margin: 120px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  font-family: "Roboto";
+
+  .img {
+    width: 80px;
+    height: 100px;
+    border: 1px solid black;
+    justify-self: center;
+    border-radius: 100px;
+  }
+
+  .countTittleWrapper {
+    h3 {
+      color: black;
+      line-height: 30px;
+      font-weight: 600;
+      width: 170px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+
+  .childCount {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .price {
+    text-align: center;
+    font-weight: 600;
+  }
+}
