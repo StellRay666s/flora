@@ -1,3 +1,6 @@
+h1 {
+  text-align: center;
+}
 .cartWrapper {
   height: 650px;
   width: 400px;
@@ -7,22 +10,24 @@
   grid-template-rows: 500px repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  justify-items: center;
   text-align: center;
-  row-gap: 20px;
+  row-gap: 0px;
   align-items: center;
-  align-self: center;
 
   .imgBorder {
     position: relative;
 
     .border {
-      width: inherit;
-      height: 500px;
+      width: 315px;
+      justify-self: center;
+      height: 420px;
       border: 1px solid white;
       border-radius: 220px;
     }
 
     .img {
+      justify-self: center;
       border-radius: 220px;
       background-color: white;
       top: 50%;
@@ -30,15 +35,22 @@
       right: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
-      width: 375px;
-      height: 475px;
+      width: 285px;
+      height: 385px;
     }
   }
 
   .title {
+    margin-bottom: 20px;
     font-family: "Roboto";
     color: white;
     font-size: 18px;
+    display: -webkit-box;
+    width: 200px;
+    line-height: 50px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-weight: 500;
   }
 
