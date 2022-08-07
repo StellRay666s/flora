@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function CreditCartIcon({ color }) {
+export default function CreditCartIcon({ color, height, width }) {
   return (
     <svg
-      fill="black"
+      fill={color}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,8 @@ export default function CreditCartIcon({ color }) {
       x="0px"
       y="0px"
       viewBox="0 0 485.231 485.231"
-      width={50}
-      height={50}
+      width={width}
+      height={height}
       xmlSpace="preserve"
     >
       <g>

@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function BagIcon({ fill = "white" }) {
+export default function BagIcon({ fill = "white", width, height }) {
   return (
     <svg
-      width="23px"
-      height="23px"
+      width={width}
+      height={height}
       viewBox="0 0 32 32"
       id="i-bag"
       xmlns="http://www.w3.org/2000/svg"
