@@ -6,3 +6,4 @@ function initializeInterceptor() {
     return config;
   });
 }
+export { initializeInterceptor };
