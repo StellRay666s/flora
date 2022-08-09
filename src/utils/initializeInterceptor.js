@@ -6,15 +6,12 @@ function initializeInterceptor() {
     config.headers.Authorization = window.localStorage.getItem("token");
     return config;
   });
-}
-
-function postRefreshToken() {
-  axiosClient.interceptors.use(
-    async function (respons) {
-      return respons;
+  axiosClient.interceptors.response.use(
+    async function (response) {
+      return response;
     },
     async function (error) {
-      if (error.respons.status !== 401) {
+      if (error.response.status !== 401) {
         return new Promise((resolve, reject) => {
           reject(error);
         });
@@ -52,19 +49,6 @@ function postRefreshToken() {
             reject(error);
           });
       });
-    }
-  );
-
-  axiosClient.interceptors.request.use(
-    async function (config) {
-      /** если токен есть в стораге то мы его суем в запрос */
-      if (localStorage.getItem("STORAGE_ACCESS_TOKEN")) {
-        config.headers.Authorization = `Bearer ${localStorage.getItem("STORAGE_ACCESS_TOKEN")}`;
-      }
-      return config;
-    },
-    async function (error) {
-      return Promise.reject(error);
     }
   );
 }
