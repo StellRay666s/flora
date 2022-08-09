@@ -5,6 +5,6 @@ async function postCart(count, productId) {
     count: count,
     productId: productId,
   });
-  console.log(response);
+  return response;
 }
 export { postCart };
