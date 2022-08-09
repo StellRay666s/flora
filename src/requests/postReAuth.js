@@ -1,9 +1,8 @@
 import { axiosClient } from "utils/axiosClient";
 
-async function postReAuth(accessToken, strategy) {
+async function postReAuth(accessToken) {
   const response = await axiosClient.post("/authentication", {
     accessToken: accessToken,
-    strategy: strategy,
   });
   return response;
 }
