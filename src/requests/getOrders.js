@@ -1,7 +1,8 @@
 import { axiosClient } from "utils/axiosClient";
 
 async function getOrders() {
-  const respons = axiosClient.get("/orders");
+  const respons = await axiosClient.get("/orders");
+  return respons;
 }
 
 export { getOrders };
