@@ -1,9 +1,11 @@
 import axios from "axios";
 import { axiosClient } from "./axiosClient";
 
+const ACCESS_TOKEN_KEY = "token";
+
 function initializeInterceptor() {
   axiosClient.interceptors.request.use(config => {
-    config.headers.Authorization = window.localStorage.getItem("token");
+    config.headers.Authorization = window.localStorage.getItem(ACCESS_TOKEN_KEY);
     return config;
   });
   axiosClient.interceptors.response.use(
@@ -17,27 +19,24 @@ function initializeInterceptor() {
         });
       }
       const config = error.config;
+      const token = window.localStorage.getItem(ACCESS_TOKEN_KEY);
 
-      const refreshToken = localStorage.getItem("STORAGE_REFRESH_TOKEN");
-
-      if (!refreshToken) {
+      if (!token) {
         return Promise.reject(error);
       }
 
       let res;
       try {
-        res = await axios.post(`${process.env.REACT_APP_API_KEY}/authentication/refresh`, {
-          refreshToken,
+        res = await axios.post(`${process.env.REACT_APP_API_KEY}/authentication/`, {
+          accessToken: token,
+          strategy: "jwt",
         });
       } catch (err) {
         console.log(err);
-        localStorage.removeItem("STORAGE_REFRESH_TOKEN");
-        localStorage.removeItem("STORAGE_ACCESS_TOKEN");
+        localStorage.removeItem(ACCESS_TOKEN_KEY);
       }
-      config.headers.Authorization = `Bearer ${res.data.accessToken}`;
-
-      localStorage.setItem("STORAGE_REFRESH_TOKEN", res.data.refreshToken);
-      localStorage.setItem("STORAGE_ACCESS_TOKEN", res.data.accessToken);
+      config.headers.Authorization = `${res.data.accessToken}`;
+      localStorage.setItem(ACCESS_TOKEN_KEY, res.data.accessToken);
 
       return new Promise((resolve, reject) => {
         axios
