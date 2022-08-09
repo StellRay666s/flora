@@ -3,7 +3,7 @@ import style from "./index.module.scss";
 import ProductCart from "components/ProductCart";
 import H1 from "components/H1";
 
-function CatalogBlock() {
+function CatalogBlock({ data }) {
   return (
     <>
       {" "}
@@ -11,12 +11,9 @@ function CatalogBlock() {
         <H1>КАТАЛОГ</H1>
       </h1>
       <div className={style.wrapperCarts}>
-        <ProductCart title={"Букет в горшке Тюльпаны и розы"} />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
+        {data.map(obj => (
+          <ProductCart {...obj} />
+        ))}
       </div>
     </>
   );
