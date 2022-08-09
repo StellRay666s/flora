@@ -1,9 +1,10 @@
-import H3 from "components/H3";
 import React from "react";
+
+import H3 from "components/H3";
 import style from "./index.module.scss";
 import Count from "components/Cout";
 
-function CartItem() {
+function CartItem({ title, price, img }) {
   return (
     <>
       <div className={style.wrapperItem}>
