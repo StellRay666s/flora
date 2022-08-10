@@ -4,7 +4,7 @@ import React, { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 /** Pages */
-import IndexPage from "pages/home";
+import { IndexPage, CartPage, ProductPage, AuthorizationPage, RegistrationPage } from "pages";
 
 export default function Router() {
   return (
@@ -12,6 +12,10 @@ export default function Router() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<IndexPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/authorization" element={<AuthorizationPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
         </Routes>
       </BrowserRouter>
     </Fragment>
