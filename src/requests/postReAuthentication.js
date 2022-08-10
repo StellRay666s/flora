@@ -1,6 +1,6 @@
 import { axiosClient } from "utils/axiosClient";
 
-async function postReAuth(accessToken) {
+async function postReAuthentication(accessToken) {
   const response = await axiosClient.post("/authentication", {
     accessToken: accessToken,
     strategy: "jwt",
@@ -8,4 +8,4 @@ async function postReAuth(accessToken) {
   return response;
 }
 
-export { postReAuth };
+export { postReAuthentication };
