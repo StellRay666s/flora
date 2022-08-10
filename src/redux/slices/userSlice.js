@@ -4,7 +4,7 @@ const initialState = {
   user: {
     email: null,
     password: null,
-    adress: null,
+    address: null,
     phone: null,
     name: null,
   },
@@ -13,7 +13,14 @@ const initialState = {
 export const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {},
+  reducers: {
+    setUser: (state, { payload }) => {
+      state.user = { ...initialState, ...payload };
+    },
+    clearUser: state => {
+      state.user = initialState;
+    },
+  },
 });
 
 export default userSlice.reducer;
