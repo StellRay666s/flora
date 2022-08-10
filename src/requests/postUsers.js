@@ -1,10 +1,10 @@
 import { axiosClient } from "utils/axiosClient";
 
-async function postUsers(email, password, adress, phone, name) {
+async function postUsers(email, password, address, phone, name) {
   const response = await axiosClient.post("/users", {
     email: email,
     password: password,
-    adress: adress,
+    address: address,
     phone: phone,
     name: name,
   });
