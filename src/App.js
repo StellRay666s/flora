@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Notific from "components/Notific";
 
 /** Redux */
 import { Provider } from "react-redux";
@@ -10,6 +11,7 @@ import Router from "router";
 function App() {
   return (
     <Provider store={store}>
+      <Notific />
       <Fragment>
         <Router />
       </Fragment>
