@@ -1,6 +1,6 @@
 import { axiosClient } from "utils/axiosClient";
 
-async function postCart(count, productId) {
+async function postCart(count = 0, productId = "") {
   const response = await axiosClient.post("/cart", {
     count: count,
     productId: productId,
