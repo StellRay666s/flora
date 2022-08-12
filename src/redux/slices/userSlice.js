@@ -1,4 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { postReAuth } from "requests/postReAuth";
+
+export const fetchUserData = createAsyncThunk("user/fetchUserData", async () => {
+  const accessToken = window.localStorage.getItem("accessToken");
+  const { data } = await postReAuth(accessToken);
+
+  return data.user;
+});
 
 const initialState = {
   user: {
@@ -20,6 +28,20 @@ export const userSlice = createSlice({
     },
     clearUser: state => {
       state.user = initialState;
+    },
+  },
+  extraReducers: {
+    [fetchUserData.pending]: state => {
+      state.user = [];
+      state.status = "loading";
+    },
+    [fetchUserData.fulfilled]: (state, action) => {
+      state.user = action.payload;
+      state.status = "loaded";
+    },
+    [fetchUserData.rejected]: state => {
+      state.user = null;
+      state.status = "error";
     },
   },
 });
