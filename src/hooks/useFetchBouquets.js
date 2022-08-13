@@ -1,22 +1,27 @@
 import { useState, useEffect } from "react";
 import { getBouquets } from "requests/getBouquets";
+import { useNotification } from "./useNotification";
 
 function useFetchBouquets() {
   const [isLoading, setIsLoading] = useState(false);
-  const [item, setItem] = useState([]);
+  const [bouquets, setBouquets] = useState([]);
+  const notify = useNotification();
 
-  console.log(item);
   useEffect(() => {
     setIsLoading(false);
-    async function getData() {
-      const response = await getBouquets();
-      setItem(response.data.data);
-      setIsLoading(true);
-    }
-    getData();
+    (async function getData() {
+      try {
+        const response = await getBouquets();
+        setBouquets(response.data.data);
+        setIsLoading(true);
+      } catch (error) {
+        notify("Ошибка при загрузке цветов", false);
+        setIsLoading(false);
+      }
+    })();
   }, []);
 
-  return [item, isLoading];
+  return { bouquets, isLoading };
 }
 
 export { useFetchBouquets };
