@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { postReAuth } from "requests/postReAuth";
+import { postReAuthentication } from "requests/postReAuthentication";
 
 export const fetchUserData = createAsyncThunk("user/fetchUserData", async () => {
   const accessToken = window.localStorage.getItem("accessToken");
-  const { data } = await postReAuth(accessToken);
+  const { data } = await postReAuthentication(accessToken);
 
   return data.user;
 });
