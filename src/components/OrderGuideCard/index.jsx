@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./index.module.scss";
-import { BoqueteIcon } from "icons";
 
 function OrderGuideCard({ title, icon }) {
   return (
