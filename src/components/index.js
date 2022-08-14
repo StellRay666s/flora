@@ -4,4 +4,4 @@ export { default as Input } from "./Input";
 export { default as PhoneInput } from "./PhoneInput";
 export { default as Switch } from "./Switch";
 export { default as H2 } from "./H2";
-export { default as ProductCartMin } from "./ProductCardMin";
+export { default as ProductCardMin } from "./ProductCardMin";

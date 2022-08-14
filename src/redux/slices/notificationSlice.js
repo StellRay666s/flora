@@ -14,11 +14,9 @@ export const notificationSlice = createSlice({
   reducers: {
     setNotification(state, action) {
       state.data = action.payload;
-      console.log(state);
     },
     hiddenNotification(state, action) {
       state.data = action.payload;
-      console.log(state);
     },
   },
 });

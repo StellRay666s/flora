@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function Radio() {
+function SelectPayment({ value, setValue }) {
   const payloadMethods = ["Наличными", "Apple Pay", "Банковская карта"];
 
   return (
@@ -9,12 +9,7 @@ function Radio() {
       <div className={style.inputWrapper}>
         {payloadMethods.map((obj, index) => (
           <label className={style.label} key={index}>
-            <input
-              onClick={() => console.log(index)}
-              className={style.radio}
-              type="radio"
-              name="cash"
-            />
+            <input className={style.radio} type="radio" name="cash" />
             <span className={style.fake}></span>
             {obj}
           </label>
@@ -24,4 +19,4 @@ function Radio() {
   );
 }
 
-export default Radio;
+export default SelectPayment;

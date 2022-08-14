@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
-import { CrossClose, H2, ProductCartMin } from "components";
+import { CrossClose, H2, ProductCardMin } from "components";
 
 function ThanksForOrderModal({ isOpen, setIsOpen }) {
   return (
@@ -20,10 +20,10 @@ function ThanksForOrderModal({ isOpen, setIsOpen }) {
             <p>Смотрите так же:</p>
           </div>
           <div className={style.miniCart}>
-            <ProductCartMin />
-            <ProductCartMin />
-            <ProductCartMin />
-            <ProductCartMin />
+            <ProductCardMin />
+            <ProductCardMin />
+            <ProductCardMin />
+            <ProductCardMin />
           </div>
         </div>
       ) : (
