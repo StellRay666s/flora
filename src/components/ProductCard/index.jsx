@@ -2,7 +2,7 @@ import React from "react";
 import style from "./index.module.scss";
 import AddButton from "components/AddButton";
 
-function ProductCart({ price = 0, title = "", image = "", alt = "" }) {
+function ProductCard({ price = 0, title = "", image = "", alt = "" }) {
   return (
     <>
       <div className={style.wrapper}>
@@ -24,4 +24,4 @@ function ProductCart({ price = 0, title = "", image = "", alt = "" }) {
   );
 }
 
-export default ProductCart;
+export default ProductCard;

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import Logo from "components/Logo";
 import H3 from "components/H3";
-import PaymentSystems from "components/PaymentSystem";
+import PaymentSystems from "components/PaymentSystems";
 import { InstagramIcons, TelegramIcon, TwitterIcon } from "icons";
 
 function Footer() {

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
-import ProductCart from "components/ProductCart";
+import ProductCard from "components/ProductCard";
 import H1 from "components/H1";
 
 function CatalogBlock({ data }) {
@@ -12,7 +12,7 @@ function CatalogBlock({ data }) {
       </h1>
       <div className={style.wrapperCarts}>
         {data.map(obj => (
-          <ProductCart {...obj} />
+          <ProductCard {...obj} />
         ))}
       </div>
     </>
