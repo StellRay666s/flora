@@ -12,8 +12,9 @@ function useFetchBouquets() {
     (async function getData() {
       try {
         const response = await getBouquets();
-        setBouquets(response.data.data);
+        const bouquets = response.data.data;
         setIsLoading(true);
+        setBouquets(bouquets);
       } catch (error) {
         notify("Ошибка при загрузке цветов", false);
         setIsLoading(false);
