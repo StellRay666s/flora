@@ -4,12 +4,17 @@
   grid-template-rows: 120px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  width: 1400px;
+  max-width: 1400px;
   margin: 20px auto;
   height: 120px;
   border-radius: 6px;
   background-color: white;
   align-items: center;
+
+  @media screen and (min-width: 1360px) {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
 
   .truck {
     display: flex;

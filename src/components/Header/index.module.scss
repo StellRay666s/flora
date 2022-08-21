@@ -1,8 +1,8 @@
 .header {
-  width: 1400px;
+  width: inherit;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   .barList {
@@ -17,7 +17,7 @@
       font-weight: 200;
       cursor: pointer;
     }
-    
+
     li:hover {
       font-weight: 500;
     }
