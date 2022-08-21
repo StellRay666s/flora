@@ -3,12 +3,12 @@ import style from "./index.module.scss";
 
 import Logo from "components/Logo";
 
-function Auth({ children }) {
+function AuthLayout({ children }) {
   return (
     <div>
       <div className={style.wrapper}>
         {<div className={style.wrapperInput}>{children}</div>}
-        <div className={style.Logo}>
+        <div className={style.logo}>
           <h1>
             {" "}
             <Logo />
@@ -19,4 +19,4 @@ function Auth({ children }) {
   );
 }
 
-export default Auth;
+export default AuthLayout;

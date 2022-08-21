@@ -4,7 +4,7 @@ import style from "./index.module.scss";
 import { H2, Input } from "components";
 
 import Button from "components/Button";
-import Auth from "layouts/AuthLayout";
+import AuthLayout from "layouts/AuthLayout";
 
 function AuthorizationPage() {
   const [email, setEmail] = React.useState("");
@@ -12,7 +12,7 @@ function AuthorizationPage() {
 
   return (
     <>
-      <Auth>
+      <AuthLayout>
         <h2>
           {" "}
           <H2>АВТОРИЗАЦИЯ</H2>
@@ -28,7 +28,7 @@ function AuthorizationPage() {
           <p className={style.reg}>Зарегистрироваться</p>
           <p className={style.home}>На Главную</p>
         </div>
-      </Auth>
+      </AuthLayout>
     </>
   );
 }
