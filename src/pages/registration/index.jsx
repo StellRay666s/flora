@@ -17,7 +17,7 @@ function RegistrationPage() {
       <AuthLayout>
         <h2>
           {" "}
-          <H2>Регистрация</H2>
+          <H2>РЕГИСТРАЦИЯ</H2>
         </h2>
         <div>
           <Input placeholder="Имя" value={name} dispatchValue={setName} />
