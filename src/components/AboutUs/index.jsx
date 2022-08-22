@@ -9,11 +9,21 @@ function AboutUs() {
         <H1>О НАС</H1>
       </div>
       <div className={style.contentWrapper}>
-        <p className={style.text}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
-          saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora perspiciatis
-          tenetur quam possimus excepturi animi sint quis?
-        </p>
+        <div className={style.tetxBlock}>
+          <p className={style.text}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
+            saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora
+            perspiciatis tenetur quam possimus excepturi animi sint quis?
+          </p>
+          <p className={style.text}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
+            saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora
+          </p>
+          <p className={style.text}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
+            saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora
+          </p>
+        </div>
         <div className={style.girlWrapper}>
           <div className={style.img}></div>
         </div>

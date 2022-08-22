@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   .barList {
     display: flex;
@@ -11,15 +12,17 @@
     gap: 39px;
 
     li {
+      opacity: 0.7;
       color: white;
       font-family: "Roboto";
       font-size: 20px;
-      font-weight: 200;
+      font-weight: 400;
       cursor: pointer;
     }
 
     li:hover {
-      font-weight: 500;
+      opacity: 1;
+      transition: 0.3s;
     }
   }
 }
