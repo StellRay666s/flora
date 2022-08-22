@@ -1,6 +1,6 @@
 .logo {
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .contentWrapper {
@@ -9,33 +9,38 @@
   height: 600px;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
   position: relative;
+
+  .tetxBlock {
+    display: grid;
+  }
 
   .text {
     margin-left: 160px;
-    width: 500px;
+    width: 600px;
     line-height: 30px;
     font-family: "Roboto";
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     font-weight: 100;
+    margin-bottom: 20px;
   }
 
   .girlWrapper {
-    width: 700px;
+    width: 50vw;
     position: absolute;
     border: 1px solid white;
-    height: 500px;
+    height: 600px;
     right: -15px;
-    border-bottom-left-radius: 250px;
-    border-top-left-radius: 250px;
+    border-bottom-left-radius: 280px;
+    border-top-left-radius: 320px;
 
     .img {
       border-bottom-left-radius: 250px;
-      border-top-left-radius: 250px;
-      width: 670px;
-
-      height: 480px;
+      border-top-left-radius: 290px;
+      width: 48vw;
+      height: 550px;
       position: absolute;
       top: 50%;
       left: 51%;

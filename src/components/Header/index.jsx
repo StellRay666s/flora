@@ -7,7 +7,9 @@ import { Link } from "react-scroll";
 function Header() {
   return (
     <div className={style.header}>
-      <Logo />
+      <div className={style.logo}>
+        <Logo />
+      </div>
       <ul className={style.barList}>
         <Link>
           <li>Главная</li>

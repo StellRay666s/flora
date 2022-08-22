@@ -6,7 +6,7 @@ function CartButton({ onClick = () => {} }) {
   return (
     <>
       <button onClick={onClick} title="Cart" aria-label="Cart" className={style.circle}>
-        <BagIcon className={style.svg} />
+        <BagIcon width={25} className={style.svg} />
         <span className={style.span}>1</span>
       </button>
     </>
