@@ -7,7 +7,7 @@ function Advantages() {
     <div className={style.advantaWrapper}>
       <div className={style.truck}>
         <TruckIcon fill="black" width={40} height={40} />
-        <div>
+        <div className={style.title_description}>
           <h4>Бесплатная доставка по всему городу</h4>
           <span>от 500 руб</span>
         </div>
