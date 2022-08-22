@@ -1,32 +1,32 @@
 .advantaWrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 360px);
   grid-template-rows: 120px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  max-width: 1400px;
   margin: 20px auto;
   height: 120px;
   border-radius: 6px;
   background-color: white;
   align-items: center;
 
-  @media screen and (min-width: 1360px) {
-    max-width: 1200px;
-    margin: 0px auto;
-  }
-
   .truck {
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    .title_description {
+      width: 160px;
+    }
   }
+
   h4 {
-    width: 200px;
+    width: 185px;
     font-weight: 500;
     font-family: "Roboto";
     font-size: 15px;
   }
+
   span {
     line-height: 20px;
     font-family: "Roboto";
