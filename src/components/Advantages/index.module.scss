@@ -9,27 +9,4 @@
   border-radius: 6px;
   background-color: white;
   align-items: center;
-
-  .truck {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-    .title_description {
-      width: 160px;
-    }
-  }
-
-  h4 {
-    width: 185px;
-    font-weight: 500;
-    font-family: "Roboto";
-    font-size: 15px;
-  }
-
-  span {
-    line-height: 20px;
-    font-family: "Roboto";
-    font-size: 13px;
-  }
 }

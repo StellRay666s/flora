@@ -27,3 +27,28 @@
   width: 310px;
   margin-top: 7px;
 }
+
+.buttonInCartProd {
+  cursor: pointer;
+  background: transparent;
+  width: 270px;
+  border-radius: 4px;
+  border: 1px solid #fefefe;
+  height: 90px;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #fefefe;
+}
+
+.buttonOrderProd {
+  background: darken($color: #ffc4a3, $amount: 3);
+  width: 270px;
+  border-radius: 4px;
+  height: 90px;
+  border: 1px;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #fefefe;
+  cursor: pointer;
+  font-weight: 500;
+}

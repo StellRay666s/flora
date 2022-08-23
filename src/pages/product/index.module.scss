@@ -1,0 +1,48 @@
+.product_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 700px);
+  grid-template-rows: 1fr;
+  grid-column-gap: 100px;
+  grid-row-gap: 0px;
+  margin-top: 60px;
+  align-self: center;
+}
+.truck {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .title_description {
+    width: 160px;
+  }
+
+  h4 {
+    width: 185px;
+    font-weight: 500;
+    font-family: "Roboto";
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  span {
+    line-height: 20px;
+    font-family: "Roboto";
+    font-size: 13px;
+  }
+}
+
+.advantages {
+  width: 1200px;
+  margin: 130px auto 0px auto;
+}
+
+.others_title {
+  font-size: 30px;
+  width: 330px;
+  line-height: 50px;
+}
+
+.wrapper_card {
+  display: flex;
+  justify-content: space-between;
+}
