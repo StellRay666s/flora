@@ -1,0 +1,40 @@
+.wrapper {
+  display: grid;
+  row-gap: 50px;
+
+  .border {
+    width: 650px;
+    height: 850px;
+    border: 1px solid white;
+    border-radius: 440px;
+    position: relative;
+
+    .image {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      width: 610px;
+      height: 810px;
+      background-color: white;
+      border-radius: 440px;
+    }
+  }
+
+  .rating_sizes {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    line-height: 30px;
+    column-gap: 60px;
+    align-items: center;
+
+    .sizes {
+      display: grid;
+      color: white;
+      font-family: "Roboto";
+      font-size: 18px;
+      font-weight: 100;
+    }
+  }
+}

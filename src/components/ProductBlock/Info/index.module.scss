@@ -1,0 +1,41 @@
+.block_text_btn {
+  display: grid;
+  grid-template-rows: 50px, 50px;
+  gap: 60px;
+
+  .title {
+    font-size: 85px;
+    width: 538px;
+    letter-spacing: 13px;
+    line-height: 110px;
+  }
+
+  .under_title {
+    font-size: 33px;
+  }
+
+  .price {
+    font-size: 50px;
+    font-family: "Roboto";
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 600;
+  }
+
+  .title_description {
+    font-size: 30px;
+  }
+
+  .description {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+  }
+}
