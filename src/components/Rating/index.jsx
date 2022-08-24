@@ -5,9 +5,12 @@ import styles from "./index.module.scss";
 import StarIcon from "icons/StarIcon";
 import StarIconDisable from "icons/StarIconDisable";
 
-export default function Rating({ rating = 0, setRating = () => {} }) {
-  const [hover, setHover] = React.useState(0);
-
+export default function Rating({
+  rating = 0,
+  setRating = () => {},
+  hover = 0,
+  setHover = () => {},
+}) {
   return (
     <div className={styles.starRating}>
       {[...Array(5)].map((_, index) => {

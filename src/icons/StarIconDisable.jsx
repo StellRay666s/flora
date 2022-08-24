@@ -4,7 +4,7 @@ export default function StarIconDisable() {
   return (
     <svg
       background="red"
-      fill="black"
+      fill="white"
       width="32px"
       height="32px"
       viewBox="0 0 32 32"
