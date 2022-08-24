@@ -4,13 +4,16 @@ import MainLayout from "layouts/MainLayout";
 
 import Info from "components/ProductBlock/Info";
 import Image from "components/ProductBlock/Image";
-import { Advantages, H3, ProductCard } from "components";
+import { Advantages, H3, Header, ProductCard } from "components";
 import { TruckIcon, BoqueteIcon, CreditCartIcon, GiftIcon } from "icons";
 
 function ProductPage() {
   return (
     <>
       <MainLayout>
+        <div className={style.header}>
+          <Header />
+        </div>
         <div className={style.product_wrapper}>
           <Info />
           <Image />
