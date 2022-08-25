@@ -1,11 +1,23 @@
 import React from "react";
 import style from "./index.module.scss";
 import MainLayout from "layouts/MainLayout";
-import { Button, CartItem, H2, H3, PaymentSystems, SelectPayment, Switch } from "components";
+import {
+  Button,
+  CartItem,
+  H2,
+  H3,
+  Header,
+  PaymentSystems,
+  SelectPayment,
+  Switch,
+} from "components";
 
 function CartPage() {
   return (
     <MainLayout>
+      <div className={style.navbar}>
+        <Header />
+      </div>
       <div className={style.wrapper}>
         <div className={style.user_info}>
           <div className={style.title}>
