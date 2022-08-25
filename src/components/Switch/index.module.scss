@@ -2,8 +2,9 @@
   width: 70px;
   height: 23px;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 1px solid white;
   position: relative;
+  margin-top: 30px;
 
   .switch {
     position: absolute;
@@ -16,7 +17,7 @@
     left: 5px;
     transition: 0.4s all ease-in-out;
   }
-  
+
   .switchOn {
     position: absolute;
     cursor: pointer;

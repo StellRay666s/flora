@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function Switch({ value = false, setValue = () => {} }) {
+function Switch({ value = true, setValue = () => {} }) {
   function onClick() {
     setValue(!value);
   }
