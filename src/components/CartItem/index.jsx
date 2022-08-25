@@ -4,7 +4,7 @@ import H3 from "components/H3";
 import style from "./index.module.scss";
 import Count from "components/Count";
 
-function CartItem({ title, price, img, alt = "" }) {
+function CartItem({ title = "Букет в горшке тюльпаны и ромашки", price = "1 200", img, alt = "" }) {
   return (
     <>
       <div className={style.wrapperItem}>
