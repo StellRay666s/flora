@@ -7,7 +7,9 @@ import {
   H2,
   H3,
   Header,
+  Input,
   PaymentSystems,
+  PhoneInput,
   SelectPayment,
   Switch,
 } from "components";
@@ -29,22 +31,10 @@ function CartPage() {
               <H3>Данные покупателя: </H3>
             </div>
             <div className={style.user}>
-              <div className={style.info}>
-                <div className={style.name}>Имя:</div>
-                <div className={style.data}>Данила</div>
-              </div>
-              <div className={style.info}>
-                <div className={style.name}>Email:</div>
-                <div className={style.data}>danila@yandex.ru</div>
-              </div>
-              <div className={style.info}>
-                <div className={style.name}>Адрес:</div>
-                <div className={style.data}>Москва/Россия</div>
-              </div>
-              <div className={style.info}>
-                <div className={style.name}>Номер телефона:</div>
-                <div className={style.data}>+79999999999</div>
-              </div>
+              <Input value="Danila" />
+              <PhoneInput value="79999999999" />
+              <Input value="danila@yandex.ru" />
+              <Input value="Москва" />
             </div>
           </div>
           <div className={style.more}>

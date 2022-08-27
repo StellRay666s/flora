@@ -20,12 +20,8 @@
     }
 
     .user_field {
-      width: 400px;
-      height: 200px;
-      padding: 10px;
-      border-radius: 6px;
-      background-color: #719da5c7;
-
+      display: grid;
+      justify-content: start;
       .hard_title {
         font-size: 23px;
       }

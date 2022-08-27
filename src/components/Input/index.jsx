@@ -10,9 +10,16 @@ export default function Input({ placeholder = "", value = "", dispatchValue = ()
     dispatchValue(e.target.value);
   }
 
+  const page = window.location.pathname;
+
   return (
     <Fragment>
-      <input value={value} onChange={onChange} className={styles.input} placeholder={placeholder} />
+      <input
+        value={value}
+        onChange={onChange}
+        className={page == "/cart" ? styles.inputOnCart : styles.input}
+        placeholder={placeholder}
+      />
     </Fragment>
   );
 }

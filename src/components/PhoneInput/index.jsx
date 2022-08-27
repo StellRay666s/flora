@@ -1,5 +1,6 @@
 import React from "react";
 import InputMask from "react-input-mask";
+import { useParams } from "react-router-dom";
 
 import styles from "./index.module.scss";
 
@@ -12,6 +13,8 @@ export default function PhoneInput({ value = "", dispatchValue = () => {} }) {
     dispatchValue(e.target.value);
   }
 
+  const page = window.location.pathname;
+
   return (
     <InputMask
       mask="+7 999 999-99-99"
@@ -19,7 +22,13 @@ export default function PhoneInput({ value = "", dispatchValue = () => {} }) {
       placeholder="Введите номер телефона"
       onChange={onChange}
     >
-      {inputProps => <input {...inputProps} className={styles.input} type="tel" />}
+      {inputProps => (
+        <input
+          {...inputProps}
+          className={page == "/cart" ? styles.inputOnCart : styles.input}
+          type="tel"
+        />
+      )}
     </InputMask>
   );
 }

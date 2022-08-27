@@ -1,8 +1,22 @@
 .input {
-  width: 250px;
+  width: 310px;
   height: 40px;
   padding: 10px 30px;
-  margin-bottom: 15px;
+  background-color: #b5d5d9;
+  color: #6a7f82;
+  border: 1px;
+  border-radius: 6px;
+  outline: none;
+
+  &::placeholder {
+    color: #94a9ac;
+  }
+}
+
+.inputOnCart {
+  width: 310px;
+  height: 40px;
+  padding: 10px 30px;
   background-color: #b5d5d9;
   color: #6a7f82;
   border: 1px;
