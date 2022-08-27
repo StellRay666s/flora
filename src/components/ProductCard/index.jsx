@@ -2,7 +2,7 @@ import React from "react";
 import style from "./index.module.scss";
 import AddButton from "components/AddButton";
 
-function ProductCard({ price = 0, title = "", image = "", alt = "" }) {
+function ProductCard({ price = 0, title = "Untitle", image = "", alt = "" }) {
   return (
     <>
       <div className={style.wrapper}>

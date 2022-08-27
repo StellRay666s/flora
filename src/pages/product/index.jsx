@@ -4,8 +4,8 @@ import MainLayout from "layouts/MainLayout";
 
 import Info from "components/ProductBlock/Info";
 import Image from "components/ProductBlock/Image";
-import { Advantages, H3, Header, ProductCard } from "components";
-import { TruckIcon, BoqueteIcon, CreditCartIcon, GiftIcon } from "icons";
+import { Advantages, Footer, H3, Header, ProductCard } from "components";
+import { TruckIcon, BoqueteIcon, CreditCartIcon } from "icons";
 
 function ProductPage() {
   return (
@@ -54,6 +54,7 @@ function ProductPage() {
           <ProductCard />
         </div>
       </MainLayout>
+      <Footer />
     </>
   );
 }
