@@ -2,20 +2,20 @@ import React from "react";
 import style from "./index.module.scss";
 import { Button, H1, H2, H3 } from "components";
 
-function InfoItem() {
+function InfoItem({ title = "букет в горшке", subTitle = "Тюльпаны и ромашки", price }) {
   return (
     <div>
       {" "}
       <div className={style.block_text_btn}>
         <div className={style.title}>
           {" "}
-          <H1>БУКЕТ В ГОРШКЕ</H1>
+          <H1>{title.toUpperCase()}</H1>
         </div>
         <div className={style.under_title}>
           {" "}
-          <H3>ТЮЛЬПАНЫ И РОМАШКИ</H3>
+          <H3>{subTitle}</H3>
         </div>
-        <div className={style.price}>1 200 руб</div>{" "}
+        <div className={style.price}>{price} руб</div>{" "}
         <div className={style.title_description}>
           <H3>Информация:</H3>
         </div>

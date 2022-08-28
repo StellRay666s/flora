@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function ProductCardMin() {
+function ProductCardMin({ image, title }) {
   return (
     <>
       <div className={style.cartWrapper}>
