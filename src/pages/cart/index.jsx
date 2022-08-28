@@ -27,10 +27,10 @@ function CartPage() {
           </div>
 
           <div className={style.user}>
-            <Input value="Danila" />
-            <PhoneInput value="79999999999" />
-            <Input value="danila@yandex.ru" />
-            <Input value="Москва" />
+            <Input style={2} value="Danila" />
+            <PhoneInput style={2} value="79999999999" />
+            <Input style={2} value="danila@yandex.ru" />
+            <Input style={2} value="Москва" />
           </div>
 
           <div className={style.more}>

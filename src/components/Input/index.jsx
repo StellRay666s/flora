@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import styles from "./index.module.scss";
 
-export default function Input({ placeholder = "", value = "", dispatchValue = () => {} }) {
+export default function Input({ placeholder = "", value = "", dispatchValue = () => {}, style }) {
   /**
    * Change handler
    * @param {React.ChangeEvent<HTMLInputElement>} e
@@ -10,14 +10,12 @@ export default function Input({ placeholder = "", value = "", dispatchValue = ()
     dispatchValue(e.target.value);
   }
 
-  const page = window.location.pathname;
-
   return (
     <Fragment>
       <input
         value={value}
         onChange={onChange}
-        className={page == "/cart" ? styles.inputOnCart : styles.input}
+        className={style == 2 ? styles.inputOnCart : styles.input}
         placeholder={placeholder}
       />
     </Fragment>

@@ -1,10 +1,9 @@
 import React from "react";
 import InputMask from "react-input-mask";
-import { useParams } from "react-router-dom";
 
 import styles from "./index.module.scss";
 
-export default function PhoneInput({ value = "", dispatchValue = () => {} }) {
+export default function PhoneInput({ value = "", dispatchValue = () => {}, style }) {
   /**
    * Change handler
    * @param {React.ChangeEvent<HTMLInputElement>} e
@@ -25,7 +24,7 @@ export default function PhoneInput({ value = "", dispatchValue = () => {} }) {
       {inputProps => (
         <input
           {...inputProps}
-          className={page == "/cart" ? styles.inputOnCart : styles.input}
+          className={style == 2 ? styles.inputOnCart : styles.input}
           type="tel"
         />
       )}
