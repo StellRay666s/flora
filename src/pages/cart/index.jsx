@@ -7,7 +7,9 @@ import {
   H2,
   H3,
   Header,
+  Input,
   PaymentSystems,
+  PhoneInput,
   SelectPayment,
   Switch,
 } from "components";
@@ -23,30 +25,14 @@ function CartPage() {
           <div className={style.title}>
             <H2>ОФОРМЛЕНИЕ ЗАКАЗА</H2>{" "}
           </div>
-          <div className={style.user_field}>
-            <div className={style.hard_title}>
-              {" "}
-              <H3>Данные покупателя: </H3>
-            </div>
-            <div className={style.user}>
-              <div className={style.info}>
-                <div className={style.name}>Имя:</div>
-                <div className={style.data}>Данила</div>
-              </div>
-              <div className={style.info}>
-                <div className={style.name}>Email:</div>
-                <div className={style.data}>danila@yandex.ru</div>
-              </div>
-              <div className={style.info}>
-                <div className={style.name}>Адрес:</div>
-                <div className={style.data}>Москва/Россия</div>
-              </div>
-              <div className={style.info}>
-                <div className={style.name}>Номер телефона:</div>
-                <div className={style.data}>+79999999999</div>
-              </div>
-            </div>
+
+          <div className={style.user}>
+            <Input style={2} value="Danila" />
+            <PhoneInput style={2} value="79999999999" />
+            <Input style={2} value="danila@yandex.ru" />
+            <Input style={2} value="Москва" />
           </div>
+
           <div className={style.more}>
             {" "}
             <H3>Дополнительно</H3>
@@ -64,6 +50,8 @@ function CartPage() {
             <H2>ВАША КОРЗИНА</H2>
           </div>
           <div className={style.order_product}>
+            <CartItem />
+            <CartItem />
             <CartItem />
           </div>
           <div className={style.total_price}>

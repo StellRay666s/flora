@@ -12,3 +12,17 @@
     color: #94a9ac;
   }
 }
+.inputOnCart {
+  width: 400px;
+  height: 60px;
+  padding: 10px 30px;
+  background-color: #b5d5d9;
+  color: #6a7f82;
+  border: 1px;
+  border-radius: 6px;
+  outline: none;
+
+  &::placeholder {
+    color: #94a9ac;
+  }
+}
