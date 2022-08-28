@@ -27,3 +27,4 @@ export { default as SelectPayment } from "./SelectPayment";
 export { default as Switch } from "./Switch";
 export { default as TagNew } from "./TagNew";
 export { default as ThanksForOrderModal } from "./ThanksForOrderModal";
+export { default as OrderCard } from "./OrderCard";
