@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.module.scss";
 
-function Product() {
+function Product({ title = "название", image }) {
   return (
     <div className={style.item}>
       <div className={style.image}>
