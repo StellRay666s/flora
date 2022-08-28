@@ -2,18 +2,18 @@ import { Rating } from "components";
 import React from "react";
 import style from "./index.module.scss";
 
-function ImageItem() {
+function ImageItem({ width, height, img }) {
   return (
     <div className={style.wrapper}>
       <div className={style.border}>
         <div className={style.image}>
-          <img src="#" alt="изображение товара" />
+          <img src={img} alt="изображение товара" />
         </div>
       </div>{" "}
       <div className={style.rating_sizes}>
         <div className={style.sizes}>
-          <span>Высота-25 см</span>
-          <span>Ширина-30 см</span>
+          <span>Высота-{height} см</span>
+          <span>Ширина-{width} см</span>
         </div>
         <Rating />
       </div>
