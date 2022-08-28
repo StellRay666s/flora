@@ -1,9 +1,8 @@
-import OrderCard from "components/OrderCard";
 import React from "react";
 import style from "./index.module.scss";
+
 import MainLayout from "layouts/MainLayout";
-import { Header } from "components";
-import { H3, H2 } from "components";
+import { Header, OrderCard, H3 } from "components";
 
 function OrderPage() {
   return (

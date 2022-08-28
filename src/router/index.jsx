@@ -4,8 +4,14 @@ import React, { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 /** Pages */
-import { IndexPage, CartPage, ProductPage, AuthorizationPage, RegistrationPage } from "pages";
-import OrderPage from "pages/order";
+import {
+  IndexPage,
+  CartPage,
+  ProductPage,
+  AuthorizationPage,
+  RegistrationPage,
+  OrderPage,
+} from "pages";
 
 export default function Router() {
   return (
@@ -14,7 +20,7 @@ export default function Router() {
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/order" element={<OrderPage />} />
+          <Route path="/order/:_id" element={<OrderPage />} />
           <Route path="/product/:_id" element={<ProductPage />} />
           <Route path="/authorization" element={<AuthorizationPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
