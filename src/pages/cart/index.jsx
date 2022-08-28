@@ -25,18 +25,14 @@ function CartPage() {
           <div className={style.title}>
             <H2>ОФОРМЛЕНИЕ ЗАКАЗА</H2>{" "}
           </div>
-          <div className={style.user_field}>
-            <div className={style.hard_title}>
-              {" "}
-              <H3>Данные покупателя: </H3>
-            </div>
-            <div className={style.user}>
-              <Input value="Danila" />
-              <PhoneInput value="79999999999" />
-              <Input value="danila@yandex.ru" />
-              <Input value="Москва" />
-            </div>
+
+          <div className={style.user}>
+            <Input value="Danila" />
+            <PhoneInput value="79999999999" />
+            <Input value="danila@yandex.ru" />
+            <Input value="Москва" />
           </div>
+
           <div className={style.more}>
             {" "}
             <H3>Дополнительно</H3>
@@ -54,6 +50,8 @@ function CartPage() {
             <H2>ВАША КОРЗИНА</H2>
           </div>
           <div className={style.order_product}>
+            <CartItem />
+            <CartItem />
             <CartItem />
           </div>
           <div className={style.total_price}>
