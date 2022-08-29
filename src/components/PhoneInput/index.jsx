@@ -24,7 +24,7 @@ export default function PhoneInput({ value = "", dispatchValue = () => {}, style
       {inputProps => (
         <input
           {...inputProps}
-          className={style == 2 ? styles.inputOnCart : styles.input}
+          className={style === 2 ? styles.inputOnCart : styles.input}
           type="tel"
         />
       )}
