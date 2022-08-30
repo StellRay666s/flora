@@ -1,5 +1,5 @@
-import H1 from "components/H1";
 import React from "react";
+import H1 from "components/H1";
 import style from "./index.module.scss";
 
 function AboutUs() {
@@ -9,7 +9,7 @@ function AboutUs() {
         <H1>О НАС</H1>
       </div>
       <div className={style.contentWrapper}>
-        <div className={style.tetxBlock}>
+        <div className={style.textBlock}>
           <p className={style.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
             saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora

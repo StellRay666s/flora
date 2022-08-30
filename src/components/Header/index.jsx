@@ -1,8 +1,9 @@
 import React from "react";
-import style from "./index.module.scss";
-import Logo from "../Logo";
-import CartButton from "components/CartButton";
 import { Link } from "react-scroll";
+import Logo from "components/Logo";
+import CartButton from "components/CartButton";
+
+import style from "./index.module.scss";
 
 function Header() {
   return (

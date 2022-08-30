@@ -26,7 +26,6 @@
       line-height: 30px;
       font-weight: 500;
       width: 270px;
-
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
@@ -39,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     span {
       font-weight: 300;
     }

@@ -1,9 +1,10 @@
 import React from "react";
-import style from "./index.module.scss";
 import H1 from "components/H1";
 import OrderGuideCard from "components/OrderGuideCard";
 import { BoqueteIcon, BagIcon, CreditCartIcon, TruckIcon } from "icons";
 import Check from "icons/Check";
+
+import style from "./index.module.scss";
 
 function OrderGuideComponent() {
   return (

@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import style from "./index.module.scss";
 import Error from "icons/Error";
 import Check from "icons/Check";
 
+import style from "./index.module.scss";
+
 function Notification() {
   const { message, status, isOpen } = useSelector(state => state.notification.data);
-  console.log(message);
+
   return (
     <>
       <div

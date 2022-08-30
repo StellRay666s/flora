@@ -1,5 +1,6 @@
-import { Rating } from "components";
 import React from "react";
+import { Rating } from "components";
+
 import style from "./index.module.scss";
 
 function ImageItem({ width, height, img }) {

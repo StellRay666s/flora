@@ -1,6 +1,7 @@
 import React from "react";
-import style from "./index.module.scss";
 import Product from "./Product";
+
+import style from "./index.module.scss";
 
 function OrderCard({ price = "2 500", date = "01.01.2002", paymentMethod = "Наличными" }) {
   return (
