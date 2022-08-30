@@ -4,9 +4,10 @@ function Button({
   children,
   className /** className from `src/styles/buttons.scss` */,
   onClick = () => {},
+  disabled,
 }) {
   return (
-    <button onClick={onClick} className={className}>
+    <button disabled={disabled} onClick={onClick} className={className}>
       {children}
     </button>
   );

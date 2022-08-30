@@ -1,8 +1,8 @@
 import { axiosClient } from "utils/axiosClient";
 
-async function postAutentication(strategy, email, password) {
+async function postAutentication(email, password) {
   const response = await axiosClient.post("/authentication", {
-    strategy: strategy,
+    strategy: "local",
     email: email,
     password: password,
   });
