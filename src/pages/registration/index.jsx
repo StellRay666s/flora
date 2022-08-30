@@ -80,10 +80,10 @@ function RegistrationPage() {
           <PhoneInput value={phone} dispatchValue={setPhone} />
         </div>
         <Button
-          disabled={checkInput() ? false : true}
+          disabled={checkInputs() ? false : true}
           onClick={() => registration()}
           className={
-            checkInput() ? "buttonOrder buttonRegistrAuth" : "buttonOrder buttonRegistrAuth2"
+            checkInputs() ? "buttonOrder buttonRegistrAuth" : "buttonOrder buttonRegistrAuth2"
           }
         >
           Зарегистрироваться
