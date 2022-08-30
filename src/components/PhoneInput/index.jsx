@@ -12,8 +12,6 @@ export default function PhoneInput({ value = "", dispatchValue = () => {}, style
     dispatchValue(e.target.value);
   }
 
-  const page = window.location.pathname;
-
   return (
     <InputMask
       mask="+7 999 999-99-99"

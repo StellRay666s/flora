@@ -16,6 +16,7 @@ const initialState = {
     address: null,
     phone: null,
     name: null,
+    isAuth: false,
   },
 };
 
@@ -23,8 +24,8 @@ export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser: (state, { payload }) => {
-      state.user = { ...initialState, ...payload };
+    setUser: (state, action) => {
+      state.user = action.payload;
     },
     clearUser: state => {
       state.user = initialState;
