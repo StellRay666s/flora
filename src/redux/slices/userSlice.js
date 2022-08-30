@@ -26,6 +26,7 @@ export const userSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload;
+      state.user.isAuth = !false;
     },
     clearUser: state => {
       state.user = initialState;
