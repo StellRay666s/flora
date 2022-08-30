@@ -14,7 +14,7 @@ function Notification() {
         style={{ position: "fixed", right: isOpen ? "100px" : "-260px", transitionDuration: "2s" }}
       >
         <div className={style.wrapper}>
-          {status ? <Check /> : <Error />}
+          {(status === "successfull" && <Check />) || (status === "error" && <Error />)}
           {message}
         </div>
       </div>
