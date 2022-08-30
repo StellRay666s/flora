@@ -31,7 +31,7 @@ function RegistrationPage() {
     phone: phone,
   };
 
-  function checkInput() {
+  function checkInputs() {
     for (let value in user) {
       if (user.hasOwnProperty(value) && !user[value]) {
         return false;
