@@ -1,27 +1,29 @@
 import React from "react";
-import AuthLayout from "layouts/AuthLayout";
-import { H2, Input } from "components";
-import Button from "components/Button";
-import style from "./index.module.scss";
-import { PhoneInput } from "components";
-import { postUsers } from "requests/postUsers";
-import { useSelector, useDispatch } from "react-redux";
-import { setUser } from "redux/slices/userSlice";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
+import AuthLayout from "layouts/AuthLayout";
+import Button from "components/Button";
+import { H2, Input, PhoneInput } from "components";
+
+import { postUsers } from "requests/postUsers";
+import { setUser } from "redux/slices/userSlice";
 import { postAutentication } from "requests/postAutentication";
 import { useNotification } from "hooks/useNotification";
 
+import style from "./index.module.scss";
+
 function RegistrationPage() {
+  const navigate = useNavigate();
+  const { isAuth } = useSelector(store => store.user.user);
+  const dispatch = useDispatch();
+  const nofication = useNotification();
+
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [address, setAddress] = React.useState("");
   const [phone, setPhone] = React.useState("");
-
-  const navigate = useNavigate();
-  const { isAuth } = useSelector(store => store.user.user);
-  const dispatch = useDispatch();
-  const nofication = useNotification();
 
   const user = {
     name: name,
@@ -46,9 +48,9 @@ function RegistrationPage() {
       await postUsers(email, password, address, phone, name);
       const response = await postAutentication(email, password);
       const accessToken = response.data.accessToken;
-      localStorage.setItem("accessToken", accessToken);
 
-      if (isAuth == false) {
+      if (isAuth === false) {
+        localStorage.setItem("accessToken", accessToken);
         dispatch(setUser(user));
         navigate("/");
       }
@@ -61,7 +63,6 @@ function RegistrationPage() {
     <div>
       <AuthLayout>
         <h2>
-          {" "}
           <H2>РЕГИСТРАЦИЯ</H2>
         </h2>
         <div>

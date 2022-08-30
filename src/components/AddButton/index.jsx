@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./index.module.scss";
 import Plus from "icons/Plus";
+import style from "./index.module.scss";
 
 function AddButton({ onClick = () => {} }) {
   return (

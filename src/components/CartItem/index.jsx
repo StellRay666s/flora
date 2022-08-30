@@ -1,8 +1,7 @@
 import React from "react";
-
-import H3 from "components/H3";
-import style from "./index.module.scss";
 import Count from "components/Count";
+
+import style from "./index.module.scss";
 
 function CartItem({ title = "Букет в горшке тюльпаны и ромашки", price = "1 200", img, alt = "" }) {
   return (

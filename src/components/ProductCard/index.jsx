@@ -1,6 +1,7 @@
 import React from "react";
-import style from "./index.module.scss";
 import AddButton from "components/AddButton";
+
+import style from "./index.module.scss";
 
 function ProductCard({ price = 0, title = "Untitle", image = "", alt = "" }) {
   return (

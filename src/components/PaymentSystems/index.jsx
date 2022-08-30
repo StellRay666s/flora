@@ -1,7 +1,8 @@
 import React from "react";
-import style from "./index.module.scss";
 
 import PaymentSystemsImage from "assets/images/paymentSystem.png";
+
+import style from "./index.module.scss";
 
 function PaymentSystems() {
   return (

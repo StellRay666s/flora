@@ -1,6 +1,7 @@
 import React from "react";
+import { Button, H1, H3 } from "components";
+
 import style from "./index.module.scss";
-import { Button, H1, H2, H3 } from "components";
 
 function InfoItem({ title = "букет в горшке", subTitle = "Тюльпаны и ромашки", price }) {
   return (

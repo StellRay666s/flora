@@ -1,8 +1,9 @@
 import React from "react";
-import style from "./index.module.scss";
 import { CrossClose, H2, ProductCardMin } from "components";
 
-function ThanksForOrderModal({ isOpen, setIsOpen }) {
+import style from "./index.module.scss";
+
+function ThanksForOrderModal({ isOpen = false, setIsOpen = () => {} }) {
   return (
     <>
       {isOpen ? (
@@ -20,10 +21,9 @@ function ThanksForOrderModal({ isOpen, setIsOpen }) {
             <p>Смотрите так же:</p>
           </div>
           <div className={style.miniCart}>
-            <ProductCardMin />
-            <ProductCardMin />
-            <ProductCardMin />
-            <ProductCardMin />
+            {[].map(function renderRecomendations() {
+              return <ProductCardMin />;
+            })}
           </div>
         </div>
       ) : (
