@@ -44,7 +44,10 @@ function RegistrationPage() {
   async function registration() {
     try {
       await postUsers(email, password, address, phone, name);
-      await postAutentication(email, password);
+      const response = await postAutentication(email, password);
+      const accessToken = response.data.accessToken;
+      localStorage.setItem("accessToken", accessToken);
+
       if (isAuth == false) {
         dispatch(setUser(user));
         navigate("/");
