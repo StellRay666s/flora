@@ -2,7 +2,10 @@ import React from "react";
 import Logo from "components/Logo";
 import H3 from "components/H3";
 import PaymentSystems from "components/PaymentSystems";
-import { InstagramIcons, TelegramIcon, TwitterIcon } from "icons";
+
+import InstagramIcons from "icons/InstagramIcon";
+import TelegramIcon from "icons/TelegramIcon";
+import TwitterIcon from "icons/TwitterIcon";
 
 import styles from "./index.module.scss";
 

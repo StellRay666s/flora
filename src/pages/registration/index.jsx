@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import AuthLayout from "layouts/AuthLayout";
 import Button from "components/Button";
-import { H2, Input, PhoneInput } from "components";
+import H2 from "components/H2";
+import Input from "components/Input";
+import PhoneInput from "components/PhoneInput";
 
 import { postUsers } from "requests/postUsers";
 import { setUser } from "redux/slices/userSlice";

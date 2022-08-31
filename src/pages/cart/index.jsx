@@ -1,18 +1,16 @@
 import React from "react";
 import style from "./index.module.scss";
 import MainLayout from "layouts/MainLayout";
-import {
-  Button,
-  CartItem,
-  H2,
-  H3,
-  Header,
-  Input,
-  PaymentSystems,
-  PhoneInput,
-  SelectPayment,
-  Switch,
-} from "components";
+
+import Button from "components/Button";
+import CartItem from "components/CartItem";
+import H2 from "components/H2";
+import H3 from "components/H3";
+import Header from "components/Header";
+import Input from "components/Input";
+import PhoneInput from "components/PhoneInput";
+import SelectPayment from "components/SelectPayment";
+import Switch from "components/Switch";
 
 function CartPage() {
   return (

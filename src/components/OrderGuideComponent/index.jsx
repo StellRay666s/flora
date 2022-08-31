@@ -1,7 +1,11 @@
 import React from "react";
 import H1 from "components/H1";
 import OrderGuideCard from "components/OrderGuideCard";
-import { BoqueteIcon, BagIcon, CreditCartIcon, TruckIcon } from "icons";
+
+import BoqueteIcon from "icons/BoqueteIcon";
+import BagIcon from "icons/BagIcon";
+import CreditCartIcon from "icons/CreditCartIcon";
+import TruckIcon from "icons/TruckIcon";
 import Check from "icons/Check";
 
 import style from "./index.module.scss";
