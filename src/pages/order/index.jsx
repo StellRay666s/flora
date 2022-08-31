@@ -2,7 +2,10 @@ import React from "react";
 import style from "./index.module.scss";
 
 import MainLayout from "layouts/MainLayout";
-import { Header, OrderCard, H3 } from "components";
+
+import Header from "components/Header";
+import OrderCard from "components/OrderCard";
+import H3 from "components/H3";
 
 function OrderPage() {
   return (

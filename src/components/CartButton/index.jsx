@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
-import { BagIcon } from "icons";
+import BagIcon from "icons/BagIcon";
 
 function CartButton({ onClick = () => {} }) {
   return (

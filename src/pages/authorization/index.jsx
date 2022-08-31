@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import AuthLayout from "layouts/AuthLayout";
-import { H2, Input } from "components";
+
 import Button from "components/Button";
+import H2 from "components/H2";
+import Input from "components/Input";
+
 import { postAutentication } from "requests/postAutentication";
 import { useNotification } from "hooks/useNotification";
 import { setUser } from "redux/slices/userSlice";

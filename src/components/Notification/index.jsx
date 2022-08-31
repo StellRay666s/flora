@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import Error from "icons/Error";
 import Check from "icons/Check";
 

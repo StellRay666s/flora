@@ -1,19 +1,19 @@
 import React, { Fragment } from "react";
 import style from "./index.module.scss";
 
-import { TruckIcon, BoqueteIcon, CreditCartIcon, GiftIcon } from "icons";
+import TruckIcon from "icons/TruckIcon";
+import BoqueteIcon from "icons/BoqueteIcon";
+import CreditCartIcon from "icons/CreditCartIcon";
+import GiftIcon from "icons/GiftIcon";
 
-import {
-  Header,
-  H1,
-  Button,
-  Advantages,
-  CatalogBlock,
-  AboutUs,
-  OrderGuideComponent,
-  Footer,
-  CatalogBlok,
-} from "components";
+import Header from "components/Header";
+import H1 from "components/H1";
+import Button from "components/Button";
+import Advantages from "components/Advantages";
+import CatalogBlock from "components/CatalogBlok";
+import AboutUs from "components/AboutUs";
+import OrderGuideComponent from "components/OrderGuideComponent";
+import Footer from "components/Footer";
 
 import MainLayout from "layouts/MainLayout";
 
@@ -70,7 +70,7 @@ export default function IndexPage() {
           </Advantages>
         </div>
         <div className={style.catalog}>
-          <CatalogBlok />
+          <CatalogBlock />
         </div>
       </MainLayout>
       <div className={style.aboutUs}>

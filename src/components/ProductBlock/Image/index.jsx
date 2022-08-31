@@ -1,5 +1,5 @@
 import React from "react";
-import { Rating } from "components";
+import Rating from "components/Rating";
 
 import style from "./index.module.scss";
 

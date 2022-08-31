@@ -1,5 +1,7 @@
 import React from "react";
-import { Button, H1, H3 } from "components";
+import H1 from "components/H1";
+import Button from "components/Button";
+import H3 from "components/H3";
 
 import style from "./index.module.scss";
 

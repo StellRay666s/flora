@@ -4,8 +4,16 @@ import MainLayout from "layouts/MainLayout";
 
 import Info from "components/ProductBlock/Info";
 import Image from "components/ProductBlock/Image";
-import { Advantages, Footer, H3, Header, ProductCard } from "components";
-import { TruckIcon, BoqueteIcon, CreditCartIcon } from "icons";
+
+import Advantages from "components/Advantages";
+import Footer from "components/Footer";
+import H3 from "components/H3";
+import Header from "components/Header";
+import ProductCard from "components/ProductCard";
+
+import TruckIcon from "icons/TruckIcon";
+import BoqueteIcon from "icons/BoqueteIcon";
+import CreditCartIcon from "icons/CreditCartIcon";
 
 function ProductPage() {
   return (
