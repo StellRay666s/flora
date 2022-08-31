@@ -34,7 +34,6 @@ function AuthorizationPage() {
       }
     }
   }
-
   async function authorization() {
     try {
       const response = await postAutentication(email, password);
@@ -47,7 +46,7 @@ function AuthorizationPage() {
         navigate("/");
       }
     } catch (err) {
-      notification("Ошибка при авторизации", false);
+      notification("Ошибка при авторизации", "error");
     }
   }
 

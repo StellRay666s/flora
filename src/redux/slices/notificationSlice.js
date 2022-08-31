@@ -4,7 +4,7 @@ const initialState = {
   data: {
     isOpen: false,
     message: "",
-    status: true || false,
+    status: "",
   },
 };
 
