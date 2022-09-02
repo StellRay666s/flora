@@ -6,6 +6,10 @@
   align-items: center;
   position: relative;
 
+  a {
+    text-decoration: none;
+  }
+
   .barList {
     display: flex;
     align-items: center;
@@ -29,9 +33,5 @@
   .auth {
     display: flex;
     gap: 20px;
-
-    a {
-      text-decoration: none;
-    }
   }
 }
