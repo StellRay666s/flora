@@ -14,10 +14,13 @@ import CatalogBlock from "components/CatalogBlok";
 import AboutUs from "components/AboutUs";
 import OrderGuideComponent from "components/OrderGuideComponent";
 import Footer from "components/Footer";
+import { useFetchBouquets } from "hooks/useFetchBouquets";
 
 import MainLayout from "layouts/MainLayout";
 
 export default function IndexPage() {
+  const { bouquets, isLoading } = useFetchBouquets();
+
   return (
     <Fragment>
       <MainLayout>
@@ -70,7 +73,7 @@ export default function IndexPage() {
           </Advantages>
         </div>
         <div className={style.catalog}>
-          <CatalogBlock />
+          <CatalogBlock data={bouquets} isLoading={isLoading} />
         </div>
       </MainLayout>
       <div className={style.aboutUs}>
