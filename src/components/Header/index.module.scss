@@ -25,4 +25,13 @@
       transition: 0.3s;
     }
   }
+
+  .auth {
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
