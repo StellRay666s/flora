@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Link as Scroll } from "react-scroll";
+import { Link as Anchor } from "react-scroll";
 import Logo from "components/Logo";
 import CartButton from "components/CartButton";
 import { useSelector } from "react-redux";
@@ -16,18 +16,18 @@ function Header() {
         <Logo />
       </div>
       <ul className={style.barList}>
-        <Scroll>
+        <Anchor>
           <li>Главная</li>
-        </Scroll>
-        <Scroll>
+        </Anchor>
+        <Anchor>
           <li>Каталог</li>
-        </Scroll>
-        <Scroll>
+        </Anchor>
+        <Anchor>
           <li>О нас</li>
-        </Scroll>
-        <Scroll>
+        </Anchor>
+        <Anchor>
           <li>Как сделать заказы</li>
-        </Scroll>
+        </Anchor>
 
         {isAuth ? (
           <Link to={"order/:_id"}>
