@@ -11,10 +11,10 @@ function CatalogBlock({ data = [], isLoading }) {
       <h1 className={style.title}>
         <H1>КАТАЛОГ</H1>
       </h1>
-      {isLoading ? (
+      {!isLoading ? (
         <div className={style.wrapperCarts}>
-          {data.map(obj => (
-            <ProductCard isLoading={isLoading} {...obj} />
+          {data.map(product => (
+            <ProductCard isLoading={isLoading} {...product} id={product._id} />
           ))}
         </div>
       ) : (

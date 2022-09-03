@@ -3,7 +3,7 @@ import { getBouquets } from "requests/getBouquets";
 import { useNotification } from "./useNotification";
 
 function useFetchBouquets() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [bouquets, setBouquets] = useState([]);
   const notify = useNotification();
 
@@ -13,11 +13,11 @@ function useFetchBouquets() {
       try {
         const response = await getBouquets();
         const bouquets = response.data.data;
-        setIsLoading(true);
+        setIsLoading(false);
         setBouquets(bouquets);
       } catch (error) {
-        notify("Ошибка при загрузке цветов", false);
-        setIsLoading(false);
+        notify("Ошибка при загрузке цветов", "error");
+        setIsLoading(true);
       }
     })();
   }, []);
