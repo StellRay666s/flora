@@ -44,7 +44,8 @@ function Header() {
           </div>
         )}
       </ul>
-      <CartButton />
+
+      {isAuth && <CartButton />}
     </div>
   );
 }
