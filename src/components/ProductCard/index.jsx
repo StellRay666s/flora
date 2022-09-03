@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AddButton from "components/AddButton";
 
 import style from "./index.module.scss";
 
-function ProductCard({ price = 0, title = "Untitle", image = "", alt = "" }) {
+function ProductCard({ price = 0, title = "Untitle", image = "", alt = "", id = -0 }) {
   return (
-    <>
+    <Link to={`/product/${id}`}>
       <div className={style.wrapper}>
         <div className={style.cartWrapper}>
           <div className={style.imgBorder}>
@@ -21,7 +22,7 @@ function ProductCard({ price = 0, title = "Untitle", image = "", alt = "" }) {
           </div>
         </div>
       </div>
-    </>
+    </Link>
   );
 }
 

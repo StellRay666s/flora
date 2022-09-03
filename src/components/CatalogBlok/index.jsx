@@ -13,8 +13,8 @@ function CatalogBlock({ data = [], isLoading }) {
       </h1>
       {!isLoading ? (
         <div className={style.wrapperCarts}>
-          {data.map(obj => (
-            <ProductCard isLoading={isLoading} {...obj} />
+          {data.map(product => (
+            <ProductCard isLoading={isLoading} {...product} id={product._id} />
           ))}
         </div>
       ) : (
