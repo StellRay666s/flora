@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import AuthLayout from "layouts/AuthLayout";
@@ -36,28 +36,31 @@ function RegistrationPage() {
   };
 
   function checkInputs() {
-    for (let value in user) {
-      if (user.hasOwnProperty(value) && !user[value]) {
-        return false;
-      } else {
-        return true;
-      }
+    if (email !== "" && password !== "" && address !== "" && phone !== "" && name !== "") {
+      return true;
+    } else {
+      return false;
     }
   }
 
   async function registration() {
     try {
-      await postUsers(email, password, address, phone, name);
-      const response = await postAutentication(email, password);
-      const accessToken = response.data.accessToken;
-
-      if (isAuth === false) {
+      if (isAuth === false && password.length > 5) {
+        await postUsers(email, password, address, phone, name);
+        const response = await postAutentication(email, password);
+        const accessToken = response.data.accessToken;
         localStorage.setItem("accessToken", accessToken);
         dispatch(setUser(user));
         navigate("/");
       }
+      if (password.length < 5) {
+        nofication("Короткий пароль", "error");
+      }
+      if (isAuth === true) {
+        nofication("Вы уже авторизированы", "error");
+      }
     } catch (err) {
-      nofication("Ошибка при регистрации", false);
+      nofication("Ошибка при регистрации", "error");
     }
   }
 
@@ -83,17 +86,23 @@ function RegistrationPage() {
           <PhoneInput value={phone} dispatchValue={setPhone} />
         </div>
         <Button
-          disabled={checkInputs() ? false : true}
+          disabled={checkInputs()}
           onClick={() => registration()}
           className={
-            checkInputs() ? "buttonOrder buttonRegistrAuth" : "buttonOrder buttonRegistrAuth2"
+            checkInputs() === false
+              ? "buttonOrder buttonRegistrAuth2"
+              : "buttonOrder buttonRegistrAuth"
           }
         >
           Зарегистрироваться
         </Button>
         <div className={style.redirect}>
-          <p className={style.auth}>Авторизуйтесь</p>
-          <p className={style.home}>На Главную</p>
+          <Link to={"/authorization"} className={style.auth}>
+            Авторизуйтесь
+          </Link>
+          <Link to={"/"} className={style.home}>
+            На Главную
+          </Link>
         </div>
       </AuthLayout>
     </div>

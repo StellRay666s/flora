@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Link as Anchor } from "react-scroll";
+import { HashLink as Anchor } from "react-router-hash-link";
+
 import Logo from "components/Logo";
 import CartButton from "components/CartButton";
 import { useSelector } from "react-redux";
@@ -13,24 +14,26 @@ function Header() {
   return (
     <div className={style.header}>
       <div className={style.logo}>
-        <Logo />
+        <Link to={"/"}>
+          <Logo />
+        </Link>
       </div>
       <ul className={style.barList}>
-        <Anchor>
+        <Link to={"/"}>
           <li>Главная</li>
-        </Anchor>
-        <Anchor>
+        </Link>
+
+        <Anchor to={"/#catalog"}>
           <li>Каталог</li>
         </Anchor>
-        <Anchor>
+        <Anchor to={"/#aboutUs"}>
           <li>О нас</li>
         </Anchor>
-        <Anchor>
+        <Anchor to={"/#orderGuide"}>
           <li>Как сделать заказы</li>
         </Anchor>
-
         {isAuth ? (
-          <Link to={"order/:_id"}>
+          <Link to={"/order/:_id"}>
             <li>Заказы</li>
           </Link>
         ) : (

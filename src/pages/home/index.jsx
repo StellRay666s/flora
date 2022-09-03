@@ -14,6 +14,7 @@ import CatalogBlock from "components/CatalogBlok";
 import AboutUs from "components/AboutUs";
 import OrderGuideComponent from "components/OrderGuideComponent";
 import Footer from "components/Footer";
+import { Link as Anchor } from "react-scroll";
 
 import MainLayout from "layouts/MainLayout";
 
@@ -32,7 +33,16 @@ export default function IndexPage() {
               опоздаем-цветы в подарок! Если не понравится букет-мы его бесплатно поменяем
             </p>
             <div className={style.btn}>
-              <Button className={"buttonOrder"}>ЗАКАЗАТЬ</Button>
+              <Anchor
+                activeClass="active"
+                to="orderGuide"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button className={"buttonOrder"}>ЗАКАЗАТЬ</Button>
+              </Anchor>
             </div>
           </div>
         </div>
@@ -69,15 +79,15 @@ export default function IndexPage() {
             </div>
           </Advantages>
         </div>
-        <div className={style.catalog}>
+        <div id="catalog" className={style.catalog}>
           <CatalogBlock />
         </div>
       </MainLayout>
-      <div className={style.aboutUs}>
+      <div id="aboutUs" className={style.aboutUs}>
         <AboutUs />
       </div>
       <MainLayout>
-        <div className={style.orderGuide}>
+        <div id="orderGuide" className={style.orderGuide}>
           <OrderGuideComponent />
         </div>{" "}
       </MainLayout>

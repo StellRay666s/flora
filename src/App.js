@@ -7,15 +7,18 @@ import { store } from "redux/store";
 
 /** Routing */
 import Router from "router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <Provider store={store}>
-      <Notification />
-      <Fragment>
-        <Router />
-      </Fragment>
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <Notification />
+        <Fragment>
+          <Router />
+        </Fragment>
+      </Provider>
+    </BrowserRouter>
   );
 }
 
