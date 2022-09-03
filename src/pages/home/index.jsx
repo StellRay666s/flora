@@ -21,6 +21,8 @@ import MainLayout from "layouts/MainLayout";
 export default function IndexPage() {
   const { bouquets, isLoading } = useFetchBouquets();
 
+  console.log("bouquets", bouquets);
+
   return (
     <Fragment>
       <MainLayout>
