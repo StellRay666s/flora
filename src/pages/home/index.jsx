@@ -84,7 +84,7 @@ export default function IndexPage() {
             </div>
           </Advantages>
         </div>
-        <div className={style.catalog}>
+        <div id="catalog" className={style.catalog}>
           <CatalogBlock data={bouquets} isLoading={isLoading} />
         </div>
       </MainLayout>
