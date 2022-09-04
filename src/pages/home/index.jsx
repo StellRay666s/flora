@@ -15,10 +15,15 @@ import AboutUs from "components/AboutUs";
 import OrderGuideComponent from "components/OrderGuideComponent";
 import Footer from "components/Footer";
 import { Link as Anchor } from "react-scroll";
+import { useFetchBouquets } from "hooks/useFetchBouquets";
 
 import MainLayout from "layouts/MainLayout";
 
 export default function IndexPage() {
+  const { bouquets, isLoading } = useFetchBouquets();
+
+  console.log("bouquets", bouquets);
+
   return (
     <Fragment>
       <MainLayout>
@@ -79,8 +84,8 @@ export default function IndexPage() {
             </div>
           </Advantages>
         </div>
-        <div id="catalog" className={style.catalog}>
-          <CatalogBlock />
+        <div className={style.catalog}>
+          <CatalogBlock data={bouquets} isLoading={isLoading} />
         </div>
       </MainLayout>
       <div id="aboutUs" className={style.aboutUs}>
