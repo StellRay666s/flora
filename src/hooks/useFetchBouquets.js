@@ -8,7 +8,7 @@ function useFetchBouquets() {
   const notify = useNotification();
 
   useEffect(() => {
-    setIsLoading(false);
+    setIsLoading(true);
     (async function getData() {
       try {
         const response = await getBouquets();
