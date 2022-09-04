@@ -2,6 +2,7 @@ import React from "react";
 import style from "./index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import AuthLayout from "layouts/AuthLayout";
 
@@ -23,18 +24,13 @@ function AuthorizationPage() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const user = {
-    email: email,
-    password: password,
-  };
+  console.log(isAuth);
 
   function checkInputs() {
-    for (let value in user) {
-      if (user.hasOwnProperty(value) && !user[value]) {
-        return false;
-      } else {
-        return true;
-      }
+    if (email !== "" && password !== "") {
+      return true;
+    } else {
+      return false;
     }
   }
   async function authorization() {
@@ -45,8 +41,12 @@ function AuthorizationPage() {
       if (isAuth === false) {
         localStorage.setItem("accessToken", accessToken);
         const user = response.data.user;
+
         dispatch(setUser(user));
         navigate("/");
+      }
+      if (isAuth === true) {
+        notification("Вы уже авторизированы", "error");
       }
     } catch (err) {
       notification("Ошибка при авторизации", "error");
@@ -67,16 +67,24 @@ function AuthorizationPage() {
         </div>
         <Button
           onClick={authorization}
-          disabled={checkInputs() ? false : true}
+          disabled={checkInputs()}
           className={
-            checkInputs() ? "buttonOrder buttonRegistrAuth" : "buttonOrder buttonRegistrAuth2"
+            checkInputs() === false
+              ? "buttonOrder buttonRegistrAuth2"
+              : "buttonOrder buttonRegistrAuth"
           }
         >
           Войти
         </Button>
         <div className={style.redirect}>
-          <p className={style.reg}>Зарегистрироваться</p>
-          <p className={style.home}>На Главную</p>
+          <Link className={style.reg} to={"/registration"}>
+            {" "}
+            Зарегистрироваться
+          </Link>
+          <Link className={style.home} to={"/"}>
+            {" "}
+            На Главную
+          </Link>
         </div>
       </AuthLayout>
     </>

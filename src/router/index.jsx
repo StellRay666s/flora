@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 /** React Router Dom */
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 /** Pages */
 import {
@@ -14,18 +14,22 @@ import {
 } from "pages";
 
 export default function Router() {
+  let location = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Fragment>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<IndexPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/order/:_id" element={<OrderPage />} />
-          <Route path="/product/:_id" element={<ProductPage />} />
-          <Route path="/authorization" element={<AuthorizationPage />} />
-          <Route path="/registration" element={<RegistrationPage />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/order/:_id" element={<OrderPage />} />
+        <Route path="/product/:_id" element={<ProductPage />} />
+        <Route path="/authorization" element={<AuthorizationPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
+      </Routes>
     </Fragment>
   );
 }
