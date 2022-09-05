@@ -13,6 +13,7 @@ import Input from "components/Input";
 import { postAutentication } from "requests/postAutentication";
 import { useNotification } from "hooks/useNotification";
 import { setUser } from "redux/slices/userSlice";
+import { validateEmail } from "utils/validateEmail";
 
 function AuthorizationPage() {
   const navigate = useNavigate();
@@ -24,15 +25,14 @@ function AuthorizationPage() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  console.log(isAuth);
-
   function checkInputs() {
-    if (email !== "" && password !== "") {
+    if (email !== "" && password !== "" && validateEmail(email)) {
       return true;
     } else {
       return false;
     }
   }
+
   async function authorization() {
     try {
       const response = await postAutentication(email, password);
@@ -41,10 +41,10 @@ function AuthorizationPage() {
       if (isAuth === false) {
         localStorage.setItem("accessToken", accessToken);
         const user = response.data.user;
-
         dispatch(setUser(user));
         navigate("/");
       }
+
       if (isAuth === true) {
         notification("Вы уже авторизированы", "error");
       }

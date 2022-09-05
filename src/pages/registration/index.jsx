@@ -12,6 +12,8 @@ import { postUsers } from "requests/postUsers";
 import { setUser } from "redux/slices/userSlice";
 import { postAutentication } from "requests/postAutentication";
 import { useNotification } from "hooks/useNotification";
+import { validateEmail } from "utils/validateEmail";
+import { validatePhone } from "utils/validatePhone";
 
 import style from "./index.module.scss";
 
@@ -36,7 +38,15 @@ function RegistrationPage() {
   };
 
   function checkInputs() {
-    if (email !== "" && password !== "" && address !== "" && phone !== "" && name !== "") {
+    if (
+      email !== "" &&
+      password !== "" &&
+      address !== "" &&
+      phone !== "" &&
+      name !== "" &&
+      validateEmail(email) &&
+      validatePhone(phone)
+    ) {
       return true;
     } else {
       return false;
