@@ -1,7 +1,7 @@
 import { axiosClient } from "utils/axiosClient";
 
-async function getBouquets() {
-  const response = await axiosClient.get("/bouquets");
+async function getBouquets(_id = "") {
+  const response = await axiosClient.get(`/bouquets/${_id}`);
   return response;
 }
 

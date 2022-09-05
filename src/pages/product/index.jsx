@@ -15,7 +15,11 @@ import TruckIcon from "icons/TruckIcon";
 import BoqueteIcon from "icons/BoqueteIcon";
 import CreditCartIcon from "icons/CreditCartIcon";
 
+import { useFetchProduct } from "hooks/useFetchProduct";
+
 function ProductPage() {
+  const { product } = useFetchProduct();
+
   return (
     <>
       <MainLayout>
@@ -23,8 +27,18 @@ function ProductPage() {
           <Header />
         </div>
         <div className={style.product_wrapper}>
-          <Info />
-          <Image />
+          <Info
+            title={product.title}
+            price={product.price}
+            subTitle={product.subTitle}
+            description={product.description}
+          />
+          <Image
+            rating={product.rating}
+            img={product.image}
+            width={product.width}
+            height={product.height}
+          />
         </div>
       </MainLayout>
       <div className={style.advantages}>

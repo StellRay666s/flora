@@ -14,7 +14,7 @@ function OrderPage() {
         <div className={style.header}></div>
         <Header />
 
-        <div className={style.order}>
+        <div className={style.orders}>
           {" "}
           <div className={style.title}>
             <H3>Заказы</H3>

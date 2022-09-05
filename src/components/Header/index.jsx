@@ -33,7 +33,7 @@ function Header() {
           <li>Как сделать заказы</li>
         </Anchor>
         {isAuth ? (
-          <Link to={"/order/:_id"}>
+          <Link to={"/orders/:_id"}>
             <li>Заказы</li>
           </Link>
         ) : (
