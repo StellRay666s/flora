@@ -1,15 +1,21 @@
 .item {
   padding: 20px;
-  width: 110px;
+  width: 150px;
 
   .image {
-    width: 110px;
-    height: 150px;
+    width: 150px;
+    height: 190px;
     border-radius: 200px;
-    border: 1px solid black;
+
+    img {
+      border-radius: 200px;
+      width: 150px;
+      height: 190px;
+    }
   }
 
   .title {
+    font-size: 18px;
     margin-top: 6px;
     text-align: center;
   }

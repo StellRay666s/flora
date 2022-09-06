@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./index.module.scss";
+import flower from "assets/images/flower.png";
 
-function Product({ title = "название", img, alt = "Изображение цветов" }) {
+function Product({ title = "Название", img = flower, alt = "Изображение цветов" }) {
   return (
     <div className={style.item}>
       <div className={style.image}>

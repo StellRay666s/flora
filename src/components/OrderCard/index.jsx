@@ -15,7 +15,7 @@ function OrderCard({ price = "2 500", date = "01.01.2002", paymentMethod = "На
           <Product />
         </div>
         <div className={style.info}>
-          <div className={style.title}>Способ оплаты:{paymentMethod}</div>
+          <div className={style.title}>Способ оплаты: {paymentMethod}</div>
           <div className={style.title}>Итого: {price} руб</div>
           <div className={style.title}>Заказ от: {date}</div>
         </div>
