@@ -28,6 +28,7 @@ function ProductPage() {
         </div>
         <div className={style.product_wrapper}>
           <Info
+            _id={product._id}
             title={product.title}
             price={product.price}
             subTitle={product.subTitle}

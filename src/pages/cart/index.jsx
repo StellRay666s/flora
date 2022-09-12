@@ -11,8 +11,13 @@ import Input from "components/Input";
 import PhoneInput from "components/PhoneInput";
 import SelectPayment from "components/SelectPayment";
 import Switch from "components/Switch";
+import { useSelector } from "react-redux";
 
 function CartPage() {
+  const bouquets = useSelector(store => store.cart.data);
+  const { totalPrice } = useSelector(state => state.cart);
+  const { user } = useSelector(state => state.user);
+
   return (
     <MainLayout>
       <div className={style.navbar}>
@@ -25,10 +30,10 @@ function CartPage() {
           </div>
 
           <div className={style.user}>
-            <Input style={2} value="Danila" />
-            <PhoneInput style={2} value="79999999999" />
-            <Input style={2} value="danila@yandex.ru" />
-            <Input style={2} value="Москва" />
+            <Input style={2} value={user.name} />
+            <PhoneInput style={2} value={user.phone} />
+            <Input style={2} value={user.email} />
+            <Input style={2} value={user.address} />
           </div>
 
           <div className={style.more}>
@@ -48,14 +53,24 @@ function CartPage() {
             <H2>ВАША КОРЗИНА</H2>
           </div>
           <div className={style.order_product}>
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            {bouquets
+              ? bouquets.map(products => (
+                  <CartItem
+                    key={products._id}
+                    _id={products._id}
+                    title={products.product.title}
+                    price={products.price}
+                    productId={products.product._id}
+                    img={products.product.image}
+                    count={products.count}
+                  />
+                ))
+              : ""}
           </div>
           <div className={style.total_price}>
             <div className={style.all}>
               <div className={style.title_price}>Всего</div>
-              <div className={style.price}>6 800</div>
+              <div className={style.price}>{totalPrice}</div>
             </div>
             <div className={style.all}>
               <div className={style.title_price}>Доставка</div>

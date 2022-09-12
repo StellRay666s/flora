@@ -11,7 +11,6 @@ function useFetchProduct() {
       const bouquet = await getBouquets(_id);
       const product = bouquet.data;
       setProduct(product);
-      console.log(product);
     })(_id);
   }, []);
 

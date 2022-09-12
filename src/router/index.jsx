@@ -13,12 +13,25 @@ import {
   OrderPage,
 } from "pages";
 
+import { useReAuthentication } from "hooks/useReAuthentication";
+import { useRequiredAuth } from "hooks/useRequiredAuth";
+import { fetchCartData } from "redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
+
 export default function Router() {
   let location = useLocation();
+  const reAuth = useReAuthentication;
+  const requiredAuth = useRequiredAuth;
+  reAuth();
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  React.useEffect(() => {
+    dispatch(fetchCartData());
+  }, []);
 
   return (
     <Fragment>

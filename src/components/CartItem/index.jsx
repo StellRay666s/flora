@@ -3,18 +3,50 @@ import Count from "components/Count";
 
 import style from "./index.module.scss";
 
-function CartItem({ title = "Букет в горшке тюльпаны и ромашки", price = "1 200", img, alt = "" }) {
+import { useDispatch } from "react-redux";
+
+import { setIncreasePrice, setDecreasePrice, fetchCartData } from "redux/slices/cartSlice";
+import { patchCart } from "requests/patchCart";
+import { deleteBoquets } from "requests/deleteBouquets";
+
+function CartItem({
+  count,
+  title = "Букет в горшке тюльпаны и ромашки",
+  price = "1 200",
+  img,
+  alt = "",
+  _id,
+}) {
+  var base64prefix = "data:image/png;base64, ";
+
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    if (count < 1) {
+      deleteBoquets(_id);
+      dispatch(fetchCartData());
+    } else {
+      patchCart(count, _id);
+    }
+  }, [count]);
+
+  function setDecrease() {
+    dispatch(setDecreasePrice(_id));
+  }
+  function setIncrease() {
+    dispatch(setIncreasePrice(_id));
+  }
+
   return (
     <>
       <div className={style.wrapperItem}>
         <div className={style.img}>
-          <img src={img} alt={alt} />
+          <img src={base64prefix + img} alt={alt} />
         </div>
         <div className={style.countTittleWrapper}>
           <h3>{title}</h3>
           <div className={style.childCount}>
             <span>Кол-во</span>
-            <Count />
+            <Count count={count} setDecrease={setDecrease} setIncrease={setIncrease} />
           </div>
         </div>
         <div className={style.price}>{price}</div>
