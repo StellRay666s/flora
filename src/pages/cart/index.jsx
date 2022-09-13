@@ -18,6 +18,11 @@ function CartPage() {
   const { totalPrice } = useSelector(state => state.cart);
   const { user } = useSelector(state => state.user);
 
+  const [name, setName] = React.useState(user.name || "");
+  const [phone, setPhone] = React.useState(user.phone || "");
+  const [email, setEmail] = React.useState(user.email || "");
+  const [address, setAddress] = React.useState(user.address || "");
+
   return (
     <MainLayout>
       <div className={style.navbar}>
@@ -30,10 +35,15 @@ function CartPage() {
           </div>
 
           <div className={style.user}>
-            <Input style={2} value={user.name} />
-            <PhoneInput style={2} value={user.phone} />
-            <Input style={2} value={user.email} />
-            <Input style={2} value={user.address} />
+            <Input style={2} placeholder={"Введите имя"} dispatchValue={setName} value={name} />
+            <PhoneInput style={2} dispatchValue={setPhone} value={phone} />
+            <Input style={2} placeholder={"Введите email"} dispatchValue={setEmail} value={email} />
+            <Input
+              style={2}
+              placeholder={"Введите адресс"}
+              dispatchValue={setAddress}
+              value={address}
+            />
           </div>
 
           <div className={style.more}>

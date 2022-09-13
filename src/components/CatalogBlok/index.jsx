@@ -20,7 +20,10 @@ function CatalogBlock({ data = [], isLoading }) {
               addToCart={addToCart}
               key={product._id}
               isLoading={isLoading}
-              {...product}
+              price={product.price}
+              title={product.title}
+              image={product.image}
+              _id={product._id}
               id={product._id}
             />
           ))}

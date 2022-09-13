@@ -10,8 +10,7 @@ import style from "./index.module.scss";
 
 function Header() {
   const { isAuth } = useSelector(store => store.user.user);
-  const data = useSelector(state => state.cart.data);
-  console.log(data.length);
+  const cart = useSelector(state => state.cart.data);
 
   return (
     <div className={style.header}>
@@ -50,7 +49,7 @@ function Header() {
         )}
       </ul>
 
-      {isAuth && <CartButton count={data.length} />}
+      {isAuth && <CartButton count={cart.length} />}
     </div>
   );
 }
