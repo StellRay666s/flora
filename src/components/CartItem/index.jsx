@@ -21,7 +21,7 @@ function CartItem({
 
   const dispatch = useDispatch();
   React.useEffect(() => {
-    if (count < 1) {
+    if (count == 0) {
       deleteBoquets(_id);
       dispatch(fetchCartData());
     } else {

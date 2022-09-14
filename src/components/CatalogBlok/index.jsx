@@ -6,7 +6,7 @@ import style from "./index.module.scss";
 import { useAddToCart } from "hooks/useAddToCart";
 
 function CatalogBlock({ data = [], isLoading }) {
-  const addToCart = useAddToCart();
+  const { addToCart, isButtonDisabled } = useAddToCart();
 
   return (
     <>
@@ -17,6 +17,7 @@ function CatalogBlock({ data = [], isLoading }) {
         <div className={style.wrapperCarts}>
           {data.map(product => (
             <ProductCard
+              disabled={isButtonDisabled}
               addToCart={addToCart}
               key={product._id}
               isLoading={isLoading}

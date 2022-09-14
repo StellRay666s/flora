@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 import AddButton from "components/AddButton";
 import style from "./index.module.scss";
 
-function ProductCard({ addToCart, price = 0, title = "Untitle", image = "", alt = "", _id = -0 }) {
+function ProductCard({
+  disabled,
+  addToCart,
+  price = 0,
+  title = "Untitle",
+  image = "",
+  alt = "",
+  _id = -0,
+}) {
   var base64prefix = "data:image/png;base64, ";
 
   return (
@@ -20,7 +28,7 @@ function ProductCard({ addToCart, price = 0, title = "Untitle", image = "", alt 
         <div className={style.title}>{title}</div>
         <span className={style.price}>{price} руб.</span>
         <div className={style.addBusket}>
-          <AddButton onClick={() => addToCart(_id)} />
+          <AddButton disabled={disabled} onClick={() => addToCart(_id)} />
           <p>Добавить в корзину</p>
         </div>
       </div>
