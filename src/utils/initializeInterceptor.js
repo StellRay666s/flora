@@ -5,7 +5,7 @@ const ACCESS_TOKEN_KEY = "token";
 
 function initializeInterceptor() {
   axiosClient.interceptors.request.use(config => {
-    config.headers.Authorization = window.localStorage.getItem(ACCESS_TOKEN_KEY);
+    config.headers.Authorization = window.localStorage.getItem("accessToken");
     return config;
   });
   axiosClient.interceptors.response.use(

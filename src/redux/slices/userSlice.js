@@ -39,6 +39,7 @@ export const userSlice = createSlice({
     },
     [fetchUserData.fulfilled]: (state, action) => {
       state.user = action.payload;
+
       state.status = "loaded";
     },
     [fetchUserData.rejected]: state => {

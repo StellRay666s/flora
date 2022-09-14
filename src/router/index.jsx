@@ -13,11 +13,16 @@ import {
   OrderPage,
 } from "pages";
 
+import { fetchCartData } from "redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
+
 export default function Router() {
   let location = useLocation();
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    dispatch(fetchCartData());
   }, [location]);
 
   return (

@@ -14,7 +14,7 @@ import CatalogBlock from "components/CatalogBlok";
 import AboutUs from "components/AboutUs";
 import OrderGuideComponent from "components/OrderGuideComponent";
 import Footer from "components/Footer";
-import { Link as Anchor } from "react-scroll";
+import { HashLink as Anchor } from "react-router-hash-link";
 import { useFetchBouquets } from "hooks/useFetchBouquets";
 
 import MainLayout from "layouts/MainLayout";
@@ -36,14 +36,7 @@ export default function IndexPage() {
               опоздаем-цветы в подарок! Если не понравится букет-мы его бесплатно поменяем
             </p>
             <div className={style.btn}>
-              <Anchor
-                activeClass="active"
-                to="orderGuide"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
+              <Anchor to={"/#orderGuide"}>
                 <Button className={"buttonOrder"}>ЗАКАЗАТЬ</Button>
               </Anchor>
             </div>

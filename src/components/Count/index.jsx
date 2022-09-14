@@ -12,7 +12,7 @@ function Count({ count = 0, setIncrease = () => {}, setDecrease = () => {} }) {
           </button>
           <button
             aria-label="Minus"
-            disabled={count <= 0 ? true : ""}
+            disabled={count === 0 ? true : ""}
             onClick={() => setDecrease()}
           >
             -

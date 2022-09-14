@@ -1,5 +1,4 @@
 .wrapperItem {
-  background-color: white;
   width: 750px;
   height: 120px;
   display: grid;
@@ -15,9 +14,14 @@
   .img {
     width: 95px;
     height: 135px;
-    border: 1px solid black;
+
     justify-self: center;
-    border-radius: 100px;
+
+    img {
+      border-radius: 100px;
+      width: 95px;
+      height: 135px;
+    }
   }
 
   .countTittleWrapper {
@@ -38,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     span {
       font-weight: 300;
     }
