@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import AuthLayout from "layouts/AuthLayout";
-
 import Button from "components/Button";
 import H2 from "components/H2";
 import Input from "components/Input";

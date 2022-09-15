@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { HashLink as Anchor } from "react-router-hash-link";
 import style from "./index.module.scss";
 
 import TruckIcon from "icons/TruckIcon";
@@ -14,7 +15,6 @@ import CatalogBlock from "components/CatalogBlok";
 import AboutUs from "components/AboutUs";
 import OrderGuideComponent from "components/OrderGuideComponent";
 import Footer from "components/Footer";
-import { HashLink as Anchor } from "react-router-hash-link";
 import { useFetchBouquets } from "hooks/useFetchBouquets";
 
 import MainLayout from "layouts/MainLayout";

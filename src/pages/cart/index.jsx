@@ -1,7 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
-import MainLayout from "layouts/MainLayout";
 
+import MainLayout from "layouts/MainLayout";
 import Button from "components/Button";
 import CartItem from "components/CartItem";
 import H2 from "components/H2";
@@ -12,13 +14,11 @@ import PhoneInput from "components/PhoneInput";
 import SelectPayment from "components/SelectPayment";
 import Switch from "components/Switch";
 import { postOrders } from "requests/postOrders";
-import { useSelector } from "react-redux";
 import { useNotification } from "hooks/useNotification";
-import { useNavigate } from "react-router-dom";
 
 function CartPage() {
   const notification = useNotification();
-  const bouquets = useSelector(store => store.cart.data);
+  const cart = useSelector(store => store.cart.data);
   const { totalPrice } = useSelector(state => state.cart);
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ function CartPage() {
   const [address, setAddress] = React.useState(user.address || "");
   const [paymentMethod, setPaymentMethod] = React.useState("");
 
-  const products = bouquets.map(item => ({ count: item.count, _id: item._id }));
+  const products = cart.map(item => ({ count: item.count, _id: item._id }));
 
   const date = new Date();
 
@@ -84,8 +84,8 @@ function CartPage() {
             <H2>ВАША КОРЗИНА</H2>
           </div>
           <div className={style.order_product}>
-            {bouquets
-              ? bouquets.map(products => (
+            {cart
+              ? cart.map(products => (
                   <CartItem
                     key={products._id}
                     _id={products._id}

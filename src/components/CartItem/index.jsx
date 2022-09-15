@@ -1,10 +1,7 @@
 import React from "react";
-import Count from "components/Count";
-
-import style from "./index.module.scss";
-
 import { useDispatch } from "react-redux";
-
+import style from "./index.module.scss";
+import Count from "components/Count";
 import { setIncreasePrice, setDecreasePrice, fetchCartData } from "redux/slices/cartSlice";
 import { patchCart } from "requests/patchCart";
 import { deleteBoquets } from "requests/deleteBouquets";
@@ -18,8 +15,8 @@ function CartItem({
   _id,
 }) {
   var base64prefix = "data:image/png;base64, ";
-
   const dispatch = useDispatch();
+
   React.useEffect(() => {
     if (count == 0) {
       deleteBoquets(_id);
@@ -32,6 +29,7 @@ function CartItem({
   function setDecrease() {
     dispatch(setDecreasePrice(_id));
   }
+
   function setIncrease() {
     dispatch(setIncreasePrice(_id));
   }

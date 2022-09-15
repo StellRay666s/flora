@@ -1,8 +1,8 @@
 import React from "react";
+import style from "./index.module.scss";
 import ProductCard from "components/ProductCard";
 import H1 from "components/H1";
 import Loading from "components/Loading";
-import style from "./index.module.scss";
 import { useAddToCart } from "hooks/useAddToCart";
 
 function CatalogBlock({ data = [], isLoading }) {
