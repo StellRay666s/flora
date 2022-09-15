@@ -14,13 +14,14 @@ import Switch from "components/Switch";
 import { postOrders } from "requests/postOrders";
 import { useSelector } from "react-redux";
 import { useNotification } from "hooks/useNotification";
+import { useNavigate } from "react-router-dom";
 
 function CartPage() {
   const notification = useNotification();
   const bouquets = useSelector(store => store.cart.data);
-  const { totalPrice, sale, delivery, summary } = useSelector(state => state.cart);
+  const { totalPrice } = useSelector(state => state.cart);
   const { user } = useSelector(state => state.user);
-  const { data } = useSelector(state => state.cart);
+  const navigate = useNavigate();
 
   const [name, setName] = React.useState(user.name || "");
   const [phone, setPhone] = React.useState(user.phone || "");
@@ -28,21 +29,14 @@ function CartPage() {
   const [address, setAddress] = React.useState(user.address || "");
   const [paymentMethod, setPaymentMethod] = React.useState("");
 
-  const product = data.map(item => ({ count: item.count, _id: item._id }));
+  const products = bouquets.map(item => ({ count: item.count, _id: item._id }));
 
-  let options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    weekday: "long",
-    minute: "numeric",
-  };
-  const date = new Intl.DateTimeFormat("Ru", options).format();
+  const date = new Date();
 
   async function orderPlacement() {
     try {
-      await postOrders(date, address, paymentMethod, product);
+      await postOrders(date, address, paymentMethod, products);
+      navigate("/orders/:id");
     } catch (err) {
       notification("Ошибка при обработке заказа", "error");
     }
@@ -105,21 +99,9 @@ function CartPage() {
               : ""}
           </div>
           <div className={style.total_price}>
-            <div className={style.all}>
-              <div className={style.title_price}>Всего</div>
-              <div className={style.price}>{totalPrice}</div>
-            </div>
-            <div className={style.all}>
-              <div className={style.title_price}>Доставка</div>
-              <div className={style.price}>{delivery}</div>
-            </div>
-            <div className={style.all}>
-              <div className={style.title_price}>Скидка</div>
-              <div className={style.price}>{sale}</div>
-            </div>
             <div className={style.summary}>
               <div className={style.title_price}>Итог:</div>
-              <div className={style.price}>{summary}</div>
+              <div className={style.price}>{totalPrice}</div>
             </div>
           </div>
         </div>
