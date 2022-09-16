@@ -30,7 +30,7 @@ function Header() {
           <li>О нас</li>
         </Anchor>
         <Anchor to={"/#orderGuide"}>
-          <li>Как сделать заказы</li>
+          <li>Как сделать заказ</li>
         </Anchor>
         {isAuth ? (
           <Link to={"/orders/:_id"}>

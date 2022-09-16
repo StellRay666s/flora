@@ -47,11 +47,12 @@ function RegistrationPage() {
       validateEmail(email) &&
       validatePhone(phone)
     ) {
-      return true;
-    } else {
       return false;
+    } else {
+      return true;
     }
   }
+  console.log(checkInputs());
 
   async function registration() {
     try {
@@ -99,9 +100,7 @@ function RegistrationPage() {
           disabled={checkInputs()}
           onClick={() => registration()}
           className={
-            checkInputs() === false
-              ? "buttonOrder buttonRegistrAuth2"
-              : "buttonOrder buttonRegistrAuth"
+            checkInputs() ? "buttonOrder buttonRegistrAuth2" : "buttonOrder buttonRegistrAuth"
           }
         >
           Зарегистрироваться

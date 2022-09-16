@@ -12,7 +12,7 @@ function useFetchProduct() {
       const product = bouquet.data;
       setProduct(product);
     })(_id);
-  }, []);
+  }, [_id]);
 
   return { product };
 }

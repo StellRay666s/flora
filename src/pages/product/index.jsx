@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./index.module.scss";
+import { useParams } from "react-router-dom";
 
 import MainLayout from "layouts/MainLayout";
 
@@ -10,15 +11,21 @@ import Footer from "components/Footer";
 import H3 from "components/H3";
 import Header from "components/Header";
 import ProductCard from "components/ProductCard";
+import Loading from "components/Loading";
 
 import TruckIcon from "icons/TruckIcon";
 import BoqueteIcon from "icons/BoqueteIcon";
 import CreditCartIcon from "icons/CreditCartIcon";
 
 import { useFetchProduct } from "hooks/useFetchProduct";
+import { useFetchBouquets } from "hooks/useFetchBouquets";
+import { useAddToCart } from "hooks/useAddToCart";
 
 function ProductPage() {
+  const { _id } = useParams();
   const { product } = useFetchProduct();
+  const { bouquets, isLoading } = useFetchBouquets();
+  const { addToCart, isButtonDisabled } = useAddToCart();
 
   return (
     <>
@@ -71,11 +78,24 @@ function ProductPage() {
         <div className={style.others_title}>
           <H3>Смотрите так же наши остальные товары </H3>
         </div>
-        <div className={style.wrapper_card}>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <div className={style.wrapper_card}>
+            {bouquets
+              .filter(boquet => boquet._id !== _id)
+              .map(product => (
+                <ProductCard
+                  disabled={isButtonDisabled}
+                  price={product.price}
+                  title={product.title}
+                  image={product.image}
+                  _id={product._id}
+                  addToCart={addToCart}
+                />
+              ))}
+          </div>
+        )}
       </MainLayout>
       <Footer />
     </>
