@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./index.module.scss";
+
 import MainLayout from "layouts/MainLayout";
 
 import Info from "components/ProductBlock/Info";
 import Image from "components/ProductBlock/Image";
-
 import Advantages from "components/Advantages";
 import Footer from "components/Footer";
 import H3 from "components/H3";

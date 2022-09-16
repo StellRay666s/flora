@@ -14,7 +14,7 @@ function InfoItem({
   description,
   _id,
 }) {
-  const addToCart = useAddToCart();
+  const { addToCart, isButtonDisabled } = useAddToCart();
 
   return (
     <div>
@@ -35,7 +35,11 @@ function InfoItem({
         <div className={style.description}>{description}</div>
         <div className={style.buttons}>
           <Button className={"buttonOrderProd"}>Заказать</Button>
-          <Button disabled={true} onClick={() => addToCart(_id)} className={"buttonInCartProd"}>
+          <Button
+            disabled={isButtonDisabled}
+            onClick={() => addToCart(_id)}
+            className={"buttonInCartProd"}
+          >
             Добавить в корзину
           </Button>
         </div>

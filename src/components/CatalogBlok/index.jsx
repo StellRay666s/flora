@@ -1,12 +1,12 @@
 import React from "react";
+import style from "./index.module.scss";
 import ProductCard from "components/ProductCard";
 import H1 from "components/H1";
 import Loading from "components/Loading";
-import style from "./index.module.scss";
 import { useAddToCart } from "hooks/useAddToCart";
 
 function CatalogBlock({ data = [], isLoading }) {
-  const addToCart = useAddToCart();
+  const { addToCart, isButtonDisabled } = useAddToCart();
 
   return (
     <>
@@ -17,6 +17,7 @@ function CatalogBlock({ data = [], isLoading }) {
         <div className={style.wrapperCarts}>
           {data.map(product => (
             <ProductCard
+              disabled={isButtonDisabled}
               addToCart={addToCart}
               key={product._id}
               isLoading={isLoading}

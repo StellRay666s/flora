@@ -2,9 +2,15 @@ import React from "react";
 import Plus from "icons/Plus";
 import style from "./index.module.scss";
 
-function AddButton({ onClick = () => {} }) {
+function AddButton({ disabled, onClick = () => {} }) {
   return (
-    <button title="Add" aria-label="Add" onClick={onClick} className={style.svgWrapper}>
+    <button
+      disabled={disabled}
+      title="Add"
+      aria-label="Add"
+      onClick={onClick}
+      className={style.svgWrapper}
+    >
       <Plus />
     </button>
   );

@@ -28,7 +28,10 @@ export const cartSlice = createSlice({
       const product = state.data.find(boquet => boquet._id === action.payload);
       const priceProduct = { price: product.product.price + product.price };
       const count = product.count++;
-      const priceAddition = Object.assign(product, priceProduct, count);
+      state.data = state.data.map(boquet => ({
+        ...boquet,
+        ...{ ...product, ...priceProduct, ...count },
+      }));
       state.totalPrice = state.data.reduce((sum, obj) => {
         return sum + obj.price;
       }, 0);
@@ -36,9 +39,12 @@ export const cartSlice = createSlice({
     setDecreasePrice: (state, action) => {
       const product = state.data.find(boquet => boquet._id === action.payload);
       const priceProduct = { price: product.price - product.product.price };
-      const priceAddition = Object.assign(product, priceProduct);
-      state.totalPrice = state.totalPrice - product.product.price;
       const count = product.count--;
+      state.data = state.data.map(boquet => ({
+        ...boquet,
+        ...{ ...product, ...priceProduct, ...count },
+      }));
+      state.totalPrice = state.totalPrice - product.product.price;
     },
   },
   extraReducers: {

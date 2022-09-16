@@ -1,15 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { HashLink as Anchor } from "react-router-hash-link";
+import style from "./index.module.scss";
 
 import Logo from "components/Logo";
 import CartButton from "components/CartButton";
-import { useSelector } from "react-redux";
-
-import style from "./index.module.scss";
 
 function Header() {
-  const { isAuth } = useSelector(store => store.user.user);
+  const { isAuth } = useSelector(state => state.user.user);
   const cart = useSelector(state => state.cart.data);
 
   return (
