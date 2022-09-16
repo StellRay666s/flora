@@ -31,12 +31,15 @@ function CartPage() {
 
   const products = cart.map(item => ({ count: item.count, _id: item._id }));
 
-  const date = new Date();
-
   async function orderPlacement() {
+    const date = new Date();
     try {
-      await postOrders(date, address, paymentMethod, products);
-      navigate("/orders/:id");
+      const orderResponse = await postOrders(date, address, paymentMethod, products);
+      if (orderResponse.data.id) {
+        navigate(`/orders/${orderResponse.data.id}`);
+      } else {
+        console.error("Miss created order id");
+      }
     } catch (err) {
       notification("Ошибка при обработке заказа", "error");
     }
