@@ -18,7 +18,7 @@ function InfoItem({
 }) {
   const { addToCart, isButtonDisabled } = useAddToCart();
   const cart = useSelector(state => state.cart.data);
-  const productId = cart.filter(boquet => boquet.product._id === _id);
+  const cartAvailability = cart.filter(boquet => boquet.product._id === _id);
 
   return (
     <div>
@@ -43,7 +43,7 @@ function InfoItem({
             onClick={() => addToCart(_id)}
             className={"buttonInCartProd"}
           >
-            {productId.length === 0 ? "Добавить в корзину" : "Добавлено в корзину"}
+            {cartAvailability.length === 0 ? "Добавить в корзину" : "Добавлено в корзину"}
           </Button>
         </div>
       </div>
