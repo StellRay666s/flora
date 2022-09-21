@@ -23,7 +23,7 @@ function CartPage() {
   const { totalPrice } = useSelector(state => state.cart);
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate();
-  const requiredAuth = useRequiredAuth;
+  const requiredAuth = useRequiredAuth();
 
   const [name, setName] = React.useState(user.name || "");
   const [phone, setPhone] = React.useState(user.phone || "");

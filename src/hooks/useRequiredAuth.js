@@ -7,13 +7,13 @@ function useRequiredAuth() {
   const navigate = useNavigate();
   const notification = useNotification();
 
-  React.useEffect(() => {
+  return function requiredAuth() {
     if (accessToken) {
     } else {
       navigate("/authorization");
       notification("Необходимо авторизироваться", "error");
     }
-  }, []);
+  };
 }
 
 export { useRequiredAuth };
