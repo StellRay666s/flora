@@ -8,7 +8,8 @@ import Logo from "components/Logo";
 import CartButton from "components/CartButton";
 
 function Header() {
-  const { isAuth } = useSelector(state => state.user.user);
+  const isAuth = useSelector(state => state.user.user.isAuth);
+
   const cart = useSelector(state => state.cart.data);
 
   return (

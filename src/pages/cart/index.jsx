@@ -15,6 +15,7 @@ import SelectPayment from "components/SelectPayment";
 import Switch from "components/Switch";
 import { postOrders } from "requests/postOrders";
 import { useNotification } from "hooks/useNotification";
+import { useRequiredAuth } from "hooks/useRequiredAuth";
 
 function CartPage() {
   const notification = useNotification();
@@ -22,6 +23,7 @@ function CartPage() {
   const { totalPrice } = useSelector(state => state.cart);
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate();
+  const requiredAuth = useRequiredAuth;
 
   const [name, setName] = React.useState(user.name || "");
   const [phone, setPhone] = React.useState(user.phone || "");
@@ -44,6 +46,8 @@ function CartPage() {
       notification("Ошибка при обработке заказа", "error");
     }
   }
+
+  requiredAuth();
 
   return (
     <MainLayout>

@@ -15,12 +15,15 @@ import {
 
 import { fetchCartData } from "redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
+import { useReAuthentication } from "hooks/useReAuthentication";
 
 export default function Router() {
   let location = useLocation();
   const dispatch = useDispatch();
+  const reAuth = useReAuthentication();
 
   React.useEffect(() => {
+    reAuth();
     window.scrollTo(0, 0);
     dispatch(fetchCartData());
   }, [location]);

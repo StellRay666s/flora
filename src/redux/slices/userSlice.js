@@ -39,11 +39,11 @@ export const userSlice = createSlice({
     },
     [fetchUserData.fulfilled]: (state, action) => {
       state.user = action.payload;
-
+      state.user.isAuth = true;
       state.status = "loaded";
     },
     [fetchUserData.rejected]: state => {
-      state.user = null;
+      state.user = { ...state.users, isAuth: false };
       state.status = "error";
     },
   },

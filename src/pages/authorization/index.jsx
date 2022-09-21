@@ -19,7 +19,7 @@ function AuthorizationPage() {
   const notification = useNotification();
   const dispatch = useDispatch();
 
-  const { isAuth } = useSelector(store => store.user.user);
+  const isAuth = useSelector(store => store.user.user.isAuth);
 
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");

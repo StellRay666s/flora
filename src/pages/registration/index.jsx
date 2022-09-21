@@ -19,7 +19,7 @@ import style from "./index.module.scss";
 
 function RegistrationPage() {
   const navigate = useNavigate();
-  const { isAuth } = useSelector(store => store.user.user);
+  const isAuth = useSelector(store => store.user.user.isAuth);
   const dispatch = useDispatch();
   const nofication = useNotification();
 
