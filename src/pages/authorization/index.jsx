@@ -19,16 +19,16 @@ function AuthorizationPage() {
   const notification = useNotification();
   const dispatch = useDispatch();
 
-  const { isAuth } = useSelector(store => store.user.user);
+  const isAuth = useSelector(store => store.user.user.isAuth);
 
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   function checkInputs() {
     if (email !== "" && password !== "" && validateEmail(email)) {
-      return true;
-    } else {
       return false;
+    } else {
+      return true;
     }
   }
 
@@ -68,9 +68,7 @@ function AuthorizationPage() {
           onClick={authorization}
           disabled={checkInputs()}
           className={
-            checkInputs() === false
-              ? "buttonOrder buttonRegistrAuth2"
-              : "buttonOrder buttonRegistrAuth"
+            checkInputs() ? "buttonOrder buttonRegistrAuth2" : "buttonOrder buttonRegistrAuth"
           }
         >
           Войти

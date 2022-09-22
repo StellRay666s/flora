@@ -4,8 +4,8 @@ import { fetchUserData } from "redux/slices/userSlice";
 
 function useReAuthentication() {
   const dispatch = useDispatch();
-  React.useEffect(() => {
+  return function reAuthentication() {
     dispatch(fetchUserData());
-  }, []);
+  };
 }
 export { useReAuthentication };

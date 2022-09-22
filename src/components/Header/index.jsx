@@ -8,7 +8,8 @@ import Logo from "components/Logo";
 import CartButton from "components/CartButton";
 
 function Header() {
-  const { isAuth } = useSelector(state => state.user.user);
+  const isAuth = useSelector(state => state.user.user.isAuth);
+
   const cart = useSelector(state => state.cart.data);
 
   return (
@@ -30,7 +31,7 @@ function Header() {
           <li>О нас</li>
         </Anchor>
         <Anchor to={"/#orderGuide"}>
-          <li>Как сделать заказы</li>
+          <li>Как сделать заказ</li>
         </Anchor>
         {isAuth ? (
           <Link to={"/orders/:_id"}>

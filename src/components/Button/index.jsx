@@ -7,7 +7,7 @@ function Button({
   disabled,
 }) {
   return (
-    <button disabled={disabled ? false : true} onClick={onClick} className={className}>
+    <button disabled={disabled ? true : false} onClick={onClick} className={className}>
       {children}
     </button>
   );

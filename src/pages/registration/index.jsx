@@ -19,7 +19,7 @@ import style from "./index.module.scss";
 
 function RegistrationPage() {
   const navigate = useNavigate();
-  const { isAuth } = useSelector(store => store.user.user);
+  const isAuth = useSelector(store => store.user.user.isAuth);
   const dispatch = useDispatch();
   const nofication = useNotification();
 
@@ -47,11 +47,12 @@ function RegistrationPage() {
       validateEmail(email) &&
       validatePhone(phone)
     ) {
-      return true;
-    } else {
       return false;
+    } else {
+      return true;
     }
   }
+  console.log(checkInputs());
 
   async function registration() {
     try {
@@ -99,9 +100,7 @@ function RegistrationPage() {
           disabled={checkInputs()}
           onClick={() => registration()}
           className={
-            checkInputs() === false
-              ? "buttonOrder buttonRegistrAuth2"
-              : "buttonOrder buttonRegistrAuth"
+            checkInputs() ? "buttonOrder buttonRegistrAuth2" : "buttonOrder buttonRegistrAuth"
           }
         >
           Зарегистрироваться

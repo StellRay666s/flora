@@ -6,8 +6,13 @@ import MainLayout from "layouts/MainLayout";
 import Header from "components/Header";
 import OrderCard from "components/OrderCard";
 import H3 from "components/H3";
+import { useRequiredAuth } from "hooks/useRequiredAuth";
 
 function OrderPage() {
+  const requiredAuth = useRequiredAuth();
+
+  requiredAuth();
+
   return (
     <div>
       <MainLayout>

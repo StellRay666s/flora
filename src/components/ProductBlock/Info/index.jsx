@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import H1 from "components/H1";
 import Button from "components/Button";
 import H3 from "components/H3";
@@ -15,6 +17,8 @@ function InfoItem({
   _id,
 }) {
   const { addToCart, isButtonDisabled } = useAddToCart();
+  const cart = useSelector(state => state.cart.data);
+  const cartAvailability = cart.filter(boquet => boquet.product._id === _id);
 
   return (
     <div>
@@ -34,13 +38,12 @@ function InfoItem({
         </div>
         <div className={style.description}>{description}</div>
         <div className={style.buttons}>
-          <Button className={"buttonOrderProd"}>Заказать</Button>
           <Button
             disabled={isButtonDisabled}
             onClick={() => addToCart(_id)}
             className={"buttonInCartProd"}
           >
-            Добавить в корзину
+            {cartAvailability.length === 0 ? "Добавить в корзину" : "Добавлено в корзину"}
           </Button>
         </div>
       </div>
