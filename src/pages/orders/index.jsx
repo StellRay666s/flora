@@ -9,7 +9,7 @@ import H3 from "components/H3";
 import { useRequiredAuth } from "hooks/useRequiredAuth";
 
 function OrderPage() {
-  const requiredAuth = useRequiredAuth;
+  const requiredAuth = useRequiredAuth();
 
   requiredAuth();
 
