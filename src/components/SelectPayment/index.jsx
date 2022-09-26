@@ -2,7 +2,7 @@ import React from "react";
 import style from "./index.module.scss";
 
 function SelectPayment({ value = "", setValue = () => {} }) {
-  const payloadMethods = ["Наличными", "Apple Pay", "Банковская карта"];
+  const payloadMethods = ["Cash", "Apple Pay", "Card"];
 
   function selectPaymentMethod(index) {
     setValue(payloadMethods[index]);

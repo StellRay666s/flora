@@ -23,9 +23,9 @@ export default function Router() {
   const reAuth = useReAuthentication();
 
   React.useEffect(() => {
-    reAuth();
     window.scrollTo(0, 0);
     dispatch(fetchCartData());
+    reAuth();
   }, [location]);
 
   return (
@@ -33,7 +33,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<IndexPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/orders/:_id" element={<OrderPage />} />
+        <Route path="/orders" element={<OrderPage />} />
         <Route path="/product/:_id" element={<ProductPage />} />
         <Route path="/authorization" element={<AuthorizationPage />} />
         <Route path="/registration" element={<RegistrationPage />} />
