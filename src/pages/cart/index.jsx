@@ -31,7 +31,7 @@ function CartPage() {
   const [address, setAddress] = React.useState(user.address || "");
   const [paymentMethod, setPaymentMethod] = React.useState("");
 
-  const products = cart.map(item => ({ count: item.count, _id: item._id }));
+  const products = cart.map(item => ({ count: item.count, _id: item.product._id }));
 
   async function orderPlacement() {
     const date = new Date();
@@ -81,7 +81,7 @@ function CartPage() {
             <H3>Выберите способо оплаты</H3>
             <SelectPayment setValue={setPaymentMethod} value={paymentMethod} />
           </div>
-          <Button disabled={true} onClick={() => orderPlacement()} className={"buttonOrderProd"}>
+          <Button disabled={false} onClick={() => orderPlacement()} className={"buttonOrderProd"}>
             Оформить
           </Button>
         </div>
