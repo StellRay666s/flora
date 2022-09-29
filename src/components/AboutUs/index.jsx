@@ -1,6 +1,7 @@
 import React from "react";
 import H1 from "components/H1";
 import style from "./index.module.scss";
+import girls from "assets/images/girls.jpeg";
 
 function AboutUs() {
   return (
@@ -25,7 +26,9 @@ function AboutUs() {
           </p>
         </div>
         <div className={style.girlWrapper}>
-          <div className={style.img}></div>
+          <div className={style.img}>
+            <img src={girls} />
+          </div>
         </div>
       </div>
     </div>

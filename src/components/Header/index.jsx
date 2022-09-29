@@ -7,6 +7,8 @@ import style from "./index.module.scss";
 import Logo from "components/Logo";
 import CartButton from "components/CartButton";
 
+import { scrollWithOffset } from "utils/scrollWithOffset";
+
 function Header() {
   const isAuth = useSelector(state => state.user.user.isAuth);
 
@@ -24,13 +26,13 @@ function Header() {
           <li>Главная</li>
         </Link>
 
-        <Anchor to={"/#catalog"}>
+        <Anchor scroll={e => scrollWithOffset(e)} to={"/#catalog"}>
           <li>Каталог</li>
         </Anchor>
-        <Anchor to={"/#aboutUs"}>
+        <Anchor scroll={e => scrollWithOffset(e)} to={"/#aboutUs"}>
           <li>О нас</li>
         </Anchor>
-        <Anchor to={"/#orderGuide"}>
+        <Anchor scroll={e => scrollWithOffset(e)} to={"/#orderGuide"}>
           <li>Как сделать заказ</li>
         </Anchor>
         {isAuth ? (

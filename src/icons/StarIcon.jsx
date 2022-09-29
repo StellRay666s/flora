@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function StarIcon({ fill = "yellow" }) {
+export default function StarIcon({ fill = "#ffc4a3" }) {
   return (
     <svg
       fill={fill}
