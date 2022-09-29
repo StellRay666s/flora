@@ -44,7 +44,7 @@ function CartItem({
         <div className={style.countTittleWrapper}>
           <h3>{title}</h3>
           <div className={style.childCount}>
-            <span>Кол-во</span>
+            <span>Кол-во:</span>
             <Count count={count} setDecrease={setDecrease} setIncrease={setIncrease} />
           </div>
         </div>

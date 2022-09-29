@@ -37,7 +37,7 @@ export default function IndexPage() {
               опоздаем-цветы в подарок! Если не понравится букет-мы его бесплатно поменяем
             </p>
             <div className={style.btn}>
-              <Anchor to={"/#orderGuide"} scroll={e => scrollWithOffset(e)}>
+              <Anchor to={"/#orderGuide"} scroll={e => scrollWithOffset(e, 75)}>
                 <Button className={"buttonOrder"}>ЗАКАЗАТЬ</Button>
               </Anchor>
             </div>
