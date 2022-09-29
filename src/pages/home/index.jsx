@@ -16,6 +16,7 @@ import AboutUs from "components/AboutUs";
 import OrderGuideComponent from "components/OrderGuideComponent";
 import Footer from "components/Footer";
 import { useFetchBouquets } from "hooks/useFetchBouquets";
+import { scrollWithOffset } from "utils/scrollWithOffset";
 
 import MainLayout from "layouts/MainLayout";
 
@@ -36,20 +37,19 @@ export default function IndexPage() {
               опоздаем-цветы в подарок! Если не понравится букет-мы его бесплатно поменяем
             </p>
             <div className={style.btn}>
-              <Anchor to={"/#orderGuide"}>
+              <Anchor to={"/#orderGuide"} scroll={e => scrollWithOffset(e)}>
                 <Button className={"buttonOrder"}>ЗАКАЗАТЬ</Button>
               </Anchor>
             </div>
           </div>
         </div>
         <div className={style.advahtages}>
-          <Advantages>
-            {" "}
+          <Advantages className={"advantaWrapper"}>
             <div className={style.truck}>
               <TruckIcon fill="black" width={40} height={40} />
               <div className={style.title_description}>
                 <h4>Бесплатная доставка по всему городу</h4>
-                <span>от 500 руб</span>
+                <span>от 500 ₽</span>
               </div>
             </div>
             <div className={style.truck}>
@@ -85,7 +85,7 @@ export default function IndexPage() {
       <MainLayout>
         <div id="orderGuide" className={style.orderGuide}>
           <OrderGuideComponent />
-        </div>{" "}
+        </div>
       </MainLayout>
       <div className={style.footer}>
         <Footer />

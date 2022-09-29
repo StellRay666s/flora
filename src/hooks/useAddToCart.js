@@ -3,13 +3,21 @@ import { useSelector, useDispatch } from "react-redux";
 import { postCart } from "requests/postCart";
 import { patchCart } from "requests/patchCart";
 import { fetchCartData } from "redux/slices/cartSlice";
+import { useNotification } from "./useNotification";
 
 function useAddToCart() {
   const cart = useSelector(state => state.cart.data);
+  const isAuth = useSelector(state => state.user.user.isAuth);
   const dispatch = useDispatch();
   const [isButtonDisabled, setIsButtonDisabled] = React.useState(false);
+  const notification = useNotification();
 
   async function addToCart(_id) {
+    if (isAuth === false) {
+      notification("Для добавления товара необходимо авторизоваться", "error");
+      isButtonDisabled(false);
+    }
+
     const products = cart.map(item => item.product);
     const productId = products.filter(item => item._id === _id);
     dispatch(fetchCartData());

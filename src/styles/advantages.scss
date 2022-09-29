@@ -1,0 +1,26 @@
+.advantaWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 360px);
+  grid-template-rows: 120px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 20px auto;
+  height: 120px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+}
+.advantaWrapperProduct {
+  display: grid;
+  grid-template-columns: repeat(3, 466px);
+  grid-template-rows: 120px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 20px auto;
+  height: 120px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+}

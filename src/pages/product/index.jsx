@@ -50,12 +50,12 @@ function ProductPage() {
         </div>
       </MainLayout>
       <div className={style.advantages}>
-        <Advantages>
+        <Advantages className={"advantaWrapperProduct"}>
           <div className={style.truck}>
             <TruckIcon fill="black" width={40} height={40} />
             <div className={style.title_description}>
               <h4>Бесплатная доставка по всему городу</h4>
-              <span>от 500 руб</span>
+              <span>от 500 ₽</span>
             </div>
           </div>
           <div className={style.truck}>

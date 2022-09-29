@@ -46,6 +46,13 @@
       left: 51%;
       transform: translate(-50%, -50%);
       background-color: white;
+
+      img {
+        border-bottom-left-radius: 250px;
+        border-top-left-radius: 290px;
+        width: 48vw;
+        height: 550px;
+      }
     }
   }
 }

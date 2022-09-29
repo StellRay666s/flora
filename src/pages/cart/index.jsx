@@ -12,7 +12,6 @@ import Header from "components/Header";
 import Input from "components/Input";
 import PhoneInput from "components/PhoneInput";
 import SelectPayment from "components/SelectPayment";
-import Switch from "components/Switch";
 import { postOrders } from "requests/postOrders";
 import { useNotification } from "hooks/useNotification";
 import { useRequiredAuth } from "hooks/useRequiredAuth";
@@ -71,12 +70,6 @@ function CartPage() {
               value={address}
             />
           </div>
-
-          <div className={style.more}>
-            {" "}
-            <H3>Дополнительно</H3>
-            <Switch />
-          </div>
           <div className={style.payment}>
             <H3>Выберите способо оплаты</H3>
             <SelectPayment setValue={setPaymentMethod} value={paymentMethod} />
@@ -87,7 +80,6 @@ function CartPage() {
         </div>
         <div className={style.order_info}>
           <div className={style.title}>
-            {" "}
             <H2>ВАША КОРЗИНА</H2>
           </div>
           <div className={style.order_product}>
@@ -108,7 +100,7 @@ function CartPage() {
           <div className={style.total_price}>
             <div className={style.summary}>
               <div className={style.title_price}>Итог:</div>
-              <div className={style.price}>{totalPrice}</div>
+              <div className={style.price}>{totalPrice} ₽</div>
             </div>
           </div>
         </div>

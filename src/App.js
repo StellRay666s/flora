@@ -1,23 +1,23 @@
 import React, { Fragment } from "react";
 import Notification from "components/Notification";
 
-/** Redux */
-import { Provider } from "react-redux";
-import { store } from "redux/store";
-
 /** Routing */
 import Router from "router";
 import { BrowserRouter } from "react-router-dom";
 
+import { useReAuthentication } from "hooks/useReAuthentication";
+
 function App() {
+  const reAuth = useReAuthentication();
+
+  reAuth();
+
   return (
     <BrowserRouter>
-      <Provider store={store}>
-        <Notification />
-        <Fragment>
-          <Router />
-        </Fragment>
-      </Provider>
+      <Notification />
+      <Fragment>
+        <Router />
+      </Fragment>
     </BrowserRouter>
   );
 }

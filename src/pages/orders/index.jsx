@@ -21,10 +21,8 @@ function OrderPage() {
       <MainLayout>
         <div className={style.header}></div>
         <Header />
-
         {isLoading ? (
           <div className={style.orders}>
-            {" "}
             <div className={style.title}>
               <H3>Заказы</H3>
             </div>

@@ -75,11 +75,9 @@ function AuthorizationPage() {
         </Button>
         <div className={style.redirect}>
           <Link className={style.reg} to={"/registration"}>
-            {" "}
             Зарегистрироваться
           </Link>
           <Link className={style.home} to={"/"}>
-            {" "}
             На Главную
           </Link>
         </div>

@@ -47,7 +47,7 @@ function CartItem({
             <Count count={count} setDecrease={setDecrease} setIncrease={setIncrease} />
           </div>
         </div>
-        <div className={style.price}>{price}</div>
+        <div className={style.price}>{price} ₽</div>
       </div>
     </>
   );
