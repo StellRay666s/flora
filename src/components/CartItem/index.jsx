@@ -5,6 +5,7 @@ import Count from "components/Count";
 import { setIncreasePrice, setDecreasePrice, fetchCartData } from "redux/slices/cartSlice";
 import { patchCart } from "requests/patchCart";
 import { deleteBoquets } from "requests/deleteBouquets";
+import { formatPrice } from "utils/formatPrice";
 
 function CartItem({
   count,
@@ -47,7 +48,7 @@ function CartItem({
             <Count count={count} setDecrease={setDecrease} setIncrease={setIncrease} />
           </div>
         </div>
-        <div className={style.price}>{new Intl.NumberFormat("ru-RU").format(price)} ₽</div>
+        <div className={style.price}>{formatPrice(price)} ₽</div>
       </div>
     </>
   );

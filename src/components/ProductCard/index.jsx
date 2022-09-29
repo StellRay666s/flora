@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 import AddButton from "components/AddButton";
 import style from "./index.module.scss";
+import { formatPrice } from "utils/formatPrice";
 
 function ProductCard({
   disabled,
@@ -29,7 +30,7 @@ function ProductCard({
           </div>
         </div>
         <div className={style.title}>{title}</div>
-        <span className={style.price}>{new Intl.NumberFormat("ru-RU").format(price)} ₽</span>
+        <span className={style.price}>{formatPrice(price)} ₽</span>
         <div className={style.addBusket}>
           <AddButton disabled={disabled} onClick={() => addToCart(_id)} />
           {cartAvailability.length === 0 ? <p>Добавить в корзину</p> : <p>Добавлено в козину</p>}
