@@ -62,7 +62,12 @@ function AuthorizationPage() {
           <Input placeholder="Email" value={email} dispatchValue={setEmail} />
         </div>
         <div>
-          <Input placeholder="Пароль" value={password} dispatchValue={setPassword} />
+          <Input
+            placeholder="Пароль"
+            type="password"
+            value={password}
+            dispatchValue={setPassword}
+          />
         </div>
         <Button
           onClick={authorization}

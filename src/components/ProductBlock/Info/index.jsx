@@ -9,6 +9,7 @@ import style from "./index.module.scss";
 
 import { useAddToCart } from "hooks/useAddToCart";
 import { Link } from "react-router-dom";
+import { formatPrice } from "utils/formatPrice";
 
 function InfoItem({
   title = "букет в горшке",
@@ -34,7 +35,7 @@ function InfoItem({
           {" "}
           <H3>{subTitle}</H3>
         </div>
-        <div className={style.price}>{price} ₽</div>{" "}
+        <div className={style.price}>{formatPrice(price)} ₽</div>{" "}
         <div className={style.title_description}>
           <H3>Информация:</H3>
         </div>

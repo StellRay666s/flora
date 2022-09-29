@@ -15,6 +15,7 @@ import SelectPayment from "components/SelectPayment";
 import { postOrders } from "requests/postOrders";
 import { useNotification } from "hooks/useNotification";
 import { useRequiredAuth } from "hooks/useRequiredAuth";
+import { formatPrice } from "utils/formatPrice";
 
 function CartPage() {
   const notification = useNotification();
@@ -100,7 +101,7 @@ function CartPage() {
           <div className={style.total_price}>
             <div className={style.summary}>
               <div className={style.title_price}>Итог:</div>
-              <div className={style.price}>{totalPrice} ₽</div>
+              <div className={style.price}>{formatPrice(totalPrice)} ₽</div>
             </div>
           </div>
         </div>

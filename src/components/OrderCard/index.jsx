@@ -2,6 +2,7 @@ import React from "react";
 import Product from "./Product";
 
 import style from "./index.module.scss";
+import { formatPrice } from "utils/formatPrice";
 
 function OrderCard({ date = "01.01.2002", paymentMethod = "Наличными", products }) {
   function priceСalculation() {
@@ -28,7 +29,7 @@ function OrderCard({ date = "01.01.2002", paymentMethod = "Наличными", 
         </div>
         <div className={style.info}>
           <div className={style.title}>Способ оплаты: {paymentMethod}</div>
-          <div className={style.title}>Итого: {priceСalculation()} руб</div>
+          <div className={style.title}>Итого: {formatPrice(priceСalculation())} руб</div>
           <div className={style.title}>Заказ от: {date}</div>
         </div>
       </div>
