@@ -54,58 +54,67 @@ function CartPage() {
       <div className={style.navbar}>
         <Header />
       </div>
-      <div className={style.wrapper}>
-        <div className={style.user_info}>
-          <div className={style.title}>
-            <H2>ОФОРМЛЕНИЕ ЗАКАЗА</H2>{" "}
-          </div>
+      {cart.length === 0 ? (
+        <div className={style.clearCart}>Ваша корзина пуста!</div>
+      ) : (
+        <div className={style.wrapper}>
+          <div className={style.user_info}>
+            <div className={style.title}>
+              <H2>ОФОРМЛЕНИЕ ЗАКАЗА</H2>{" "}
+            </div>
 
-          <div className={style.user}>
-            <Input style={2} placeholder={"Введите имя"} dispatchValue={setName} value={name} />
-            <PhoneInput style={2} dispatchValue={setPhone} value={phone} />
-            <Input style={2} placeholder={"Введите email"} dispatchValue={setEmail} value={email} />
-            <Input
-              style={2}
-              placeholder={"Введите адресс"}
-              dispatchValue={setAddress}
-              value={address}
-            />
+            <div className={style.user}>
+              <Input style={2} placeholder={"Введите имя"} dispatchValue={setName} value={name} />
+              <PhoneInput style={2} dispatchValue={setPhone} value={phone} />
+              <Input
+                style={2}
+                placeholder={"Введите email"}
+                dispatchValue={setEmail}
+                value={email}
+              />
+              <Input
+                style={2}
+                placeholder={"Введите адресс"}
+                dispatchValue={setAddress}
+                value={address}
+              />
+            </div>
+            <div className={style.payment}>
+              <H3>Выберите способо оплаты</H3>
+              <SelectPayment setValue={setPaymentMethod} value={paymentMethod} />
+            </div>
+            <Button disabled={false} onClick={() => orderPlacement()} className={"buttonOrderProd"}>
+              Оформить
+            </Button>
           </div>
-          <div className={style.payment}>
-            <H3>Выберите способо оплаты</H3>
-            <SelectPayment setValue={setPaymentMethod} value={paymentMethod} />
-          </div>
-          <Button disabled={false} onClick={() => orderPlacement()} className={"buttonOrderProd"}>
-            Оформить
-          </Button>
-        </div>
-        <div className={style.order_info}>
-          <div className={style.title}>
-            <H2>ВАША КОРЗИНА</H2>
-          </div>
-          <div className={style.order_product}>
-            {cart
-              ? cart.map(products => (
-                  <CartItem
-                    key={products._id}
-                    _id={products._id}
-                    title={products.product.title}
-                    price={products.price}
-                    productId={products.product._id}
-                    img={products.product.image}
-                    count={products.count}
-                  />
-                ))
-              : ""}
-          </div>
-          <div className={style.total_price}>
-            <div className={style.summary}>
-              <div className={style.title_price}>Итог:</div>
-              <div className={style.price}>{formatPrice(totalPrice)} ₽</div>
+          <div className={style.order_info}>
+            <div className={style.title}>
+              <H2>ВАША КОРЗИНА</H2>
+            </div>
+            <div className={style.order_product}>
+              {cart
+                ? cart.map(products => (
+                    <CartItem
+                      key={products._id}
+                      _id={products._id}
+                      title={products.product.title}
+                      price={products.price}
+                      productId={products.product._id}
+                      img={products.product.image}
+                      count={products.count}
+                    />
+                  ))
+                : ""}
+            </div>
+            <div className={style.total_price}>
+              <div className={style.summary}>
+                <div className={style.title_price}>Итог:</div>
+                <div className={style.price}>{formatPrice(totalPrice)} ₽</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </MainLayout>
   );
 }
