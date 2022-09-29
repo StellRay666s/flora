@@ -88,7 +88,12 @@ function RegistrationPage() {
           <Input placeholder="Email" value={email} dispatchValue={setEmail} />
         </div>
         <div>
-          <Input placeholder="Пароль" value={password} dispatchValue={setPassword} />
+          <Input
+            placeholder="Пароль"
+            type="password"
+            value={password}
+            dispatchValue={setPassword}
+          />
         </div>
         <div>
           <Input placeholder="Адресс" value={address} dispatchValue={setAddress} />

@@ -76,7 +76,7 @@ function ProductPage() {
       </div>
       <MainLayout>
         <div className={style.others_title}>
-          <H3>Смотрите так же наши остальные товары </H3>
+          <H3>Смотрите так же наши остальные товары: </H3>
         </div>
         {isLoading ? (
           <Loading />

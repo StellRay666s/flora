@@ -8,9 +8,12 @@ import Logo from "components/Logo";
 import CartButton from "components/CartButton";
 
 import { scrollWithOffset } from "utils/scrollWithOffset";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const isAuth = useSelector(state => state.user.user.isAuth);
+  const location = useLocation();
+  const scrollPositions = location.pathname === "/orders" || "/cart" ? -150 : 75;
 
   const cart = useSelector(state => state.cart.data);
 
@@ -26,13 +29,13 @@ function Header() {
           <li>Главная</li>
         </Link>
 
-        <Anchor scroll={e => scrollWithOffset(e)} to={"/#catalog"}>
+        <Anchor scroll={e => scrollWithOffset(e, 75)} to={"/#catalog"}>
           <li>Каталог</li>
         </Anchor>
-        <Anchor scroll={e => scrollWithOffset(e)} to={"/#aboutUs"}>
+        <Anchor scroll={e => scrollWithOffset(e, scrollPositions)} to={"/#aboutUs"}>
           <li>О нас</li>
         </Anchor>
-        <Anchor scroll={e => scrollWithOffset(e)} to={"/#orderGuide"}>
+        <Anchor scroll={e => scrollWithOffset(e, scrollPositions)} to={"/#orderGuide"}>
           <li>Как сделать заказ</li>
         </Anchor>
         {isAuth ? (

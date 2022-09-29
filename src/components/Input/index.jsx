@@ -1,7 +1,13 @@
 import React, { Fragment } from "react";
 import styles from "./index.module.scss";
 
-export default function Input({ placeholder = "", value = "", dispatchValue = () => {}, style }) {
+export default function Input({
+  placeholder = "",
+  value = "",
+  dispatchValue = () => {},
+  style,
+  type = "text",
+}) {
   /**
    * Change handler
    * @param {React.ChangeEvent<HTMLInputElement>} e
@@ -13,6 +19,7 @@ export default function Input({ placeholder = "", value = "", dispatchValue = ()
   return (
     <Fragment>
       <input
+        type={type}
         value={value}
         onChange={onChange}
         className={style == 2 ? styles.inputOnCart : styles.input}

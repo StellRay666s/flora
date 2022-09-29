@@ -34,7 +34,7 @@ function InfoItem({
           {" "}
           <H3>{subTitle}</H3>
         </div>
-        <div className={style.price}>{price} ₽</div>{" "}
+        <div className={style.price}>{new Intl.NumberFormat("ru-RU").format(price)} ₽</div>{" "}
         <div className={style.title_description}>
           <H3>Информация:</H3>
         </div>
