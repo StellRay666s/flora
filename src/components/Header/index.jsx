@@ -13,8 +13,10 @@ import { useLocation } from "react-router-dom";
 function Header() {
   const isAuth = useSelector(state => state.user.user.isAuth);
   const location = useLocation();
-  const scrollPositions = location.pathname === "/orders" || "/cart" ? -150 : 75;
+  const scrollPositions =
+    location.pathname === "/orders" || location.pathname === "/cart" ? -150 : 75;
 
+  console.log(scrollPositions);
   const cart = useSelector(state => state.cart.data);
 
   return (

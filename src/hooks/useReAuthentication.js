@@ -1,11 +1,15 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchUserData } from "redux/slices/userSlice";
 
 function useReAuthentication() {
   const dispatch = useDispatch();
+  const isAuth = useSelector(state => state.user.user.isAuth);
+
   return function reAuthentication() {
-    dispatch(fetchUserData());
+    if (isAuth === false) {
+      dispatch(fetchUserData());
+    }
   };
 }
 export { useReAuthentication };

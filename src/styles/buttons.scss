@@ -57,3 +57,16 @@
   cursor: pointer;
   font-weight: 500;
 }
+.buttonOrderProd2 {
+  background: darken($color: #ffc5a376, $amount: 3);
+  width: 270px;
+  border-radius: 4px;
+  height: 90px;
+  border: 1px;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #fefefe;
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.6;
+}

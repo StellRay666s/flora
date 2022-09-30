@@ -18,20 +18,19 @@ import { useRequiredAuth } from "hooks/useRequiredAuth";
 import { formatPrice } from "utils/formatPrice";
 
 function CartPage() {
+  const navigate = useNavigate();
+  const requiredAuth = useRequiredAuth();
   const notification = useNotification();
   const cart = useSelector(store => store.cart.data);
   const { totalPrice } = useSelector(state => state.cart);
   const { user } = useSelector(state => state.user);
-  const navigate = useNavigate();
-  const requiredAuth = useRequiredAuth();
-
-  const [name, setName] = React.useState(user.name || "");
-  const [phone, setPhone] = React.useState(user.phone || "");
-  const [email, setEmail] = React.useState(user.email || "");
-  const [address, setAddress] = React.useState(user.address || "");
-  const [paymentMethod, setPaymentMethod] = React.useState("");
-
   const products = cart.map(item => ({ count: item.count, _id: item.product._id }));
+
+  const [name, setName] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [address, setAddress] = React.useState("");
+  const [paymentMethod, setPaymentMethod] = React.useState("");
 
   async function orderPlacement() {
     const date = new Date();
@@ -47,7 +46,13 @@ function CartPage() {
     }
   }
 
-  requiredAuth();
+  React.useEffect(() => {
+    setName(user.name);
+    setPhone(user.phone);
+    setEmail(user.email);
+    setAddress(user.address);
+    requiredAuth();
+  }, [user]);
 
   return (
     <MainLayout>
@@ -83,7 +88,11 @@ function CartPage() {
               <H3>Выберите способо оплаты</H3>
               <SelectPayment setValue={setPaymentMethod} value={paymentMethod} />
             </div>
-            <Button disabled={false} onClick={() => orderPlacement()} className={"buttonOrderProd"}>
+            <Button
+              disabled={paymentMethod === "" && true}
+              onClick={() => orderPlacement()}
+              className={paymentMethod === "" ? "buttonOrderProd2" : "buttonOrderProd"}
+            >
               Оформить
             </Button>
           </div>

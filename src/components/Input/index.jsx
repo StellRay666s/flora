@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 export default function Input({
   placeholder = "",
   value = "",
+
   dispatchValue = () => {},
   style,
   type = "text",
