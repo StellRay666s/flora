@@ -32,8 +32,14 @@ function ProductCard({
         <div className={style.title}>{title}</div>
         <span className={style.price}>{formatPrice(price)} ₽</span>
         <div className={style.addBusket}>
-          <AddButton disabled={disabled} onClick={() => addToCart(_id)} />
-          {cartAvailability.length === 0 ? <p>Добавить в корзину</p> : <p>Добавлено в козину</p>}
+          {cartAvailability.length === 0 ? (
+            <>
+              <AddButton disabled={disabled} onClick={() => addToCart(_id)} />
+              <p onClick={() => addToCart(_id)}>Добавить в корзину</p>
+            </>
+          ) : (
+            <p>Добавлено в козину</p>
+          )}
         </div>
       </div>
     </div>

@@ -9,8 +9,9 @@ import { useReAuthentication } from "hooks/useReAuthentication";
 
 function App() {
   const reAuth = useReAuthentication();
-
-  reAuth();
+  React.useEffect(() => {
+    reAuth();
+  }, []);
 
   return (
     <BrowserRouter>
