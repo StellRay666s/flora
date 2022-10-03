@@ -1,29 +1,37 @@
 import React from "react";
-import { CrossClose, H2, ProductCardMin } from "components";
+
+import CrossClose from "components/CrossClose";
+import H2 from "components/H2";
+import ProductCardMin from "components/ProductCardMin";
 
 import style from "./index.module.scss";
+import { Link } from "react-router-dom";
 
-function ThanksForOrderModal({ isOpen = false, setIsOpen = () => {} }) {
+function ThanksForOrderModal({ bouquets, isOpen = false, setIsOpen = () => {} }) {
   return (
     <>
       {isOpen ? (
-        <div className={style.modalWrapper}>
-          <div className={style.close}>
-            <CrossClose onClick={() => setIsOpen(!isOpen)} />
-          </div>
-          <div className={style.title}>
-            <H2>БЛАГОДАРИМ ЗА ПОКУПКУ</H2>
-          </div>
-          <div className={style.text}>
-            <p>Посмотрите пожалуйста почту, мы отправили туда информацию о закзазе</p>
-          </div>
-          <div className={style.description}>
-            <p>Смотрите так же:</p>
-          </div>
-          <div className={style.miniCart}>
-            {[].map(function renderRecomendations() {
-              return <ProductCardMin />;
-            })}
+        <div className={style.wrapper}>
+          <div className={style.modalWrapper}>
+            <div className={style.close}>
+              <CrossClose onClick={() => setIsOpen()} />
+            </div>
+            <div className={style.title}>
+              <H2>БЛАГОДАРИМ ЗА ПОКУПКУ</H2>
+            </div>
+            <div className={style.text}>
+              <p>
+                Перейти на страницу <Link to={"/orders"}>заказов.</Link>
+              </p>
+            </div>
+            <div className={style.description}>
+              <p>Смотрите так же:</p>
+            </div>
+            <div className={style.miniCart}>
+              {bouquets.map(product => (
+                <ProductCardMin image={product.image} title={product.title} _id={product._id} />
+              ))}
+            </div>
           </div>
         </div>
       ) : (

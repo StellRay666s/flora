@@ -15,8 +15,6 @@ function Header() {
   const location = useLocation();
   const scrollPositions =
     location.pathname === "/orders" || location.pathname === "/cart" ? -150 : 75;
-
-  console.log(scrollPositions);
   const cart = useSelector(state => state.cart.data);
 
   return (
