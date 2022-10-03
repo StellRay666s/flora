@@ -5,7 +5,11 @@
   position: relative;
   border-radius: 100px;
   margin: 10px;
-  
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+
   .cart {
     position: absolute;
     background-color: white;
@@ -14,5 +18,18 @@
     top: 10px;
     left: 10px;
     border-radius: 100px;
+
+    img {
+      width: 110px;
+      height: 160px;
+      border-radius: 100px;
+    }
+
+    .title {
+      color: white;
+      margin-top: 20px;
+      text-align: center;
+      width: 110px;
+    }
   }
 }
