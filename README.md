@@ -12,4 +12,4 @@
   <li>React-Router-Dom,</li> 
 </ul>
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=StellRay666s&theme=tokyonight_duo&hide_border=true&border_radius=5&locale=ru)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=StellRay666s&theme=tokyonight_duo&border_radius=5&locale=ru)](https://git.io/streak-stats)
