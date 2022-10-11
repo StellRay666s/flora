@@ -11,4 +11,4 @@
   <li>Axios,</li> 
   <li>React-Router-Dom,</li> 
 </ul>
-[![Danila Amazaryan's github activity graph](https://activity-graph.herokuapp.com/graph?username=Danila Amazaryan)](https://github.com/Danila Amazaryan/github-readme-activity-graph)
+[![Danila Amazaryan's github activity graph](https://activity-graph.herokuapp.com/graph?username=DanilaAmazaryan)](https://github.com/DanilaAmazaryan/github-readme-activity-graph)
