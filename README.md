@@ -11,4 +11,4 @@
   <li>Axios,</li> 
   <li>React-Router-Dom,</li> 
 </ul>
-[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=StellRay666s&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=StellRay666s&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
