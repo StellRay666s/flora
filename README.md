@@ -11,4 +11,4 @@
   <li>Axios,</li> 
   <li>React-Router-Dom,</li> 
 </ul>
-https://github-readme-streak-stats.herokuapp.com/?user=StellRay666s)](https://git.io/streak-stats
+[![StellRay666s's github activity graph](https://activity-graph.herokuapp.com/graph?username=StellRay666s)](https://github.com/StellRay666s/github-readme-activity-graph)
