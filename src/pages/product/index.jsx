@@ -83,6 +83,7 @@ function ProductPage() {
         ) : (
           <div className={style.wrapper_card}>
             {bouquets
+              .slice(0, 4)
               .filter(boquet => boquet._id !== _id)
               .map(product => (
                 <ProductCard

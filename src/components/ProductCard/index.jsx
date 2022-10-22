@@ -15,7 +15,6 @@ function ProductCard({
   alt = "",
   _id = -0,
 }) {
-  var base64prefix = "data:image/png;base64, ";
   const cart = useSelector(state => state.cart.data);
   const cartAvailability = cart.filter(boquet => boquet.product._id === _id);
 
@@ -25,7 +24,7 @@ function ProductCard({
         <div className={style.imgBorder}>
           <div className={style.border}>
             <Link to={`/product/${_id}`}>
-              <img src={base64prefix + image} alt={alt} className={style.img} />
+              <img src={image} alt={alt} className={style.img} />
             </Link>
           </div>
         </div>

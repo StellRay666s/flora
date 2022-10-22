@@ -28,7 +28,7 @@ function ThanksForOrderModal({ bouquets, isOpen = false, setIsOpen = () => {} })
               <p>Смотрите так же:</p>
             </div>
             <div className={style.miniCart}>
-              {bouquets.map(product => (
+              {bouquets.slice(0, 3).map(product => (
                 <ProductCardMin image={product.image} title={product.title} _id={product._id} />
               ))}
             </div>
