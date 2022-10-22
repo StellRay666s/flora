@@ -15,7 +15,6 @@ function CartItem({
   alt = "",
   _id,
 }) {
-  var base64prefix = "data:image/png;base64, ";
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -39,7 +38,7 @@ function CartItem({
     <>
       <div className={style.wrapperItem}>
         <div className={style.img}>
-          <img src={base64prefix + img} alt={alt} />
+          <img src={img} alt={alt} />
         </div>
         <div className={style.countTittleWrapper}>
           <h3>{title}</h3>

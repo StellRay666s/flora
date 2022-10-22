@@ -21,7 +21,7 @@ import { scrollWithOffset } from "utils/scrollWithOffset";
 import MainLayout from "layouts/MainLayout";
 
 export default function IndexPage() {
-  const { bouquets, isLoading } = useFetchBouquets();
+  const { bouquets, isLoading, skip, setSkip, total, setTotal } = useFetchBouquets();
 
   return (
     <Fragment>
@@ -76,7 +76,14 @@ export default function IndexPage() {
           </Advantages>
         </div>
         <div id="catalog" className={style.catalog}>
-          <CatalogBlock data={bouquets} isLoading={isLoading} />
+          <CatalogBlock
+            total={total}
+            setTotal={setTotal}
+            skip={skip}
+            setSkip={setSkip}
+            data={bouquets}
+            isLoading={isLoading}
+          />
         </div>
       </MainLayout>
       <div id="aboutUs" className={style.aboutUs}>

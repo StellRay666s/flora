@@ -4,13 +4,11 @@ import Rating from "components/Rating";
 import style from "./index.module.scss";
 
 function ImageItem({ width, height, img, rating }) {
-  var base64prefix = "data:image/png;base64, ";
-
   return (
     <div className={style.wrapper}>
       <div className={style.border}>
         <div className={style.image}>
-          <img src={base64prefix + img} alt="изображение товара" />
+          <img src={img} alt="изображение товара" />
         </div>
       </div>{" "}
       <div className={style.rating_sizes}>
