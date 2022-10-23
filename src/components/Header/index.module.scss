@@ -1,16 +1,13 @@
-.header {
-  width: inherit;
-  margin: 0 auto;
+.wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
 
   a {
     text-decoration: none;
   }
 
-  .barList {
+  .barList,
+  .barList_close {
     display: flex;
     align-items: center;
     gap: 39px;
@@ -33,5 +30,55 @@
   .auth {
     display: flex;
     gap: 20px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+
+    .burger_logo {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .burger_menu {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+
+      div {
+        height: 2px;
+        width: 30px;
+        background-color: white;
+      }
+    }
+
+    .barList {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: flex-start;
+      animation: open 0.7s ease-in-out;
+    }
+
+    .barList_close {
+      display: none;
+    }
+
+    @keyframes open {
+      0% {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }

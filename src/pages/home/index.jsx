@@ -44,7 +44,7 @@ export default function IndexPage() {
           </div>
         </div>
         <div className={style.advahtages}>
-          <Advantages className={"advantaWrapper"}>
+          <Advantages>
             <div className={style.truck}>
               <TruckIcon fill="black" width={40} height={40} />
               <div className={style.title_description}>
