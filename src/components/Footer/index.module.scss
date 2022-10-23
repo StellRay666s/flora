@@ -3,11 +3,11 @@
 
   .footerWrapper {
     margin: 0 auto;
-    width: 1440px;
-    height: 550px;
+    width: 90%;
+
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 100px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding: 20px;
@@ -19,12 +19,9 @@
     }
 
     .wrapperList {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       .company {
         bottom: 20px;
@@ -39,11 +36,8 @@
     }
 
     .lastBlock {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
+      display: flex;
+      justify-content: space-around;
 
       .socialNetwort {
         cursor: pointer;
@@ -57,6 +51,21 @@
         color: white;
         font-family: "Roboto";
         font-size: 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .lastBlock {
+      flex-direction: column;
+      gap: 35px;
+    }
+    .wrapperList {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .company {
+        align-self: flex-start;
       }
     }
   }

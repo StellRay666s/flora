@@ -1,12 +1,18 @@
 .title {
   margin-bottom: 40px;
   font-size: 60px;
+  text-align: center;
 }
 
 .wrapperCarts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 342px);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  align-self: center;
 }
 
 .wrapper_pagination {

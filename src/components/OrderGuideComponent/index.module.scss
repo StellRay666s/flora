@@ -6,6 +6,7 @@
 
 .cardWrapper {
   display: flex;
+  max-width: 1440px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -14,5 +15,12 @@
   .line {
     width: 50px;
     border: 1px solid white;
+  }
+
+  @media screen and (max-width: 1390px) {
+    gap: 15px;
+    .line {
+      display: none;
+    }
   }
 }

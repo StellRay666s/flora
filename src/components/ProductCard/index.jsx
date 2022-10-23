@@ -21,11 +21,9 @@ function ProductCard({
   return (
     <div className={style.cartWrapper}>
       <div className={style.imgBorder}>
-        <div className={style.border}>
-          <Link to={`/product/${_id}`}>
-            <img src={image} alt={alt} className={style.img} />
-          </Link>
-        </div>
+        <Link to={`/product/${_id}`}>
+          <img src={image} alt={alt} className={style.img} />
+        </Link>
       </div>
       <div className={style.title}>{title}</div>
       <span className={style.price}>{formatPrice(price)} ₽</span>
