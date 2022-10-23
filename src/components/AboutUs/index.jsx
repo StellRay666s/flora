@@ -8,25 +8,25 @@ function AboutUs() {
     <div>
       <div className={style.logo}>
         <H1>О НАС</H1>
-      </div>
-      <div className={style.contentWrapper}>
-        <div className={style.textBlock}>
-          <p className={style.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
-            saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora
-            perspiciatis tenetur quam possimus excepturi animi sint quis?
-          </p>
-          <p className={style.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
-            saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora
-          </p>
-          <p className={style.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptas enim sequi
-            saepe! Ratione rerum quae optio deserunt, accusantium voluptatem quia tempora
-          </p>
-        </div>
-        <div className={style.girlWrapper}>
-          <div className={style.img}>
+        <div className={style.wrapper}>
+          <div className={style.text_block}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta accusantium fugit
+              obcaecati optio eius atque numquam nulla, explicabo corporis minima blanditiis eos
+              similique nisi consequatur corrupti sapiente et harum officiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta accusantium fugit
+              obcaecati optio eius atque numquam nulla, explicabo corporis minima blanditiis eos
+              similique nisi consequatur corrupti sapiente et harum officiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta accusantium fugit
+              obcaecati optio eius atque numquam nulla, explicabo corporis minima blanditiis eos
+              similique nisi consequatur corrupti sapiente et harum officiis.
+            </p>
+          </div>
+          <div className={style.girls_block}>
             <img src={girls} />
           </div>
         </div>
