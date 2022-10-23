@@ -10,7 +10,6 @@ import "styles/reset.css";
 import "styles/global.scss";
 import "styles/variables.scss";
 import "styles/buttons.scss";
-import "styles/advantages.scss";
 
 import { store } from "redux/store";
 

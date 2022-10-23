@@ -4,14 +4,13 @@
 }
 
 .wrapperCarts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.wrapper_pagination{
+.wrapper_pagination {
   display: flex;
   justify-content: center;
   gap: 5px;
-
 }

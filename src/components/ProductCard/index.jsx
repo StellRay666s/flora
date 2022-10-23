@@ -19,27 +19,25 @@ function ProductCard({
   const cartAvailability = cart.filter(boquet => boquet.product._id === _id);
 
   return (
-    <div className={style.wrapper}>
-      <div className={style.cartWrapper}>
-        <div className={style.imgBorder}>
-          <div className={style.border}>
-            <Link to={`/product/${_id}`}>
-              <img src={image} alt={alt} className={style.img} />
-            </Link>
-          </div>
+    <div className={style.cartWrapper}>
+      <div className={style.imgBorder}>
+        <div className={style.border}>
+          <Link to={`/product/${_id}`}>
+            <img src={image} alt={alt} className={style.img} />
+          </Link>
         </div>
-        <div className={style.title}>{title}</div>
-        <span className={style.price}>{formatPrice(price)} ₽</span>
-        <div className={style.addBusket}>
-          {cartAvailability.length === 0 ? (
-            <>
-              <AddButton disabled={disabled} onClick={() => addToCart(_id)} />
-              <p onClick={() => addToCart(_id)}>Добавить в корзину</p>
-            </>
-          ) : (
-            <p>Добавлено в козину</p>
-          )}
-        </div>
+      </div>
+      <div className={style.title}>{title}</div>
+      <span className={style.price}>{formatPrice(price)} ₽</span>
+      <div className={style.addBusket}>
+        {cartAvailability.length === 0 ? (
+          <>
+            <AddButton disabled={disabled} onClick={() => addToCart(_id)} />
+            <p onClick={() => addToCart(_id)}>Добавить в корзину</p>
+          </>
+        ) : (
+          <p>Добавлено в козину</p>
+        )}
       </div>
     </div>
   );
